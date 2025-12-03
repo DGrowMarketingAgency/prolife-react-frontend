@@ -1,10 +1,27 @@
-
-import React from "react";
+import React, { useState } from "react";
 
 const Home = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleSeeMore = () => {
+    setExpanded(!expanded);
+  };
+
+  const cardsData = [
+    { img: "/images/img/s1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance for couples planning to conceive..." },
+    { img: "/images/img/s2.jpg", label: "Maternity & Gynaecology", text: "Complete care before, during and after pregnancy..." },
+    { img: "/images/img/s3.jpg", label: "Fertility Treatment", text: "Advanced reproductive care tailored to each family..." },
+    { img: "/images/img/s4.jpg", label: "NICU - Neonatal Care", text: "Specialized support for premature and critical newborns..." },
+    { img: "/images/img/s5.jpg", label: "Women's Wellness", text: "Gynecologic screening, menstrual care & hormonal balance..." },
+    { img: "/images/img/s6.jpg", label: "Laparoscopic Surgery", text: "Minimally invasive treatment for faster recovery..." },
+    { img: "/images/img/s7.jpg", label: "Pediatrics", text: "Child health monitoring, immunization & illness support..." },
+    { img: "/images/img/s8.jpg", label: "Emergency & Trauma", text: "24/7 advanced emergency response team available..." },
+  ];
+
   const openPharmacy = () => {
     window.open("https://theprolifepharmacy.com/", "_blank");
   };
+
 
   return (
     <>
@@ -281,28 +298,37 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="specialization-section">
-        <div className="specialization-container">
-          <h2 className="specialization-title">Clinical Departments</h2>
-          <p className="specialization-subtitle">Multi-Specialty Care Coordination</p>
+      
+    <section className="specialization-section">
+      <div className="specialization-container">
+        <h2 className="specialization-title">Clinical Departments</h2>
+        <p className="specialization-subtitle">Multi-Specialty Care Coordination</p>
 
-          <div className="specialization-grid">
-            {/* Example of one card, repeat for others */}
-            <div className="specialization-card">
+        <div className="specialization-grid">
+          {cardsData.map((card, index) => (
+            <div
+              className="specialization-card"
+              key={index}
+              style={{
+                display: expanded || index < 6 ? "block" : "none"
+              }}
+            >
               <div className="card-img">
-                <img src="/images/img/s1.jpg" alt="Maternity & Gynaecology" />
+                <img src={card.img} alt={card.label} />
               </div>
-              <div className="card-label">Pre-Pregnancy Counselling</div>
-              <p className="card-text">
-                Thoughtful guidance for couples planning to conceive. We evaluate medical history, lifestyle factors, and potential risks to help you begin pregnancy with confidence.
-              </p>
+              <div className="card-label">{card.label}</div>
+              <p className="card-text">{card.text}</p>
               <a href="#" className="learn-more">Learn More →</a>
             </div>
-            {/* Repeat similar cards for other specializations */}
-          </div>
-          <button id="seeMoreBtn" className="see-more-btn">See More...</button>
+          ))}
         </div>
-      </section>
+
+        <button className="see-more-btn" onClick={handleSeeMore}>
+          {expanded ? "Show Less" : "See More..."}
+        </button>
+      </div>
+    </section>
+ 
        
       <section className="doc-section">
         <h2>Our Medical Team</h2>
