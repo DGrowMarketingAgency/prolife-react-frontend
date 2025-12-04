@@ -8,15 +8,70 @@ const Home = () => {
   };
 
   const cardsData = [
-    { img: "/images/img/s1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance for couples planning to conceive..." },
-    { img: "/images/img/s2.jpg", label: "Maternity & Gynaecology", text: "Complete care before, during and after pregnancy..." },
-    { img: "/images/img/s3.jpg", label: "Fertility Treatment", text: "Advanced reproductive care tailored to each family..." },
-    { img: "/images/img/s4.jpg", label: "NICU - Neonatal Care", text: "Specialized support for premature and critical newborns..." },
+    { img: "/images/img/s1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance for couples planning to conceive. We evaluate medical history, lifestyle factors, and potential risks to help you begin pregnancy with confidence." },
+    { img: "/images/img/s2.jpg", label: "Pregnancy Care", text: "Comprehensive antenatal check-ups focused on maternal and fetal wellbeing. We monitor growth, screen for complications, and support you through every stage of pregnancy." },
+    { img: "/images/img/s3.jpg", label: "High-Risk Pregnancy Management", text: "Conditions like diabetes, hypertension, thyroid disorders, and previous complications can make pregnancy challenging. Our specialists deliver evidence-based monitoring to ensure safe outcomes." },
+    { img: "/images/img/s4.jpg", label: "GDM (Gestational Diabetes Mellitus)", text: "Early screening, diet planning, glucose monitoring, and safe treatment options to protect both mother and baby throughout pregnancy." },
     { img: "/images/img/s5.jpg", label: "Women's Wellness", text: "Gynecologic screening, menstrual care & hormonal balance..." },
-    { img: "/images/img/s6.jpg", label: "Laparoscopic Surgery", text: "Minimally invasive treatment for faster recovery..." },
-    { img: "/images/img/s7.jpg", label: "Pediatrics", text: "Child health monitoring, immunization & illness support..." },
-    { img: "/images/img/s8.jpg", label: "Emergency & Trauma", text: "24/7 advanced emergency response team available..." },
+    { img: "/images/img/s6.jpg", label: "Thyroid Disorders in Pregnancy", text: "Balanced thyroid levels are essential for fetal development. We provide targeted evaluation and treatment for hypothyroidism and hyperthyroidism during pregnancy." },
+    { img: "/images/img/s7.jpg", label: "Hypertension in Pregnancy", text: "CFrom gestational hypertension to preeclampsia, we offer vigilant monitoring, medication guidance, and safe delivery planning." },
+    { img: "/images/img/s8.jpg", label: "Preterm Labour Management", text: "Advanced assessment and timely intervention to prevent premature delivery and support optimal neonatal outcomes." },
+
+    { img: "/images/img/s1.jpg", label: "Normal Vaginal Delivery (NVD)", text: "Encouraging natural birth through supportive care, continuous monitoring, and evidence-based labour practices." },
+
+    { img: "/images/img/s2.jpg", label: "Assisted Delivery – Vacuum & Forceps", text: "When required for safe delivery, our specialists perform assisted procedures with precision to ensure the wellbeing of both mother and baby." },
+
+    { img: "/images/img/s3.jpg", label: "Caesarean Sections (LSCS)", text: "Safe surgical delivery performed when medically required. We prioritise maternal comfort, minimal pain, and fast recovery." },
+
+    { img: "/images/img/s4.jpg", label: "Emergency LSCS", text: "Immediate response for time-sensitive complications to protect maternal and fetal health." },
+
+    { img: "/images/img/s5.jpg", label: "Elective LSCS", text: "Planned C-sections scheduled for medical or personal reasons, ensuring a comfortable, well-prepared birthing experience." },
+
+    { img: "/images/img/s6.jpg", label: "Elective LSCS + Sterilisation", text: "Combined procedure for women who prefer permanent contraception during their planned caesarean section." },
+
+    { img: "/images/img/s7.jpg", label: "Cervical Encirclage (Cervical Cerclage)", text: "A targeted procedure to support pregnancies affected by cervical insufficiency. Helps reduce risk of miscarriage or preterm birth." },
+
+    { img: "/images/img/s8.jpg", label: "LAB Services", text: "On-site laboratory for essential prenatal and pregnancy-related investigations—blood tests, hormonal panels, infection screening, and emergency diagnostics." },
   ];
+
+  const doctorsData = [
+  { img: "./images/img/d1.png", name: "DR.NELLAIYAPPAN", specialization: "Orthopedics" },
+  { img: "./images/img/d2.png", name: "DR.KUMANAN", specialization: "Oncology" },
+  { img: "./images/img/d3.png", name: "DR.HARI PRAKASH", specialization: "Anesthesiology" },
+  { img: "./images/img/d4.png", name: "DR.BALA", specialization: "Oncology" },
+  { img: "./images/img/d5.png", name: "DR.SHALINI", specialization: "Anesthesiology" },
+  { img: "./images/img/d6.png", name: "DR.PAULIA DEVI", specialization: "General Surgery" },
+  { img: "./images/img/d7.png", name: "DR.SATHYA MOORTHY", specialization: "Internal Medicine" },
+  { img: "./images/img/d8.png", name: "DR.NITHYA PRIYAN", specialization: "Anesthesiology" },
+  { img: "./images/img/d9.png", name: "DR.SOORIYA.S", specialization: "Dermatology" },
+  { img: "./images/img/d10.png", name: "DR.SUJITHA.R", specialization: "Gynecology" },
+  { img: "./images/img/d11.png", name: "Dr.Thamarai", specialization: "Gynecology" },
+  { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
+  { img: "./images/img/d13.png", name: "Dr.Varshini", specialization: "Gynecology" },
+  { img: "./images/img/d14.png", name: "DR.PAVITHRA", specialization: "Duty Medical Officer" },
+];
+
+
+const reviewsData = [
+  {
+    text: "I received impeccable care from Dr. Thamarai ram and Prolife Hospital for the delivery of my twins. Dr listens to us and respects our choices and is very empathetic and respectful. Great Doctor with a great personality. We felt that we are in the safe hands.",
+    name: "Mohammed",
+    avatar: "M",
+    rating: 5
+  },
+  {
+    text: "It's was a beautiful and pleasant experience and journey with Prolife Hospital and Dr.Thamarai Ram during planning for pregnancy, pregnancy, delivery and post delivery. Warmth, hospitality and helping tendency during delivery time makes our life easy and to be appreciated. Hope and trust this will be continued in years to come.",
+    name: "Sreya",
+    avatar: "S",
+    rating: 5
+  },
+  {
+    text: "We had our second delivery in prolife. We had safe delivery experience by Dr. tamarai, Dr. Sujitha, Dr Iswarya . We had excellent support and care by ward staff and nurses.They take care of my wife and daughter very well. Rooms also neat and clean",
+    name: "Selva Ganesh",
+    avatar: "S",
+    rating: 5
+  }
+];
 
   const openPharmacy = () => {
     window.open("https://theprolifepharmacy.com/", "_blank");
@@ -330,49 +385,63 @@ const Home = () => {
     </section>
  
        
-      <section className="doc-section">
-        <h2>Our Medical Team</h2>
-        <h5>Board-Certified Specialists</h5>
-        <p className="doc-sub-tit">Prolife's strength lies in our physician roster. Each doctor combines clinical training with patient-focused practice:</p>
-        <div className="doc-section-container">
-          {/* Paste all doctor cards exactly like in your HTML */}
-          <div className="doc-section-card">
-            <img src="/images/img/d1.png" alt="DR.NELLAIYAPPAN" className="doc-section-img" />
-            <div className="doc-section-overlay">
-              <h3>DR.NELLAIYAPPAN</h3>
-              <p>Orthopedics</p>
-            </div>
-            <div className="doc-section-icons">
-              <span><i className="fa-solid fa-user-doctor"></i></span>
-              <span><i className="fa-solid fa-stethoscope"></i></span>
-            </div>
-          </div>
-          {/* Repeat for all other doctor cards */}
+<section className="doc-section">
+  <h2>Our Medical Team</h2>
+  <h5>Board-Certified Specialists</h5>
+  <p className="doc-sub-tit">
+    Prolife's strength lies in our physician roster. Each doctor combines clinical training with patient-focused practice:
+  </p>
+
+  <div className="doc-section-container">
+    {doctorsData.map((doc, index) => (
+      <div className="doc-section-card" key={index}>
+        <img src={doc.img} alt={doc.name} className="doc-section-img" />
+        <div className="doc-section-overlay">
+          <h3>{doc.name}</h3>
+          <p>{doc.specialization}</p>
         </div>
-      </section>
+        <div className="doc-section-icons">
+          <span><i className="fa-solid fa-user-doctor"></i></span>
+          <span><i className="fa-solid fa-stethoscope"></i></span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* Reviews Section */}
       <section className="reviews-section">
-        <p className="sub-title">TESTIMONIALS</p>
-        <div className="google-rating">⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span></div>
+  <p className="sub-title">TESTIMONIALS</p>
+  <div className="google-rating">
+    ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+  </div>
 
-        <div className="reviews-container">
-          {/* Paste all review cards exactly like in your HTML */}
-          <div className="review-card">
-            <p className="review-text">I received impeccable care from Dr. Thamarai ram and Prolife Hospital for the delivery of my twins. Dr listens to us and respects our choices and is very empathetic and respectful. Great Doctor with a great personality. We felt that we are in the safe hands.</p>
-            <div className="reviewer">
-              <div className="avatar">M</div>
-              <div>
-                <h4>Mohammed</h4>
-                <div className="stars">⭐⭐⭐⭐⭐</div>
-              </div>
-            </div>
+  <div className="reviews-container">
+    {reviewsData.map((review, index) => (
+      <div className="review-card" key={index}>
+        <p className="review-text">{review.text}</p>
+        <div className="reviewer">
+          <div className="avatar">{review.avatar}</div>
+          <div>
+            <h4>{review.name}</h4>
+            <div className="stars">{"⭐".repeat(review.rating)}</div>
           </div>
-          {/* Repeat for other reviews */}
         </div>
+      </div>
+    ))}
+  </div>
 
-        <a href="https://g.page/r/CS9733eotKhCEBM/review" target="_blank" rel="noreferrer" className="see-more-btn">⭐ See More Reviews</a>
-      </section>
+  <a
+    href="https://g.page/r/CS9733eotKhCEBM/review"
+    target="_blank"
+    rel="noreferrer"
+    className="see-more-btn"
+  >
+    ⭐ See More Reviews
+  </a>
+</section>
+
 
     
   
