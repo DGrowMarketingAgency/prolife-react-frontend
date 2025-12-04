@@ -2,11 +2,68 @@ import React, { useState } from "react";
 
 const Home = () => {
   const [expanded, setExpanded] = useState(false);
+  const [openFAQ, setOpenFAQ] = useState(null);
 
   const handleSeeMore = () => {
     setExpanded(!expanded);
   };
 
+  const faqData = [
+    {
+      question: "What makes Prolife different from other hospitals in Chennai?",
+      answer:
+        "We focus exclusively on women's health as our primary specialty, which means deeper expertise in maternity, fertility, and gynecology. Our doctors aren't generalists—they've built their careers around these specific areas."
+    },
+    {
+      question: "Do you handle high-risk pregnancies?",
+      answer:
+        " Yes. Our maternal-fetal medicine team manages conditions like gestational diabetes, preeclampsia, multiple pregnancies, and previous cesarean deliveries with specialized monitoring protocols"
+    },
+    {
+      question: "What are your visiting hours?",
+      answer:
+        " Family can visit between 4 PM and 8 PM daily. We make exceptions for new fathers and primary support persons who can stay extended hours in maternity wards."
+    },
+    {
+      question: "Is parking available at the hospital?",
+      answer:
+        " We maintain a dedicated parking area for patients and visitors. Attendants are available to assist during peak hours."
+    },
+    {
+      question: "How do I book my first appointment?",
+      answer:
+        " Call our reception at [phone number], use our online booking system, or visit the hospital directly. First-time patients should bring any previous medical records and current medications list."
+    },
+    {
+      question: "Do you provide emergency services?",
+      answer:
+        " Our emergency department operates 24/7 for obstetric emergencies, pediatric urgent care, and general medical emergencies."
+    },
+    {
+      question: "What documents do I need for admission?",
+      answer:
+        " Government-issued ID, insurance card (if applicable), doctor's referral letter for planned procedures, and any relevant medical history documents."
+    },
+    {
+      question: "Can I choose my delivery method?",
+      answer:
+        " Absolutely. We support both natural childbirth and cesarean delivery based on medical indications and patient preference. Your obstetrician will discuss options during prenatal visits."
+    },
+    {
+      question: "Do you offer payment plans?",
+      answer:
+        " Yes. Our billing department works with families to arrange payment schedules for larger medical expenses. Discuss options during your pre-admission consultation."
+    },
+    {
+      question: "How experienced are your gynecologists?",
+      answer:
+        "  Our gynecology team averages 15+ years of clinical practice. Several doctors hold fellowship training in subspecialties like reproductive endocrinology and minimally invasive surger"
+    },
+  ];
+  
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
   const cardsData = [
     { img: "/images/img/s1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance for couples planning to conceive. We evaluate medical history, lifestyle factors, and potential risks to help you begin pregnancy with confidence." },
     { img: "/images/img/s2.jpg", label: "Pregnancy Care", text: "Comprehensive antenatal check-ups focused on maternal and fetal wellbeing. We monitor growth, screen for complications, and support you through every stage of pregnancy." },
@@ -91,14 +148,14 @@ const reviewsData = [
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/story">Our Story</a></li>
-              <li><a href="/team">Our Teams</a></li>
+              <li><a href="/Ourteam">Our Teams</a></li>
               <li><a href="https://prolifefertility.com/">Fertility</a></li>
               <li className="dropdown">
                 <a href="#">Services ▾</a>
               </li>
               <li><a href="/gallery">Gallery</a></li>
               <li><a href="/videos">Videos</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/Contact">Contact Us</a></li>
               <li><a href="/blogs">Blogs</a></li>
             </ul>
           </nav>
@@ -154,7 +211,7 @@ const reviewsData = [
 
     <div className="story-hero-image-container home-2">
       <img
-        src="/images/img/story-sec.png"
+        src="/images/img/Prolife-office.png"
         alt="Prolife Hospital"
         className="story-hero-sideimage"
       />
@@ -294,7 +351,7 @@ const reviewsData = [
           <div className="section-three-header">
             <h3 className="section-three-subtitle">Health Education Resources</h3>
             <p className="section-three-desc">Evidence-Based Information for Better Decisions</p>
-            <p>Knowledgeable patients participate more actively in their care. Browse our physician-authored guides:</p>
+            <p className="section-three-desc">Knowledgeable patients participate more actively in their care. Browse our physician-authored guides:</p>
           </div>
 
           <div className="section-three-cards">
@@ -471,78 +528,18 @@ const reviewsData = [
       </section>
 
       {/* FAQ Section */}
-      <section className="faq-section">
+       <section className="faq-section">
         <h2>FAQ</h2>
-
-        <div className="faq-item">
-          <div className="faq-question">What makes Prolife different from other hospitals in Chennai?</div>
-          <div className="faq-answer">
-            We focus exclusively on women's health as our primary specialty, which means deeper expertise in maternity, fertility, and gynecology. Our doctors aren't generalists—they've built their careers around these specific areas.
+        {faqData.map((item, index) => (
+          <div className="faq-item" key={index}>
+            <div className={`faq-question ${openFAQ === index ? "active" : ""}`} onClick={() => toggleFAQ(index)}>
+              {item.question}
+            </div>
+            <div className={`faq-answer ${openFAQ === index ? "open" : ""}`}>
+              {item.answer}
+            </div>
           </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">Do you handle high-risk pregnancies?</div>
-          <div className="faq-answer">
-            Yes. Our maternal-fetal medicine team manages conditions like gestational diabetes, preeclampsia, multiple pregnancies, and previous cesarean deliveries with specialized monitoring protocols.
-          </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">What are your visiting hours?</div>
-          <div className="faq-answer">
-            Family can visit between 4 PM and 8 PM daily. We make exceptions for new fathers and primary support persons who can stay extended hours in maternity wards.
-          </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">Is parking available at the hospital?</div>
-          <div className="faq-answer">
-            We maintain a dedicated parking area for patients and visitors. Attendants are available to assist during peak hours.
-          </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">How do I book my first appointment?</div>
-          <div className="faq-answer">
-            Call our reception at [phone number], use our online booking system, or visit the hospital directly. First-time patients should bring any previous medical records and current medications list.
-          </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">Do you provide emergency services?</div>
-          <div className="faq-answer">
-            Our emergency department operates 24/7 for obstetric emergencies, pediatric urgent care, and general medical emergencies.
-          </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">What documents do I need for admission?</div>
-          <div className="faq-answer">
-            Government-issued ID, insurance card (if applicable), doctor's referral letter for planned procedures, and any relevant medical history documents.
-          </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">Can I choose my delivery method?</div>
-          <div className="faq-answer">
-            Absolutely. We support both natural childbirth and cesarean delivery based on medical indications and patient preference. Your obstetrician will discuss options during prenatal visits.
-          </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">Do you offer payment plans?</div>
-          <div className="faq-answer">
-            Yes. Our billing department works with families to arrange payment schedules for larger medical expenses. Discuss options during your pre-admission consultation.
-          </div>
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-question">How experienced are your gynecologists?</div>
-          <div className="faq-answer">
-            Our gynecology team averages 15+ years of clinical practice. Several doctors hold fellowship training in subspecialties like reproductive endocrinology and minimally invasive surgery.
-          </div>
-        </div>
+        ))}
       </section>
 
       {/* Care Journey Section */}

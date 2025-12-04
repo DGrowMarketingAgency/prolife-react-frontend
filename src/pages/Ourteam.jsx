@@ -1,9 +1,7 @@
 
 import React, { useState } from "react";
 
-
-
-const Home = () => {
+const Ourteam = () => {
   const [expanded, setExpanded] = useState(false);
   
   const doctorsData = [
@@ -25,12 +23,25 @@ const Home = () => {
 
 
   return ( <>
+
+ <div className="story-hero-banner">
+      <img
+        src="./images/img/download (1).webp"
+        alt="Our Story Banner"
+        className="story-hero-image"
+      />
+      <div className="story-hero-overlay">
+        <h1 className="story-hero-title">Our Team</h1>
+      </div>
+    </div>
+  
+
     <section className="doc-section">
-  <h2>Our Medical Team</h2>
-  <h5>Board-Certified Specialists</h5>
-  <p className="doc-sub-tit">
+  <h2>Our Dedicated Doctors</h2>
+  <h5>Meet our experienced professionals</h5>
+  {/* <p className="doc-sub-tit">
     Prolife's strength lies in our physician roster. Each doctor combines clinical training with patient-focused practice:
-  </p>
+  </p> */}
 
   <div className="doc-section-container">
     {doctorsData.map((doc, index) => (
@@ -53,3 +64,5 @@ const Home = () => {
 }
 
 
+
+export default Ourteam;

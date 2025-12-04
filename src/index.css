@@ -93,6 +93,7 @@ body {
   color: #222;
   background-color: #fff;
   overflow: hidden;
+  padding-bottom: 40px;
 }
 
 /* ===== HERO BANNER ===== */
@@ -144,9 +145,9 @@ body {
 
 .story-hero-text {
   flex: 1 1 600px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
-  color: #444;
+  color:var(--primary-color);
 }
 .home-2 h2{
   padding-bottom: 35px;
@@ -407,7 +408,7 @@ body {
 }
 
 .navbar .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -495,18 +496,18 @@ nav ul li a:hover {
 
 /* Pharmacy Button */
 .pharmacy-btn button {
-  background-color: #f5b800;
+  background-color: #28af60;
   border: none;
   padding: 8px 18px;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
-  color: #000;
+  color: #fff;
   transition: background 0.3s;
 }
 
 .pharmacy-btn button:hover {
-  background-color: #ffcc33;
+  background-color: var(--primary-color);
 }
 
 /* Hamburger */
@@ -717,6 +718,7 @@ nav ul li a:hover {
 
 .section-subtitle {
   font-size: 1rem;
+  font-weight: 600;
   color: #333;
   margin-bottom: 40px;
 }
@@ -865,7 +867,7 @@ nav ul li a:hover {
 .section-two-subtitle {
   color: #165F34;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 30px;
 }
 
 .section-two-title {
@@ -879,7 +881,10 @@ nav ul li a:hover {
   color: #555;
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+.section-two-desc:nth-child(5){
+  padding-bottom: 40px;
 }
 
 .section-two-btn {
@@ -895,7 +900,7 @@ nav ul li a:hover {
 }
 
 .section-two-btn:hover {
-  background-color: #165F10;
+  background-color: var(--whatsapp-green-hover);
 }
 
 @media (max-width: 768px) {
@@ -1029,13 +1034,16 @@ nav ul li a:hover {
   color:  #165F34;
   font-weight: 600;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 
 .section-three-desc {
   color: #222;
   font-size: 16px;
+  font-weight: 600;
   margin-top: 5px;
+  padding-bottom: 7px;
 }
 
 .section-three-cards {
@@ -1088,11 +1096,17 @@ nav ul li a:hover {
 }
 
 .section-three-overlay h4 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
   margin-bottom: 20px;
   text-transform: uppercase;
+}
+.section-three-overlay p{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .section-three-overlay button {
@@ -1108,7 +1122,7 @@ nav ul li a:hover {
 }
 
 .section-three-overlay button:hover {
-  background:  #165F34;
+  background:  var(--whatsapp-green-hover);
 }
 
 @media (max-width: 768px) {
@@ -1122,22 +1136,29 @@ nav ul li a:hover {
 }
 .doc-section {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   padding: 50px 20px;
   text-align: center;
-  margin: 0 auto;
 }
 
 .doc-section h2 {
   font-size: 2rem;
   color:  #165F34;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   position: relative;
+}
+.doc-section h5{
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 7px;
+  padding-bottom: 40px;
+
 }
 .doc-sub-tit {
   text-align: center;
   margin-bottom: 40px;
+  font-weight: 500;
 }
 .doc-section-container {
   display: grid;
@@ -3717,7 +3738,8 @@ footer::before {
 .services-title {
   font-size: 34px;
   font-weight: 800;
-  color: var(--text-primary);
+  color: var(--primary-color);
+  text-align: center;
 }
 
 .services-subtitle {
@@ -3828,7 +3850,7 @@ footer::before {
   font-size: 34px;
   font-weight: 800;
   margin-bottom: 50px;
-  color: var(--text-primary);
+  color: var(--primary-color);
 }
 
 /* Grid layout */
@@ -3856,7 +3878,7 @@ footer::before {
 /* Hover effect */
 .trust-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.10);
+  box-shadow: 0px 0px 24px rgba(94, 219, 36, 0.856);
 }
 
 /* Card content */
@@ -3929,7 +3951,7 @@ footer::before {
 
 /* Overlay for better readability */
 .results-overlay {
-  background: rgba(0,0,0,0.55);
+  background: rgba(47, 136, 20, 0.685);
   padding: 60px 20px;
 }
 
@@ -3958,7 +3980,7 @@ footer::before {
   flex: 1 1 180px;
   max-width: 220px;
   padding: 25px 20px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   text-align: center;
   backdrop-filter: blur(6px);
@@ -4017,11 +4039,11 @@ footer::before {
 }
 
 .approach-title {
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 800;
   text-align: center;
   margin-bottom: 50px;
-  color: var(--text-primary);
+  color: var(--primary-color);
 }
 
 /* Grid layout */
@@ -4104,10 +4126,10 @@ footer::before {
 }
 
 .location-title {
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 800;
   margin-bottom: 20px;
-  color: var(--text-primary);
+  color: var(--primary-color);
 }
 
 .location-description {
@@ -4147,6 +4169,7 @@ footer::before {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
+  color: var(--primary-color);
 }
 
 .location-card p {
