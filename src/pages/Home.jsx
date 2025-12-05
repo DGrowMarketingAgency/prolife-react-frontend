@@ -191,8 +191,8 @@ const moveSlide = (direction) => {
 
       {/* Section 1 - Specialized Healthcare */}
 
-<section className="story-hero-section home-2">
-  <div className="story-hero-content home-2">
+<section className="story-hero-section home-21">
+  <div className="story-hero-content home-12">
     <div className="story-hero-text home-2">
       <h2>Specialized Healthcare for Women and Growing Families</h2>
       <p>

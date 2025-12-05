@@ -16,6 +16,12 @@ import FetalMedicine from "./pages/FetalMedicine";
 import Ultrasound from "./pages/Ultrasound";
 import SurgerySection from "./pages/SurgerySection";
 import Lab from "./pages/Lab";
+import Gallery from "./pages/Gallery";
+import PrePregnancy from "./pages/PrePregnancy";
+
+
+
+
 
 
 
@@ -34,6 +40,8 @@ export default function App() {
         <Route path="/ultrasound" element={<Ultrasound />} />
         <Route path="/surgery-and-procedures" element={<SurgerySection />} />
          <Route path="/lab" element={<Lab />} />
+         <Route path="/gallery" element={<Gallery />} />
+         <Route path="/pre-pregnancy" element={<PrePregnancy />} />
       </Routes>
       <Footer />
     </Router>
