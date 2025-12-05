@@ -137,39 +137,6 @@ const reviewsData = [
 
   return (
     <>
-      {/* Navbar */}
-      <header className="navbar">
-        <div className="container">
-          <div className="logo">
-            <img src="/images/img/prolife-logo.png" alt="Prolife Logo" />
-          </div>
-
-          <nav id="nav-links">
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/story">Our Story</a></li>
-              <li><a href="/Ourteam">Our Teams</a></li>
-              <li><a href="https://prolifefertility.com/">Fertility</a></li>
-              <li className="dropdown">
-                <a href="#">Services ▾</a>
-              </li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/videos">Videos</a></li>
-              <li><a href="/Contact">Contact Us</a></li>
-              <li><a href="/blogs">Blogs</a></li>
-            </ul>
-          </nav>
-
-          <div className="pharmacy-btn">
-            <button onClick={openPharmacy}>PHARMACY</button>
-          </div>
-
-          <div className="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="master-section">
         <div className="master-section-container">

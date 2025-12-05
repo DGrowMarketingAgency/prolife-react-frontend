@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../index.css";
 
 export default function Navbar() {
@@ -8,64 +9,77 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container">
         <div className="logo">
-          <img src="./images/img/prolife-logo.png" alt="Prolife Logo" />
+          <Link to="/">
+            <img src="/images/img/prolife-logo.png" alt="Prolife Logo" />
+          </Link>
         </div>
 
         <nav id="nav-links" className={showMenu ? "show" : ""}>
           <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="./story">Our Story</a></li>
-            <li><a href="./team">Our Teams</a></li>
-            <li><a href="https://prolifefertility.com/">Fertility</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/story">Our Story</Link></li>
+            <li><Link to="/ourteam">Our Teams</Link></li>
+            <li><a href="https://prolifefertility.com/" target="_blank">Fertility</a></li>
+
             <li className="dropdown">
               <a href="#">Services ▾</a>
               <ul className="dropdown-menu">
-                <li><a href="./pregnancy-maternity">Pregnancy / Maternity</a></li>
+                <li><Link to="/pregnancy-maternity">Pregnancy / Maternity</Link></li>
+
                 <li className="sub-dropdown">
                   <a href="#">Obstetrics ▸</a>
                   <ul className="sub-menu">
-                    <li><a href="./Pre-pregnancy">Pre-pregnancy</a></li>
+                    <li><Link to="/pre-pregnancy">Pre-pregnancy</Link></li>
+
                     <li className="inner-dropdown">
                       <a href="#">Your Pregnancy ▸</a>
                       <ul className="inner-menu">
-                        <li><a href="./just-pregnant">Just Pregnant</a></li>
-                        <li><a href="./growing-time">Growing Time: 2nd Trimester</a></li>
-                        <li><a href="./3rd-trimester">The End Is Near – 3rd Trimester</a></li>
-                        <li><a href="./after-37-weeks">After 37 Weeks (37–40 Weeks)</a></li>
+                        <li><Link to="/just-pregnant">Just Pregnant</Link></li>
+                        <li><Link to="/growing-time">Growing Time: 2nd Trimester</Link></li>
+                        <li><Link to="/3rd-trimester">3rd Trimester</Link></li>
+                        <li><Link to="/after-37-weeks">After 37 Weeks</Link></li>
                       </ul>
                     </li>
-                    <li><a href="./your-birth-its-time">Your Birth It's Time</a></li>
-                    <li><a href="./post-natal-care">Post-Natal Care</a></li>
+
+                    <li><Link to="/your-birth-its-time">Your Birth It's Time</Link></li>
+                    <li><Link to="/post-natal-care">Post-Natal Care</Link></li>
                   </ul>
                 </li>
+
                 <li className="sub-dropdown">
                   <a href="#">Gynecology ▸</a>
                   <ul className="sub-menu">
-                    <li><a href="./abnormal-uterine-bleeding">Abnormal Uterine Bleeding</a></li>
-                    <li><a href="./pap-smear-and-colposcopy">Pap Smear and Colposcopy</a></li>
-                    <li><a href="./contraception-and-family-planning">Contraception and Family Planning</a></li>
-                    <li><a href="./Pelvic Orgaprolapse-and-vaginal-reconstruction">Pelvic Organ Prolapse & Vaginal Reconstruction</a></li>
-                    <li><a href="./pelvic-pain-endometriosis">Pelvic Pain & Endometriosis</a></li>
-                    <li><a href="./ultrasound">Urinary Incontinence</a></li>
-                    <li><a href="./ovarian-cysts">Ovarian Cysts</a></li>
-                    <li><a href="./menopause-change-life">Menopause & Change Life</a></li>
+                    <li><Link to="/abnormal-uterine-bleeding">Abnormal Uterine Bleeding</Link></li>
+                    <li><Link to="/pap-smear-and-colposcopy">Pap Smear & Colposcopy</Link></li>
+                    <li><Link to="/contraception-and-family-planning">Contraception</Link></li>
+                    <li><Link to="/pelvic-organ-prolapse">Pelvic Organ Prolapse</Link></li>
+                    <li><Link to="/pelvic-pain-endometriosis">Pelvic Pain</Link></li>
+                    <li><Link to="/urinary-incontinence">Urinary Incontinence</Link></li>
+                    <li><Link to="/ovarian-cysts">Ovarian Cysts</Link></li>
+                    <li><Link to="/menopause">Menopause</Link></li>
                   </ul>
                 </li>
-                <li><a href="./fetal-medicine">Fetal Medicine</a></li>
-                <li><a href="./ultrasound">Ultrasound</a></li>
-                <li><a href="./surgery-and-proceures">Surgery and Procedures</a></li>
-                <li><a href="./lab">Lab</a></li>
+
+                <li><Link to="/fetal-medicine">Fetal Medicine</Link></li>
+                <li><Link to="/ultrasound">Ultrasound</Link></li>
+                <li><Link to="/surgery-and-procedures">Surgery & Procedures</Link></li>
+                <li><Link to="/lab">Lab</Link></li>
               </ul>
             </li>
-            <li><a href="./galary">Gallery</a></li>
-            <li><a href="./videos">Videos</a></li>
-            <li><a href="./contact">Contact Us</a></li>
-            <li><a href="./blogs">Blogs</a></li>
+
+            <li><Link to="/gallery">Gallery</Link></li>
+            <li><Link to="/videos">Videos</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/blogs">Blogs</Link></li>
           </ul>
         </nav>
 
         <div className="pharmacy-btn">
-          <button onClick={() => window.open('https://theprolifepharmacy.com/', '_blank')}>
+          <button
+            onClick={() =>
+              window.open("https://theprolifepharmacy.com/", "_blank")
+            }
+          >
             PHARMACY
           </button>
         </div>
@@ -77,4 +91,3 @@ export default function Navbar() {
     </header>
   );
 }
-

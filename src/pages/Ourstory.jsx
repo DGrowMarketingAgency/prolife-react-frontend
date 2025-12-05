@@ -97,47 +97,6 @@ const OurStory = () => {
 // export default function MaternityClinicSections()
   return (
     <div className="story">
-      {/* Navbar */}
-      <header className="navbar">
-        <div className="container">
-          <div className="logo">
-            <img src="./images/img/prolife-logo.png" alt="Prolife Logo" />
-          </div>
-
-          <nav id="nav-links">
-            <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./story.html">Our Story</a></li>
-              <li><a href="./team.html">Our Teams</a></li>
-              <li><a href="https://prolifefertility.com/">Fertility</a></li>
-              <li className="dropdown">
-                <a href="#">Services <span className="arrow">▾</span></a>
-                <ul className="dropdown-menu">
-                  <li><a href="./pregnancy-maternity.html">Pregnancy / Maternity</a></li>
-                  <li><a href="./Pre-pregnancy.html">Pre-pregnancy</a></li>
-                  <li><a href="./just-pregnant.html">Your Pregnancy</a></li>
-                  <li><a href="./post-natal-care.html">Post-Natal Care</a></li>
-                  {/* Add all sub-menu items here */}
-                </ul>
-              </li>
-              <li><a href="./galary.html">Gallery</a></li>
-              <li><a href="./videos.html">Videos</a></li>
-              <li><a href="./contact.html">Contact Us</a></li>
-              <li><a href="./blogs.html">Blogs</a></li>
-            </ul>
-          </nav>
-
-          <div className="pharmacy-btn">
-            <button onClick={() => window.open("https://theprolifepharmacy.com/", "_blank")}>
-              PHARMACY
-            </button>
-          </div>
-
-          <div className="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-      </header>
 
       {/* Story Section */}
       <section className="story-hero-section">
@@ -158,7 +117,7 @@ const OurStory = () => {
           </div>
 
           <div className="story-hero-image-container">
-            <img src="./images/img/Prolife-office.png" alt="Prolife Hospital" className="story-hero-sideimage" />
+            <img src="./images/img/story-sec.png" alt="Prolife Hospital" className="story-hero-sideimage" />
           </div>
         </div>
 
@@ -404,37 +363,6 @@ const OurStory = () => {
         ))}
       </section>
 
-      {/* Footer */}
-      <footer>
-        <div className="footer-column footer-logo">
-          <img src=".images/img/prolife-logo.png" alt="Prolife Hospital Logo" />
-          <p>River View Enclave, No:1, 1st Street, IAS, IPS Colony, Manapakkam, Chennai, Tamil Nadu 600125</p>
-          <p><strong>Call Us:</strong> 8220305887 / 7305737051 / 9790896211</p>
-          <p><strong>Mail:</strong> prolifehospitalg@gmail.com</p>
-        </div>
-        <div className="footer-column">
-          <h4>Quick Links</h4>
-          <a href="./story.html">Our History</a><br/>
-          <a href="./pregnancy-maternity.html">Obstetrics</a><br/>
-          <a href="./abnormal-uterine-bleeding.html">Gynecology</a><br/>
-          <a href="./team.html">Our Doctors</a><br/>
-          <a href="./contact.html">Contact Us</a>
-        </div>
-        <div className="footer-column">
-          <h4>Quick Contact</h4>
-          <form className="contact-form">
-            <input type="text" placeholder="Your Name" required/>
-            <input type="email" placeholder="Your Email" required/>
-            <input type="text" placeholder="Mobile Number" required/>
-            <input type="text" placeholder="Subject"/>
-            <textarea rows="4" placeholder="Your message (optional)"></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-        <div className="footer-bottom">
-          Copyright © 2025. <a href="https://www.prolifehospitals.com/">Prolife Hospital</a>. All Rights Reserved.
-        </div>
-      </footer>
     </div>
   );
 };
