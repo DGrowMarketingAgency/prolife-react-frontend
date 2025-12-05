@@ -1,13 +1,46 @@
 import React, { useState } from "react";
+import { useRef } from "react";
 
 const Home = () => {
   const [expanded, setExpanded] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(null);
 
-  const handleSeeMore = () => {
-    setExpanded(!expanded);
+ const [modalOpen, setModalOpen] = useState(false);
+const [modalData, setModalData] = useState({ img: "", title: "", text: "" });
+
+  const handleSeeMore = () => setExpanded(!expanded);
+
+  const openModal = (card) => {
+  setModalData({ img: card.img, title: card.label, text: card.text });
+  setModalOpen(true);
+  document.body.style.overflow = "hidden"; // scroll lock
+};
+
+  const closeModal = () => {
+    setModalOpen(false);
+    document.body.style.overflow = "auto";
   };
 
+  const cardsData = [
+    { img: "/images/img/s1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance... ifbuhbcjhdc cdicbic cns hyddscnds dcsb ch n cbiuuijkjkbfsdfsdfdfcbdusjibdcdjhdnibfzfoudbcnoidsc djcdscudcud ddjcbdsucsj cjcidjciodsdicdc jcdsiuhcojdcv cnbxijzcnduc nc xziojcdnsuubcdc nbxzcz dcnjssj ciod ndhjccbscd" },
+    { img: "/images/img/s2.jpg", label: "Pregnancy Care", text: "Comprehensive antenatal check-ups..." },
+    { img: "/images/img/s3.jpg", label: "High-Risk Pregnancy Management", text: "Conditions like diabetes..." },
+    { img: "/images/img/s4.jpg", label: "GDM (Gestational Diabetes Mellitus)", text: "Early screening, diet planning..." },
+    { img: "/images/img/s5.jpg", label: "Women's Wellness", text: "Gynecologic screening..." },
+    { img: "/images/img/s6.jpg", label: "Thyroid Disorders in Pregnancy", text: "Balanced thyroid levels..." },
+    { img: "/images/img/s7.jpg", label: "Hypertension in Pregnancy", text: "Gestational hypertension monitoring..." },
+    { img: "/images/img/s8.jpg", label: "Preterm Labour Management", text: "Advanced assessment..." },
+    { img: "/images/img/s1.jpg", label: "Normal Vaginal Delivery (NVD)", text: "Encouraging natural birth..." },
+    { img: "/images/img/s2.jpg", label: "Assisted Delivery – Vacuum & Forceps", text: "Assisted procedures..." },
+    { img: "/images/img/s3.jpg", label: "Caesarean Sections (LSCS)", text: "Safe surgical delivery..." },
+    { img: "/images/img/s4.jpg", label: "Emergency LSCS", text: "Immediate response..." },
+    { img: "/images/img/s5.jpg", label: "Elective LSCS", text: "Planned C-sections..." },
+    { img: "/images/img/s6.jpg", label: "Elective LSCS + Sterilisation", text: "Combined procedure..." },
+    { img: "/images/img/s7.jpg", label: "Cervical Encirclage", text: "Procedure to support pregnancies..." },
+    { img: "/images/img/s8.jpg", label: "LAB Services", text: "On-site laboratory investigations..." },
+  ];
+
+  // 
   const faqData = [
     {
       question: "What makes Prolife different from other hospitals in Chennai?",
@@ -64,32 +97,7 @@ const Home = () => {
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
-  const cardsData = [
-    { img: "/images/img/s1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance for couples planning to conceive. We evaluate medical history, lifestyle factors, and potential risks to help you begin pregnancy with confidence." },
-    { img: "/images/img/s2.jpg", label: "Pregnancy Care", text: "Comprehensive antenatal check-ups focused on maternal and fetal wellbeing. We monitor growth, screen for complications, and support you through every stage of pregnancy." },
-    { img: "/images/img/s3.jpg", label: "High-Risk Pregnancy Management", text: "Conditions like diabetes, hypertension, thyroid disorders, and previous complications can make pregnancy challenging. Our specialists deliver evidence-based monitoring to ensure safe outcomes." },
-    { img: "/images/img/s4.jpg", label: "GDM (Gestational Diabetes Mellitus)", text: "Early screening, diet planning, glucose monitoring, and safe treatment options to protect both mother and baby throughout pregnancy." },
-    { img: "/images/img/s5.jpg", label: "Women's Wellness", text: "Gynecologic screening, menstrual care & hormonal balance..." },
-    { img: "/images/img/s6.jpg", label: "Thyroid Disorders in Pregnancy", text: "Balanced thyroid levels are essential for fetal development. We provide targeted evaluation and treatment for hypothyroidism and hyperthyroidism during pregnancy." },
-    { img: "/images/img/s7.jpg", label: "Hypertension in Pregnancy", text: "CFrom gestational hypertension to preeclampsia, we offer vigilant monitoring, medication guidance, and safe delivery planning." },
-    { img: "/images/img/s8.jpg", label: "Preterm Labour Management", text: "Advanced assessment and timely intervention to prevent premature delivery and support optimal neonatal outcomes." },
 
-    { img: "/images/img/s1.jpg", label: "Normal Vaginal Delivery (NVD)", text: "Encouraging natural birth through supportive care, continuous monitoring, and evidence-based labour practices." },
-
-    { img: "/images/img/s2.jpg", label: "Assisted Delivery – Vacuum & Forceps", text: "When required for safe delivery, our specialists perform assisted procedures with precision to ensure the wellbeing of both mother and baby." },
-
-    { img: "/images/img/s3.jpg", label: "Caesarean Sections (LSCS)", text: "Safe surgical delivery performed when medically required. We prioritise maternal comfort, minimal pain, and fast recovery." },
-
-    { img: "/images/img/s4.jpg", label: "Emergency LSCS", text: "Immediate response for time-sensitive complications to protect maternal and fetal health." },
-
-    { img: "/images/img/s5.jpg", label: "Elective LSCS", text: "Planned C-sections scheduled for medical or personal reasons, ensuring a comfortable, well-prepared birthing experience." },
-
-    { img: "/images/img/s6.jpg", label: "Elective LSCS + Sterilisation", text: "Combined procedure for women who prefer permanent contraception during their planned caesarean section." },
-
-    { img: "/images/img/s7.jpg", label: "Cervical Encirclage (Cervical Cerclage)", text: "A targeted procedure to support pregnancies affected by cervical insufficiency. Helps reduce risk of miscarriage or preterm birth." },
-
-    { img: "/images/img/s8.jpg", label: "LAB Services", text: "On-site laboratory for essential prenatal and pregnancy-related investigations—blood tests, hormonal panels, infection screening, and emergency diagnostics." },
-  ];
 
   const doctorsData = [
   { img: "./images/img/d1.png", name: "DR.NELLAIYAPPAN", specialization: "Orthopedics" },
@@ -130,10 +138,33 @@ const reviewsData = [
   }
 ];
 
-  const openPharmacy = () => {
+const openPharmacy = () => {
     window.open("https://theprolifepharmacy.com/", "_blank");
   };
 
+const trackRef = useRef(null); // Track-a reference panna
+
+const moveSlide = (direction) => {
+  const track = trackRef.current;
+  if (!track) return;
+
+  const card = track.querySelector(".home-doc-card");
+  if (!card) return;
+
+  const cardWidth = card.clientWidth + 22; // margin included
+  const style = window.getComputedStyle(track);
+  const matrix = new WebKitCSSMatrix(style.transform); // current transform
+  let currentX = matrix.m41; // current translateX value
+
+  if (direction === "left") {
+    currentX = Math.min(currentX + cardWidth, 0); // left scroll limit
+  } else {
+    currentX = currentX - cardWidth; // right scroll (limit optional)
+  }
+
+  track.style.transition = "0.4s ease";
+  track.style.transform = `translateX(${currentX}px)`;
+};
 
   return (
     <>
@@ -377,8 +408,7 @@ const reviewsData = [
         </div>
       </section>
 
-      
-    <section className="specialization-section">
+ <section className="specialization-section">
       <div className="specialization-container">
         <h2 className="specialization-title">Clinical Departments</h2>
         <p className="specialization-subtitle">Multi-Specialty Care Coordination</p>
@@ -386,18 +416,17 @@ const reviewsData = [
         <div className="specialization-grid">
           {cardsData.map((card, index) => (
             <div
-              className="specialization-card"
               key={index}
-              style={{
-                display: expanded || index < 6 ? "block" : "none"
-              }}
+              className="specialization-card"
+              style={{ display: expanded || index < 6 ? "block" : "none" }}
+              onClick={() => openModal(card)}
             >
               <div className="card-img">
                 <img src={card.img} alt={card.label} />
               </div>
               <div className="card-label">{card.label}</div>
               <p className="card-text">{card.text}</p>
-              <a href="#" className="learn-more">Learn More →</a>
+              <a className="learn-more">Learn More →</a>
             </div>
           ))}
         </div>
@@ -406,33 +435,46 @@ const reviewsData = [
           {expanded ? "Show Less" : "See More..."}
         </button>
       </div>
+
+      {/* Modal */}
+
+        {modalOpen && (
+  <div className="specialization-modal" onClick={closeModal}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <span className="close-btn" onClick={closeModal}>&times;</span>
+      <img src={modalData.img} alt={modalData.title} />
+      <h3>{modalData.title}</h3>
+      <p>{modalData.text}</p>
+    </div>
+  </div>
+)}
+    
     </section>
+
  
        
-<section className="doc-section">
-  <h2>Our Medical Team</h2>
-  <h5>Board-Certified Specialists</h5>
-  <p className="doc-sub-tit">
+<section className="home-doc-slider">
+  <h2 className="home-doc-title">Our Medical Team</h2>
+  <h5 className="home-doc-subtitle">Board-Certified Specialists</h5>
+  <p className="home-doc-text">
     Prolife's strength lies in our physician roster. Each doctor combines clinical training with patient-focused practice:
   </p>
 
-  <div className="doc-section-container">
-    {doctorsData.map((doc, index) => (
-      <div className="doc-section-card" key={index}>
-        <img src={doc.img} alt={doc.name} className="doc-section-img" />
-        <div className="doc-section-overlay">
-          <h3>{doc.name}</h3>
-          <p>{doc.specialization}</p>
-        </div>
-        <div className="doc-section-icons">
-          <span><i className="fa-solid fa-user-doctor"></i></span>
-          <span><i className="fa-solid fa-stethoscope"></i></span>
-        </div>
+  <div className="home-doc-wrapper">
+     <div className="home-doc-track">
+    {[...doctorsData, ...doctorsData].map((doc, index) => (
+      <div className="home-doc-card" key={index}>
+        <img src={doc.img} alt={doc.name} />
+        <h4>{doc.name}</h4>
+        <p>{doc.specialization}</p>
       </div>
     ))}
   </div>
-</section>
 
+  <button className="doc-arrow left">❮</button>
+  <button className="doc-arrow right">❯</button>
+  </div>
+</section>
 
       {/* Reviews Section */}
       <section className="reviews-section">
@@ -466,9 +508,6 @@ const reviewsData = [
   </a>
 </section>
 
-
-    
-  
       {/* Insurance Section */}
       <section className="slide-section">
         <h2>Insurance Accepted</h2>

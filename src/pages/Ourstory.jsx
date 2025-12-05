@@ -10,6 +10,21 @@ const OurStory = () => {
     text: ""
   });
 
+useEffect(() => {
+  const elements = document.querySelectorAll(
+    ".services-container, .services-list li, .services-right"
+  );
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+}, []);
+
+
   const faqData = [
     {
       question: "Can I transfer my pregnancy care mid-term?",
@@ -94,6 +109,24 @@ const OurStory = () => {
     window.addEventListener("click", handleOutsideClick);
     return () => window.removeEventListener("click", handleOutsideClick);
   }, [storyModal]);
+
+  useEffect(() => {
+  const items = document.querySelectorAll(
+    ".approach-grid div, .approach-bullets li, .approach-descriptions p"
+  );
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show-approach");
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  items.forEach(i => observer.observe(i));
+}, []);
+
 // export default function MaternityClinicSections()
   return (
     <div className="story">

@@ -59,14 +59,18 @@ export default function Footer() {
           <button type="submit">Send Message</button>
         </form>
       </div>
-      <div className="footer-bottom">
-        Copyright © 2025.
-        <a style={{color:"#fff"}} href="https://www.prolifehospitals.com/">Prolife Hospital</a>.
-        All Rights Reserved. || Designed by
-        <a style={{color:"#fff"}} href="https://dgrowmarketing.com/">D-Grow Marketing</a>
-      </div>
+
+      <section className="footer-section">
+        <div className="footer-bottom">
+          Copyright © 2025.
+          <a href="https://www.prolifehospitals.com/">Prolife Hospital</a>.
+          All Rights Reserved. || Designed by
+          <a href="https://dgrowmarketing.com/">D-Grow Marketing</a>
+        </div>
+      </section>
+      
     </footer>
 
-    
+
   );
 }
