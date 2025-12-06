@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Ourstory from "./pages/Ourstory";
 import Ourteam from "./pages/Ourteam";
-// import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import PregnancyMaternity from "./pages/PregnancyMaternity";
 import FetalMedicine from "./pages/FetalMedicine";
@@ -17,7 +16,11 @@ import Ultrasound from "./pages/Ultrasound";
 import SurgerySection from "./pages/SurgerySection";
 import Lab from "./pages/Lab";
 import Gallery from "./pages/Gallery";
+import Videos from "./pages/Videos";
 import PrePregnancy from "./pages/PrePregnancy";
+import Pregnancy from "./pages/Pregnancy";
+import CervicalCerclage from "./pages/CervicalCerclage";
+
 
 
 
@@ -41,7 +44,10 @@ export default function App() {
         <Route path="/surgery-and-procedures" element={<SurgerySection />} />
          <Route path="/lab" element={<Lab />} />
          <Route path="/gallery" element={<Gallery />} />
+         <Route path="/videos" element={<Videos />} />
          <Route path="/pre-pregnancy" element={<PrePregnancy />} />
+         <Route path="/cervicalcerclage" element={<CervicalCerclage />} />
+         <Route path="/pregnancy" element={<Pregnancy />} />
       </Routes>
       <Footer />
     </Router>

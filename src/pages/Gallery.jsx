@@ -1,181 +1,179 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-// GalleryComponent.jsx
-// Single-file React component (Tailwind CSS classes assumed available)
-// Drop this file into your React app and ensure the images live at /img/galary/... or update paths.
-
-export default function GalleryComponent() {
-  const [active, setActive] = useState("parents");
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Image lists (update file names/paths as needed)
-  const parentsImgs = [
-    "/img/galary/g (1).webp",
-    "/img/galary/g (2).webp",
-    "/img/galary/g (3).webp",
-    // add more images up to 20+
+export default function GallerySection() {
+  const happyParents = [
+    "./images/img/galary/g (53).webp",
+    "./images/img/galary/g (54).webp",
+    "./images/img/galary/g (57).webp",
+    "./images/img/galary/g (58).webp",
+    "./images/img/galary/g (59).webp",
   ];
 
-  const functionImgs = [
-    "/img/galary/f (1).webp",
-    "/img/galary/f (2).webp",
-    "/img/galary/f (3).webp",
-    // add more images for inauguration function
+  const inaugurationImages = [
+    "/images/img/galary/g (10).webp",
+    "/images/img/galary/g (1).webp",
+    "./images/img/galary/g (2).webp",
+    "./images/img/galary/g (3).webp",
+    "./images/img/galary/g (4).webp",
+    "./images/img/galary/g (5).webp",
+    "./images/img/galary/g (6).webp",
+    "./images/img/galary/g (7).webp",
+    "./images/img/galary/g (8).webp",
+    "./images/img/galary/g (9).webp",
+    "./images/img/galary/g (11).webp",
+    "./images/img/galary/g (12).webp",
+    "./images/img/galary/g (13).webp",
+    "./images/img/galary/g (14).webp",
+    "./images/img/galary/g (15).webp",
+    "./images/img/galary/g (16).webp",
+    "./images/img/galary/g (17).webp",
+    "./images/img/galary/g (18).webp",
+    "./images/img/galary/g (19).webp",
+    "./images/img/galary/g (20).webp",
+    "./images/img/galary/g (21).webp",
+    "./images/img/galary/g (22).webp",
+    "./images/img/galary/g (23).webp",
+    "./images/img/galary/g (24).webp",
+    "./images/img/galary/g (25).webp",
+    "./images/img/galary/g (26).webp",
+    "./images/img/galary/g (27).webp",
+    "./images/img/galary/g (28).webp",
+    "./images/img/galary/g (29).webp",
+    "./images/img/galary/g (30).webp",
+    "./images/img/galary/g (31).webp",
+    "./images/img/galary/g (32).webp",
+    "./images/img/galary/g (33).webp",
+    "./images/img/galary/g (34).webp",
+    "./images/img/galary/g (35).webp",
+    "./images/img/galary/g (36).webp",
+    "./images/img/galary/g (37).webp",
+    "./images/img/galary/g (38).webp",
+    "./images/img/galary/g (39).webp",
+    "./images/img/galary/g (40).webp",
+    "./images/img/galary/g (41).webp",
+    "./images/img/galary/g (42).webp",
+    "./images/img/galary/g (43).webp",
+    "./images/img/galary/g (44).webp",
+    "./images/img/galary/g (45).webp",
+    "./images/img/galary/g (46).webp",
+    "./images/img/galary/g (47).webp",
+    "./images/img/galary/g (48).webp",
+    "./images/img/galary/g (49).webp",
+    "./images/img/galary/g (50).webp",
+    "./images/img/galary/g (51).webp",
+    "./images/img/galary/g (52).webp",
+    "./images/img/galary/g (53).webp",
+    "./images/img/galary/g (54).webp",
+    "./images/img/galary/g (55).webp",
+    "./images/img/galary/g (56).webp",
+    "./images/img/galary/g (57).webp",
+    "./images/img/galary/g (58).webp",
+    "./images/img/galary/g (59).webp",
+    "./images/img/galary/g (60).webp",
+    "./images/img/galary/g (61).webp",
+    "./images/img/galary/g (62).webp",
+    "./images/img/galary/g (63).webp",
+    "./images/img/galary/g (64).webp",
+    "./images/img/galary/g (65).webp",
+    "./images/img/galary/g (66).webp",
+    "./images/img/galary/g (67).webp",
+    "./images/img/galary/g (68).webp",
+    "./images/img/galary/g (69).webp",
+    "./images/img/galary/g (70).webp",
+    "./images/img/galary/g (71).webp",
+    "./images/img/galary/g (72).webp",
+    "./images/img/galary/g (73).webp",
+    "./images/img/galary/g (74).webp",
+    "./images/img/galary/g (75).webp",
+    "./images/img/galary/g (76).webp",
+    "./images/img/galary/g (77).webp",
+    "./images/img/galary/g (78).webp",
+    "./images/img/galary/g (79).webp",
+    "./images/img/galary/g (80).webp",
+    "./images/img/galary/g (81).webp",
+    "./images/img/galary/g (82).webp",
+    "./images/img/galary/g (83).webp",
+    "./images/img/galary/g (84).webp",
+    "./images/img/galary/g (85).webp",
+    "./images/img/galary/g (86).webp",
+    "./images/img/galary/g (87).webp",
+    "./images/img/galary/g (88).webp",
+    "./images/img/galary/g (89).webp",
+    "./images/img/galary/g (90).webp",
+    "./images/img/galary/g (91).webp",
+    "./images/img/galary/g (92).webp",
+    "./images/img/galary/g (93).webp",
+    "./images/img/galary/g (94).webp",
+    "./images/img/galary/g (95).webp",
+    "./images/img/galary/g (96).webp",
   ];
 
-  const images = active === "parents" ? parentsImgs : functionImgs;
+  const [activeTab, setActiveTab] = useState("happy");
+  const [lightbox, setLightbox] = useState({ open: false, img: "" });
 
-  useEffect(() => {
-    function handleKey(e) {
-      if (!lightboxOpen) return;
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowRight") showNext();
-      if (e.key === "ArrowLeft") showPrev();
-    }
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [lightboxOpen, currentIndex]);
+  const handleImageClick = (img) => {
+    setLightbox({ open: true, img });
+  };
 
-  function openLightbox(index) {
-    setCurrentIndex(index);
-    setLightboxOpen(true);
-    // prevent background scrolling while modal open
-    document.body.style.overflow = "hidden";
-  }
+  const closeLightbox = () => {
+    setLightbox({ open: false, img: "" });
+  };
 
-  function closeLightbox() {
-    setLightboxOpen(false);
-    document.body.style.overflow = "";
-  }
-
-  function showNext() {
-    setCurrentIndex((i) => (i + 1) % images.length);
-  }
-
-  function showPrev() {
-    setCurrentIndex((i) => (i - 1 + images.length) % images.length);
-  }
+  const images = activeTab === "happy" ? happyParents : inaugurationImages;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      {/* Hero banner */}
-      <div className="relative rounded-lg overflow-hidden mb-8">
+    <div>
+      <div className="story-hero-banner relative w-full h-[300px]">
         <img
-          src="/img/g-bg.webp"
+          src="./images/img/g-bg.webp"
           alt="Our Story Banner"
-          className="w-full h-56 object-cover story-hero-image"
+          className="story-hero-image w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-3xl md:text-5xl text-white font-semibold">Gallery</h1>
+        <div className="story-hero-overlay absolute inset-0 bg-black/50 flex items-center justify-center">
+          <h1 className="story-hero-title text-white text-4xl font-bold uppercase">Gallery</h1>
         </div>
       </div>
 
-      <section className="gallery-section">
-        <div className="flex gap-3 mb-6 gallery-header">
+      <section className="gallery-section py-10">
+        <div className="gallery-header flex justify-center gap-4 mb-6">
           <button
-            onClick={() => setActive("parents")}
-            className={`gallery-btn px-4 py-2 rounded-lg transition-shadow shadow-sm focus:outline-none ${
-              active === "parents"
-                ? "bg-blue-600 text-white"
-                : "bg-white text-gray-700 border"
-            }`}
-            aria-pressed={active === "parents"}
+            className={`gallery-btn px-4 py-2 rounded-md border ${activeTab === "happy" ? "bg-red-600 text-white" : "bg-gray-200"}`}
+            onClick={() => setActiveTab("happy")}
           >
             Happy Parents
           </button>
-
           <button
-            onClick={() => setActive("function")}
-            className={`gallery-btn px-4 py-2 rounded-lg transition-shadow shadow-sm focus:outline-none ${
-              active === "function"
-                ? "bg-blue-600 text-white"
-                : "bg-white text-gray-700 border"
-            }`}
-            aria-pressed={active === "function"}
+            className={`gallery-btn px-4 py-2 rounded-md border ${activeTab === "function" ? "bg-red-600 text-white" : "bg-gray-200"}`}
+            onClick={() => setActiveTab("function")}
           >
             Inauguration Function
           </button>
         </div>
 
-        <div
-          id="gallery"
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 gallery-grid"
-        >
-          {images.map((src, idx) => (
-            <div
-              key={src + idx}
-              className="gallery-item relative rounded overflow-hidden bg-gray-50 cursor-pointer"
-            >
-              <img
-                src={src}
-                alt={active === "parents" ? "Happy Parent" : "Function"}
-                className="w-full h-40 object-cover block"
-                onClick={() => openLightbox(idx)}
-                loading="lazy"
-              />
-
-              <div
-                className="zoom-icon absolute right-2 top-2 text-xl bg-white/80 rounded-full p-1"
-                onClick={() => openLightbox(idx)}
-                aria-hidden
-              >
-                🔍
-              </div>
+        <div className="gallery-grid container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {images.map((img, i) => (
+            <div key={i} className="gallery-item relative cursor-pointer group" onClick={() => handleImageClick(img)}>
+              <img src={img} alt="gallery-item" className="w-full h-40 object-cover rounded-md" />
+              <div className="zoom-icon absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-2xl rounded-md transition">🔍</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Lightbox */}
-      {lightboxOpen && (
-        <div
-          id="lightbox"
-          role="dialog"
-          aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
-          onClick={closeLightbox}
-        >
-          <div
-            className="relative max-w-4xl max-h-[90vh] w-full mx-4"
-            onClick={(e) => e.stopPropagation()}
+      {lightbox.open && (
+        <div className="lightbox fixed inset-0 bg-black/80 flex items-center justify-center z-50" onClick={closeLightbox}>
+          <span
+            className="close absolute top-4 right-6 text-white text-4xl cursor-pointer z-50"
+            onClick={closeLightbox}
           >
-            <button
-              className="absolute right-2 top-2 text-white text-3xl leading-none"
-              onClick={closeLightbox}
-              aria-label="Close"
-            >
-              &times;
-            </button>
-
-            <img
-              id="lightbox-img"
-              src={images[currentIndex]}
-              alt="Zoomed"
-              className="w-full h-auto max-h-[80vh] object-contain rounded"
-            />
-
-            {/* Prev / Next */}
-            <button
-              onClick={showPrev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 text-3xl p-2 bg-white/10 rounded-full"
-              aria-label="Previous"
-            >
-              ‹
-            </button>
-            <button
-              onClick={showNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-3xl p-2 bg-white/10 rounded-full"
-              aria-label="Next"
-            >
-              ›
-            </button>
-
-            {/* Caption / index */}
-            <div className="mt-2 text-center text-white text-sm">
-              {currentIndex + 1} / {images.length}
-            </div>
-          </div>
+            &times;
+          </span>
+          <img
+            className="lightbox-img max-w-[70vw] max-h-[70vh] object-contain rounded-lg shadow-xl"
+            src={lightbox.img}
+            alt="Zoomed Image"
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
       )}
     </div>

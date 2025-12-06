@@ -181,10 +181,6 @@ useEffect(() => {
         </div>
       )}
 
-
-  
-
-
       <section className="services-section">
          <h2 className="services-title">Our Services</h2>
         <div className="services-container">

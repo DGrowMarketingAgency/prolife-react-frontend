@@ -552,7 +552,7 @@ const moveSlide = (direction) => {
       <section className="journey-section">
         <div className="journey-container">
           <div className="journey-grid">
-            <div className="journey-image">
+            <div className="journey-image-home">
               <div className="journey-content">
                 <h2>Begin Your Care Journey</h2>
                 <p>Need expert medical attention? Prolife Hospitals provides the specialized care your family deserves.</p>

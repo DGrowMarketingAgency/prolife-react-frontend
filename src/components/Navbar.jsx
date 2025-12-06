@@ -39,7 +39,8 @@ export default function Navbar() {
                 <li className="sub-dropdown">
                   <a href="#">Obstetrics ▸</a>
                   <ul className="sub-menu">
-                    <li><Link to="/pre-pregnancy">Pre-pregnancy</Link></li>
+                    <li><Link to="/pre-pregnancy">Pre-pregnancy </Link></li>
+                    <li><Link to="/pregnancy"> Pregnancy Care</Link></li>
                     <li className="inner-dropdown">
                       <a href="#">Your Pregnancy ▸</a>
                       <ul className="inner-menu">
@@ -71,7 +72,8 @@ export default function Navbar() {
                 <li><Link to="/fetal-medicine">Fetal Medicine</Link></li>
                 <li><Link to="/ultrasound">Ultrasound</Link></li>
                 <li><Link to="/surgery-and-procedures">Surgery & Procedures</Link></li>
-                <li><Link to="/lab">Lab</Link></li>
+                <li><Link to="/cervical-encirclage"> Cervical Encirclage </Link></li>
+                <li><Link to="/lab">Lab </Link></li>
               </ul>
             </li>
 

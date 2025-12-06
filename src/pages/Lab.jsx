@@ -302,7 +302,7 @@ const Lab = () => {
 
       {/* Lab Section */}
       <h2 className="fetal-section-title">Comprehensive Laboratory Services at Prolife Hospital</h2>
-      <section className="fetal-section">
+    <section className="fetal-section">
         <div className="fetal-section-container">
           <div className="fetal-section-content">
             <p className="fetal-section-text">
