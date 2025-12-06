@@ -19,12 +19,7 @@ import Gallery from "./pages/Gallery";
 import Videos from "./pages/Videos";
 import PrePregnancy from "./pages/PrePregnancy";
 import Pregnancy from "./pages/Pregnancy";
-import CervicalCerclage from "./pages/CervicalCerclage";
-
-
-
-
-
+import CervicalEncirclage from "./pages/CervicalEncirclage";
 
 
 
@@ -46,7 +41,7 @@ export default function App() {
          <Route path="/gallery" element={<Gallery />} />
          <Route path="/videos" element={<Videos />} />
          <Route path="/pre-pregnancy" element={<PrePregnancy />} />
-         <Route path="/cervicalcerclage" element={<CervicalCerclage />} />
+         <Route path="/cervical-encirclage" element={<CervicalEncirclage />} />
          <Route path="/pregnancy" element={<Pregnancy />} />
       </Routes>
       <Footer />
