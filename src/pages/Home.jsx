@@ -98,9 +98,9 @@ const [modalData, setModalData] = useState({ img: "", title: "", text: "" });
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-
   const doctorsData = [
   { img: "./images/img/d1.png", name: "DR.NELLAIYAPPAN", specialization: "Orthopedics" },
+  { img: "./images/img/d11.png", name: "Dr.THAMARAI",  specialization: "Gynecology" },
   { img: "./images/img/d2.png", name: "DR.KUMANAN", specialization: "Oncology" },
   { img: "./images/img/d3.png", name: "DR.HARI PRAKASH", specialization: "Anesthesiology" },
   { img: "./images/img/d4.png", name: "DR.BALA", specialization: "Oncology" },
@@ -110,7 +110,6 @@ const [modalData, setModalData] = useState({ img: "", title: "", text: "" });
   { img: "./images/img/d8.png", name: "DR.NITHYA PRIYAN", specialization: "Anesthesiology" },
   { img: "./images/img/d9.png", name: "DR.SOORIYA.S", specialization: "Dermatology" },
   { img: "./images/img/d10.png", name: "DR.SUJITHA.R", specialization: "Gynecology" },
-  { img: "./images/img/d11.png", name: "Dr.Thamarai", specialization: "Gynecology" },
   { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
   { img: "./images/img/d13.png", name: "Dr.Varshini", specialization: "Gynecology" },
   { img: "./images/img/d14.png", name: "DR.PAVITHRA", specialization: "Duty Medical Officer" },
@@ -258,7 +257,7 @@ const moveSlide = (direction) => {
 
 
       <section className="gynaecology-section">
-        <h2 className="section-title">What Sets Prolife Apart</h2>
+        <h2 className="section-title-doc">What Sets Prolife Apart</h2>
         <p className="section-subtitle">Medical Excellence Meets Patient Comfort</p>
 
         <div className="gynaecology-container">
@@ -286,18 +285,18 @@ const moveSlide = (direction) => {
                 </p>
               </div>
             </div>
-
-            <div className="feature-box">
+             <div className="feature-box">
               <div className="icon-circle">
-                <i className="fa-solid fa-baby"></i>
+                <i className="fa-solid fa-clock"></i>
               </div>
               <div>
-                <h3>Comprehensive Pregnancy Services</h3>
+                <h3>24-Hour Pharmacy Access</h3>
                 <p>
-                  From initial ultrasounds to postpartum follow-ups, our coordinated team approach means consistent care throughout your pregnancy.
+                  Always-available medication and banking services eliminate logistical stress during your hospital visit.
                 </p>
               </div>
             </div>
+            
           </div>
 
           <div className="doctor-image">
@@ -316,19 +315,17 @@ const moveSlide = (direction) => {
                 </p>
               </div>
             </div>
-
-            <div className="feature-box">
+<div className="feature-box">
               <div className="icon-circle">
-                <i className="fa-solid fa-clock"></i>
+                <i className="fa-solid fa-baby"></i>
               </div>
               <div>
-                <h3>24-Hour Pharmacy Access</h3>
+                <h3>Comprehensive Pregnancy Services</h3>
                 <p>
-                  Always-available medication and banking services eliminate logistical stress during your hospital visit.
+                  From initial ultrasounds to postpartum follow-ups, our coordinated team approach means consistent care throughout your pregnancy.
                 </p>
               </div>
             </div>
-
             <div className="feature-box">
               <div className="icon-circle">
                 <i className="fa-solid fa-hand-holding-heart"></i>
@@ -359,7 +356,7 @@ const moveSlide = (direction) => {
                 <h4>Labour Preparation Guide</h4>
                 <p>Practical information about delivery day—what to expect, what to pack, and how to stay calm.</p>
                 <button>
-                  <a style={{ color: "#fff", textDecoration: "none" }} href="./Pre-pregnancy.html">
+                  <a style={{ color: "#fff", textDecoration: "none" }} href="./PrePregnancy.jsx">
                     View More
                   </a>
                 </button>
@@ -499,7 +496,7 @@ const moveSlide = (direction) => {
   </div>
 
   <a
-    href="https://g.page/r/CS9733eotKhCEBM/review"
+    href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews"
     target="_blank"
     rel="noreferrer"
     className="see-more-btn"
@@ -556,7 +553,10 @@ const moveSlide = (direction) => {
               <div className="journey-content">
                 <h2>Begin Your Care Journey</h2>
                 <p>Need expert medical attention? Prolife Hospitals provides the specialized care your family deserves.</p>
-                <button className="appointment-btn">Book Appointment</button>
+               {/* <button href="/contact" className="appointment-btn"> Book Appointment </button> */}
+               <a href="/contact" className="master-section-btn">
+              Book Appointment →
+              </a>
               </div>
             </div>
           </div>

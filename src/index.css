@@ -34,6 +34,7 @@ body {
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 40px;
 }
 
 .story-card {
@@ -108,7 +109,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(50%);
+  filter: brightness(95%);
 }
 
 .story-hero-overlay {
@@ -124,18 +125,21 @@ body {
 }
 
 .story-hero-title {
-  color:  white;
+  color:  var(--secondary-color);
   font-size: 2.8rem;
   font-weight: 600;
   text-align: center;
+  padding: 18px 20px;
+  background-color: #056839;
+  border-radius: 40px;
 }
 
 /* ===== CONTENT SECTION ===== */
 .story-hero-content {
   max-width: 1200px;
   margin: 20px auto;
-  margin-top: 60px;
-  padding: 0 20px;
+  margin-top: 30px;
+  padding: 0 10px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -145,12 +149,22 @@ body {
 
 .story-hero-text {
   flex: 1 1 600px;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 26px;
+  line-height: 1.2;
   color:var(--primary-color);
 }
+.story-hero-text-about {
+  flex: 1 1 600px;
+  font-size: 26px;
+  line-height: 1.2;
+  color:var(--primary-color);
+}
+.story-hero-text-about h2{
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
 .home-2 h2{
-  padding-bottom: 35px;
+  padding: 48px 0px 30px 0px;
 }
 
 .story-hero-section .story-sub-text {
@@ -177,6 +191,7 @@ body {
   font-size: 1rem;
   line-height: 1.8;
   color: #444;
+  text-align: justify;
 }
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
@@ -617,9 +632,9 @@ nav ul li a:hover {
 
 
 .specialization-title {
-  font-size: 2rem;
+  font-size: 36px;
   color: var(--primary-color);
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -730,22 +745,22 @@ nav ul li a:hover {
 
 .gynaecology-section {
   text-align: center;
-  padding: 60px 20px;
+  padding: 60px 0px;
   background: #fff;
 }
 
-.section-title {
-  color: #165F34;
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin-bottom: 8px;
+.section-title-doc {
+  font-size: 40px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .section-subtitle {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .gynaecology-container {
@@ -763,16 +778,16 @@ nav ul li a:hover {
 
 .gynaecology-column {
   flex: 1;
-  min-width: 280px;
+  min-width: 330px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 .feature-box {
   display: flex;
-  align-items: center;
-  gap: 15px;
+  align-items :start;
+  gap: 10px;
   text-align: left;
 }
 
@@ -790,16 +805,18 @@ nav ul li a:hover {
 }
 
 .feature-box h3 {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: #000;
   font-weight: 600;
+ 
 }
 
 .feature-box p {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   color: #555;
   margin-top: 4px;
-  line-height: 1.4;
+  line-height: 1.2;
+  text-align: justify;
 }
 .left .feature-box {
   flex-direction: row-reverse;
@@ -890,14 +907,14 @@ nav ul li a:hover {
 }
 
 .section-two-subtitle {
-  color: #165F34;
+  color: var(--primary-color);
   font-weight: 600;
-  font-size: 30px;
+  font-size: 42px;
 }
 
 .section-two-title {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
   margin: 10px 0 20px;
   color: #000;
 }
@@ -907,6 +924,7 @@ nav ul li a:hover {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 10px;
+  text-align: justify;
 }
 .section-two-desc:nth-child(5){
   padding-bottom: 40px;
@@ -916,7 +934,7 @@ nav ul li a:hover {
   background-color: #165F34;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   padding: 12px 24px;
   font-weight: 600;
   cursor: pointer;
@@ -925,7 +943,8 @@ nav ul li a:hover {
 }
 
 .section-two-btn:hover {
-  background-color: var(--whatsapp-green-hover);
+  background-color: var(--secondary-color);
+  color: #000;
 }
 
 @media (max-width: 768px) {
@@ -950,7 +969,7 @@ nav ul li a:hover {
 
 
 .master-section {
-  background: linear-gradient(to right, #165F34, #ffffff);
+  background: linear-gradient(to right, #165F34, #165F34);
   padding: 60px 10% 0px 10%;
   display: flex;
   justify-content: center;
@@ -977,7 +996,7 @@ nav ul li a:hover {
 .master-section-title {
   font-size: 42px;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -1004,8 +1023,8 @@ nav ul li a:hover {
 }
 
 .master-section-btn:hover {
-  background: #056839;
-  color: #fff;
+  background: var(--secondary-color);
+  color: #000;
 }
 
 .master-section-image {
@@ -1100,14 +1119,13 @@ nav ul li a:hover {
   color:  #165F34;
   font-weight: 600;
   letter-spacing: 1px;
-  font-size: 30px;
+  font-size: 36px;
   padding-bottom: 20px;
 }
 
 .section-three-desc {
   color: #222;
   font-size: 16px;
-  font-weight: 600;
   margin-top: 5px;
   padding-bottom: 7px;
 }
@@ -1207,18 +1225,19 @@ nav ul li a:hover {
   max-width: 1400px;
   margin: auto;
   text-align: center;
-  padding: 50px 16px;
+  padding: 20px 16px;
   overflow: hidden;
 }
 
 .home-doc-title {
   color: #165F34;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .home-doc-subtitle {
-  font-size: 1rem;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 18px;
 }
@@ -1226,7 +1245,6 @@ nav ul li a:hover {
 .home-doc-text {
   font-size: 0.95rem;
   font-weight: 500;
-  max-width: 700px;
   margin: 0 auto 30px;
 }
 
@@ -1265,7 +1283,7 @@ nav ul li a:hover {
 
 .home-doc-card img {
   width: 100%;
-  height: 300px;
+  height: 350px;
   object-fit: cover;
   border-radius: 16px;
 }
@@ -2026,6 +2044,7 @@ footer::before {
   font-size: 2rem;
   display: block;
   margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
 .info-box h4 {
@@ -3971,7 +3990,7 @@ footer::before {
   font-weight: 600;
   text-align: center;
   color: var(--primary-color);
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 /* Main Container */
@@ -4044,7 +4063,7 @@ footer::before {
 /* Headings */
 .services-heading {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: #000;
   margin-bottom: 2px;
 }
@@ -4054,6 +4073,9 @@ footer::before {
   line-height: 1.7;
   opacity: .95;
   padding-bottom: 30px;
+}
+.trust-card .trust-icon{
+  color: var(--primary-color);
 }
 
 /* Scroll Animation */
@@ -4097,8 +4119,8 @@ footer::before {
 }
 
 .trust-title {
-  font-size: 34px;
-  font-weight: 800;
+  font-size: 36px;
+  font-weight: 600;
   margin-bottom: 50px;
   color: var(--primary-color);
 }
@@ -4195,13 +4217,13 @@ footer::before {
 .results-section {
   position: relative;
   background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437ff?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-  padding: 80px 20px;
+  padding: 40px 20px;
   color: #fff;
 }
 
 /* Overlay for better readability */
 .results-overlay {
-  background: rgba(47, 136, 20, 0.685);
+  background:var(--primary-color);
   padding: 60px 20px;
 }
 
@@ -4230,7 +4252,7 @@ footer::before {
   flex: 1 1 180px;
   max-width: 220px;
   padding: 25px 20px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(211, 214, 10, 0.76);
   border-radius: 12px;
   text-align: center;
   backdrop-filter: blur(6px);
@@ -4240,17 +4262,18 @@ footer::before {
 /* Hover effect */
 .results-card:hover {
   transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 24px rgba(32, 32, 14, 0.822);
 }
 
 .results-card h3 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 12px;
+  color: var(--primary-color);
 }
 
 .results-card p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -4546,7 +4569,7 @@ footer::before {
   color: #fff;
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   
 }
 .journey-content p b{
@@ -7208,10 +7231,10 @@ footer::before {
 
 .services-title {
   text-align: center;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
   color: #064b3f;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   animation: fadeDown 0.7s ease-in-out;
 }
 

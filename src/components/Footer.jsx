@@ -14,7 +14,7 @@ export default function Footer() {
           Mugalivakkam, Chennai, Tamil Nadu 600125
         </p>
         <p><strong>Call Us:</strong> 8220305887 / 7305737051 / 9790896211</p>
-        <p><strong>Mail:</strong> prolifehospitalg@gmail.com</p>
+        <p><strong>Mail:</strong> prolifehospitalog@gmail.com</p>
 
         <div className="social-icons">
           <a href="https://www.facebook.com/prolifeogclinic"><i className="fa-brands fa-facebook-f"></i></a>

@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <>
-      
+
 
       {/* Hero Banner */}
       <div className="story-hero-banner">
@@ -62,27 +62,28 @@ const Contact = () => {
               <button type="submit" className="submit-btn">Send Now</button>
             </form>
           </div>
-
+          
           <div className="contact-right">
             <div className="info-box">
-              <span>📞</span>
+              <span><i className="fa-solid fa-phone fa-lg"></i></span>
               <h4>Phone Number</h4>
               <p>8220305887 / 7305737051 / 9790869211</p>
             </div>
 
             <div className="info-box">
-              <span>📧</span>
+              <span><i className="fa-solid fa-envelope fa-lg"></i></span>
               <h4>Email Address</h4>
               <p>prolifehospitalog@gmail.com</p>
             </div>
 
             <div className="info-box">
-              <span>📍</span>
+              <span><i className="fa-solid fa-location-dot fa-lg"></i></span>
               <h4>Our Location</h4>
               <p>IAS Colony, Manapakkam - Chennai</p>
               <p>Mugalivakkam - Chennai</p>
             </div>
           </div>
+
         </div>
       </section>
 

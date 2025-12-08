@@ -5,6 +5,7 @@ const Ourteam = () => {
   const [expanded, setExpanded] = useState(false);
   
   const doctorsData = [
+      { img: "./images/img/d11.png", name: "Dr.THAMARAI", specialization: "Gynecology" },
   { img: "./images/img/d1.png", name: "DR.NELLAIYAPPAN", specialization: "Orthopedics" },
   { img: "./images/img/d2.png", name: "DR.KUMANAN", specialization: "Oncology" },
   { img: "./images/img/d3.png", name: "DR.HARI PRAKASH", specialization: "Anesthesiology" },
@@ -15,7 +16,6 @@ const Ourteam = () => {
   { img: "./images/img/d8.png", name: "DR.NITHYA PRIYAN", specialization: "Anesthesiology" },
   { img: "./images/img/d9.png", name: "DR.SOORIYA.S", specialization: "Dermatology" },
   { img: "./images/img/d10.png", name: "DR.SUJITHA.R", specialization: "Gynecology" },
-  { img: "./images/img/d11.png", name: "Dr.Thamarai", specialization: "Gynecology" },
   { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
   { img: "./images/img/d13.png", name: "Dr.Varshini", specialization: "Gynecology" },
   { img: "./images/img/d14.png", name: "DR.PAVITHRA", specialization: "Duty Medical Officer" },

@@ -136,13 +136,13 @@ useEffect(() => {
         <div className="story-hero-banner">
           <img src="./images/img/download (1).webp" alt="Our Story Banner" className="story-hero-image" />
           <div className="story-hero-overlay">
-            <h1 className="story-hero-title">ABOUT PROLIFE HOSPITAL</h1>
+            <h1 className="story-hero-title">About Prolife Hospital</h1>
           </div>
           <p>Trusted Women's Healthcare in Chennai Since 2013</p>
         </div>
 
         <div className="story-hero-content">
-          <div className="story-hero-text">
+          <div className="story-hero-text-about">
             <h2>OUR STORY:</h2>
             <p>Prolife Hospitals began in December 2013 with a focused mission: deliver specialized women's healthcare to families across West Chennai.</p>
             <p>Today, we're recognized as one of the best maternity hospitals in Chennai, serving women from Manapakkam, Mugalivakkam, Porur, Ramapuram, and nearby IT corridors.</p>
@@ -150,7 +150,7 @@ useEffect(() => {
           </div>
 
           <div className="story-hero-image-container">
-            <img src="./images/img/story-sec.png" alt="Prolife Hospital" className="story-hero-sideimage" />
+            <img src="./images/img/Prolife-office.png" alt="Prolife Hospital" className="story-hero-sideimage" />
           </div>
         </div>
 
@@ -229,67 +229,74 @@ useEffect(() => {
       </section>
 
       <section className="trust-section">
-        <div className="trust-container">
-          <h2 className="trust-title">Why Families Trust Us</h2>
+  <div className="trust-container">
+    <h2 className="trust-title">Why Families Trust Us</h2>
 
-          <div className="trust-grid">
-            {/* 1 */}
-            <div className="trust-card">
-              <div className="trust-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/4105/4105438.png" alt="High-Risk Pregnancy" />
-              </div>
-              <h3>High-Risk Pregnancy Expertise</h3>
-              <p>
-                Our maternal-fetal specialists manage diabetes, hypertension, multiple pregnancies, and complex cases with coordinated tertiary care access.
-              </p>
-            </div>
-
-            {/* 2 */}
-            <div className="trust-card">
-              <div className="trust-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" alt="Technology" />
-              </div>
-              <h3>Advanced Diagnostic Technology</h3>
-              <p>
-                High-clarity ultrasound and expert imaging ensures early detection and accurate monitoring throughout pregnancy.
-              </p>
-            </div>
-
-            {/* 3 */}
-            <div className="trust-card">
-              <div className="trust-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966508.png" alt="Experience" />
-              </div>
-              <h3>Two Decades of Experience</h3>
-              <p>
-                Thousands of successful deliveries and fertility cases backed by skilled clinical judgment for safer outcomes.
-              </p>
-            </div>
-
-            {/* 4 */}
-            <div className="trust-card">
-              <div className="trust-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/4206/4206325.png" alt="Physiotherapy" />
-              </div>
-              <h3>Physiotherapy &amp; Recovery Support</h3>
-              <p>
-                Targeted therapy for pain relief, mobility, and postpartum recovery to help mothers heal the right way.
-              </p>
-            </div>
-
-            {/* 5 */}
-            <div className="trust-card">
-              <div className="trust-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/685/685352.png" alt="Lactation Support" />
-              </div>
-              <h3>Lactation &amp; Midwifery Services</h3>
-              <p>
-                Compassionate support for breastfeeding comfort, supply issues, and practical guidance for new mothers.
-              </p>
-            </div>
-          </div>
+    <div className="trust-grid">
+      {/* 1 */}
+      <div className="trust-card">
+        <div className="trust-icon">
+          <i className="fa-solid fa-baby fa-3x"></i>
         </div>
-      </section>
+        <h3>High-Risk Pregnancy Expertise</h3>
+        <p>
+          Our maternal-fetal specialists manage diabetes, hypertension,
+          multiple pregnancies, and complex cases with coordinated tertiary
+          care access.
+        </p>
+      </div>
+
+      {/* 2 */}
+      <div className="trust-card">
+        <div className="trust-icon">
+          <i className="fa-solid fa-microscope fa-3x"></i>
+        </div>
+        <h3>Advanced Diagnostic Technology</h3>
+        <p>
+          High-clarity ultrasound and expert imaging ensures early detection
+          and accurate monitoring throughout pregnancy.
+        </p>
+      </div>
+
+      {/* 3 */}
+      <div className="trust-card">
+        <div className="trust-icon">
+          <i className="fa-solid fa-award fa-3x"></i>
+        </div>
+        <h3>Two Decades of Experience</h3>
+        <p>
+          Thousands of successful deliveries and fertility cases backed by
+          skilled clinical judgment for safer outcomes.
+        </p>
+      </div>
+
+      {/* 4 */}
+      <div className="trust-card">
+        <div className="trust-icon">
+          <i className="fa-solid fa-hand-holding-medical fa-3x"></i>
+        </div>
+        <h3>Physiotherapy & Recovery Support</h3>
+        <p>
+          Targeted therapy for pain relief, mobility, and postpartum recovery
+          to help mothers heal the right way.
+        </p>
+      </div>
+
+      {/* 5 */}
+      <div className="trust-card">
+        <div className="trust-icon">
+          <i className="fa-solid fa-person-breastfeeding fa-3x"></i>
+        </div>
+        <h3>Lactation & Midwifery Services</h3>
+        <p>
+          Compassionate support for breastfeeding comfort, supply issues,
+          and practical guidance for new mothers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="results-section">
         <div className="results-overlay">
@@ -298,23 +305,23 @@ useEffect(() => {
             <div className="results-grid">
               <div className="results-card">
                 <h3>10,000+</h3>
-                <p>Women treated across all services</p>
+                <p>Women Treated Across All Services</p>
               </div>
               <div className="results-card">
                 <h3>2,500+</h3>
-                <p>Successful deliveries</p>
+                <p>Successful Deliveries</p>
               </div>
               <div className="results-card">
                 <h3>Hundreds</h3>
-                <p>Of couples achieved pregnancy through fertility care</p>
+                <p>Of Couples Achieved Pregnancy Through Fertility Care</p>
               </div>
               <div className="results-card">
                 <h3>24/7</h3>
-                <p>Emergency obstetric services</p>
+                <p>Emergency Obstetric Services</p>
               </div>
               <div className="results-card">
                 <h3>98%</h3>
-                <p>Patient satisfaction</p>
+                <p>Patient Satisfaction</p>
               </div>
             </div>
           </div>
