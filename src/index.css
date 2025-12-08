@@ -6127,9 +6127,10 @@ footer::before {
 
 .plan-title {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.3;
   margin-bottom: 18px;
+  margin-top: 25px;
   color: #165F34;
 }
 
@@ -6143,6 +6144,7 @@ footer::before {
   color: #444;
   line-height: 1.6;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .plan-btn {
@@ -7778,5 +7780,183 @@ footer::before {
   .wp-cta-btn {
     font-size: 16px;
     width: 100%;
+  }
+}
+
+/*  */
+
+/* 🌟 Premium Medical UI | Related Services */
+
+.rs-section {
+  padding: 90px 20px;
+  background: linear-gradient(180deg, #f4fff8 0%, #ffffff 100%);
+}
+
+.rs-wrap {
+  max-width: 1300px;
+  margin: auto;
+  text-align: center;
+}
+
+.rs-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #064e3b;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  animation: fadeSlideDown 0.8s ease both;
+}
+
+.rs-sub {
+  font-size: 1.08rem;
+  max-width: 620px;
+  margin: 0 auto 55px;
+  color: #4b5563;
+  animation: fadeIn 1.1s ease both;
+}
+
+/* ⭐ Grid */
+.rs-grid {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+}
+
+/* Make exactly 3 on first row, 2 on second row */
+.rs-card:nth-child(n+4) {
+  grid-column: span 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .rs-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .rs-grid {
+    grid-template-columns: repeat(1, minmax(260px, 1fr));
+  }
+}
+
+
+/* 🎯 Card */
+.rs-card {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 20px;
+  text-align: left;
+  border: 1px solid rgba(6, 78, 59, 0.12);
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.06);
+  transition: 0.35s ease;
+  position: relative;
+  opacity: 0;
+  animation: slideUp 0.9s ease forwards;
+}
+
+/* 👇 stagger each card animation */
+.rs-card:nth-child(1) { animation-delay: 0.1s; }
+.rs-card:nth-child(2) { animation-delay: 0.2s; }
+.rs-card:nth-child(3) { animation-delay: 0.3s; }
+.rs-card:nth-child(4) { animation-delay: 0.4s; }
+.rs-card:nth-child(5) { animation-delay: 0.5s; }
+
+.rs-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  border-color: #10b981;
+  box-shadow: 0 16px 35px rgba(16, 185, 129, 0.22);
+}
+
+/* Icon */
+.rs-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  font-size: 2rem;
+  background: #d1fae5;
+  color: #047857;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: 0.35s ease;
+}
+
+.rs-card:hover .rs-icon {
+  background: #10b981;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Head + Desc */
+.rs-head {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #064e3b;
+  margin-bottom: 8px;
+}
+
+.rs-desc {
+  color: #52525b;
+  font-size: 0.97rem;
+  line-height: 1.45rem;
+  min-height: 65px;
+}
+
+/* CTA */
+.rs-cta {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #047857;
+  font-weight: 700;
+  font-size: 0.97rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 0;
+}
+
+.rs-cta:hover {
+  color: #064e3b;
+  transform: translateX(8px);
+}
+
+/* ✨ Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 📱 Mobile Support */
+@media (max-width: 480px) {
+  .rs-title { font-size: 1.9rem; }
+  .rs-card { padding: 22px; }
+  .rs-icon {
+    width: 55px; height: 55px;
+    font-size: 1.7rem;
   }
 }

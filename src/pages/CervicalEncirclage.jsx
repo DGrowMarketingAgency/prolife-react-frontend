@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLeaf,
@@ -10,10 +10,71 @@ import {
   faClipboardCheck,
   faAppleWhole,
   faCalendarDays,
+  faUserMd,
+  faBaby,
+  faHeartbeat,
+  faMicroscope,
+  faStethoscope,
 } from "@fortawesome/free-solid-svg-icons";
 import { FaCheckCircle } from "react-icons/fa";
 
 const PrePregnancy = () => {
+
+const SERVICES = [
+  {
+    title: "High-Risk Pregnancy Management",
+    desc:
+      "Comprehensive care for pregnancies with complications, medical conditions, or previous pregnancy losses.",
+    icon: faUserMd,
+  },
+  {
+    title: "Pre-Pregnancy Counselling",
+    desc:
+      "Plan your pregnancy with risk assessment and health optimization before conceiving.",
+    icon: faBaby,
+  },
+  {
+    title: "Pregnancy Care",
+    desc:
+      "Complete antenatal care with regular monitoring, scans, and delivery support.",
+    icon: faHeartbeat,
+  },
+  {
+    title: "Fertility Treatment",
+    desc:
+      "If you're struggling to conceive, our fertility specialists help you start your family.",
+    icon: faMicroscope,
+  },
+  {
+    title: "PCOS Management",
+    desc:
+      "Treatment for polycystic ovary syndrome affecting pregnancy and hormonal health.",
+    icon: faStethoscope,
+  },
+];
+
+const containerRef = useRef(null);
+
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { root: null, rootMargin: "0px", threshold: 0.12 }
+    );
+
+    const cards = node.querySelectorAll(".rs-card");
+    cards.forEach((c) => observer.observe(c));
+
+    return () => observer.disconnect();
+  }, []);
 
   const features = [
     {
@@ -316,7 +377,7 @@ const PrePregnancy = () => {
           <h2 className="choose-title">
             Why Choose Prolife <span>Prolife</span> for Cervical Cerclage in Chennai?
           </h2>
-
+        
           <ul className="choose-list">
             <li>
               <strong>Specialists Who've Done This Hundreds of Times</strong>
@@ -628,15 +689,49 @@ const PrePregnancy = () => {
         ))}
       </section>
 
+<section className="rs-section" aria-labelledby="rs-heading">
+      <div className="rs-wrap">
+        <h2 id="rs-heading" className="rs-title">
+          Related Services You Might Need
+        </h2>
+
+        <p className="rs-sub">
+          Care pathways and treatments tailored for maternal & newborn health.
+        </p>
+
+        <div className="rs-grid" ref={containerRef}>
+          {SERVICES.map((s, i) => (
+            <article key={i} className={`rs-card rs-card-${i % 5}`}>
+              <div className="rs-icon">
+                <FontAwesomeIcon icon={s.icon} />
+              </div>
+
+              <div className="rs-body">
+                <h3 className="rs-head">{s.title}</h3>
+                <p className="rs-desc">{s.desc}</p>
+              </div>
+
+              <button
+                className="rs-cta"
+                aria-label={`Learn more about ${s.title}`}
+              >
+                Learn More →
+              </button>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
 
       <section className="lab-hero">
         <div className="lab-content">
           <h1>
-            Prolife Hospital —  Best pregnancy care in Chennai for your growing family.
+            Prolife Hospital —  Cervical cerclage specialists protecting your pregnancy.
+
           </h1>
 
           <button className="lab-btn">
-            Start Your Pregnancy Journey Today →
+             Protect Your Pregnancy Today →
           </button>
         </div>
       </section>
