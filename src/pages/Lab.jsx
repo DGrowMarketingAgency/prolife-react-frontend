@@ -138,6 +138,11 @@ const Lab = () => {
       description:
         "First trimester screening with complete blood work\nGestational diabetes testing (Glucose tolerance test)\nAnemia and iron deficiency screening\nInfection screening (TORCH panel, Hepatitis, HIV)\nThird trimester readiness tests",
     },
+     {
+      title: "Nutritional Deficiency Tests",
+      description:
+        "Vitamin D levels\nVitamin B12 and folate\nCalcium, magnesium, and iron studies",
+    },
     {
       title: "Diabetes Management Tests",
       description:
@@ -163,40 +168,38 @@ const Lab = () => {
       description:
         "ANA profile for autoimmune conditions\nRheumatoid factor and CRP\nIgE levels and allergy-specific tests",
     },
-    {
-      title: "Nutritional Deficiency Tests",
-      description:
-        "Vitamin D levels\nVitamin B12 and folate\nCalcium, magnesium, and iron studies",
-    },
+   
   ];
 
   const steps = [
-    {
-      icon: "📋",
-      title: "Step 1: Test Booking",
-      desc: "Walk into any Prolife Hospital, call, book online or request home sample collection.",
-    },
-    {
-      icon: "💉",
-      title: "Step 2: Sample Collection",
-      desc: "Trained phlebotomists ensure comfortable sample collection with special pediatric care.",
-    },
-    {
-      icon: "🧪",
-      title: "Step 3: Laboratory Processing",
-      desc: "Advanced analyzers + strict quality control for accurate results.",
-    },
-    {
-      icon: "📄",
-      title: "Step 4: Report Generation",
-      desc: "Pathologists verify all results & reports are easy to interpret.",
-    },
-    {
-      icon: "📩",
-      title: "Step 5: Report Delivery",
-      desc: "Printed or digital reports via email/portal — shared with doctor if authorized.",
-    },
-  ];
+  {
+    icon: <i className="fa-solid fa-file-medical fa-2x"></i>,
+    title: "Step 1: Test Booking",
+    desc: "Walk into any Prolife Hospital, call, book online or request home sample collection.",
+  },
+  {
+    icon: <i className="fa-solid fa-syringe fa-2x"></i>,
+    title: "Step 2: Sample Collection",
+    desc: "Trained phlebotomists ensure comfortable sample collection with special pediatric care.",
+  },
+  {
+    icon: <i className="fa-solid fa-vial fa-2x"></i>,
+    title: "Step 3: Laboratory Processing",
+    desc: "Advanced analyzers + strict quality control for accurate results.",
+  },
+  {
+    icon: <i className="fa-solid fa-file-waveform fa-2x"></i>,
+    title: "Step 4: Report Generation",
+    desc: "Pathologists verify all results & reports are easy to interpret.",
+  },
+  {
+    icon: <i className="fa-solid fa-paper-plane fa-2x"></i>,
+    title: "Step 5: Report Delivery",
+    desc: "Printed or digital reports via email/portal — shared with doctor if authorized.",
+  },
+];
+
+
   const imgSrc =
     "/images/img/d7.png";
 
@@ -261,29 +264,30 @@ const Lab = () => {
   {
     title: "Pregnancy Care",
     desc: "Comprehensive antenatal monitoring with regular lab testing throughout your pregnancy.",
-    icon: "👶",
+    icon: <i className="fa-solid fa-baby fa-2x"></i>,
   },
   {
     title: "Fertility Treatment",
     desc: "Complete fertility evaluation including hormonal testing and semen analysis.",
-    icon: "❤️",
+    icon: <i className="fa-solid fa-heart-pulse fa-2x"></i>,
   },
   {
     title: "PCOS Management",
     desc: "Hormonal panels and metabolic screening for PCOS treatment.",
-    icon: "🧬",
+    icon: <i className="fa-solid fa-dna fa-2x"></i>,
   },
   {
     title: "Thyroid Treatment",
     desc: "Complete thyroid workup with follow-up testing to monitor treatment effectiveness.",
-    icon: "🦋",
+    icon: <i className="fa-solid fa-ribbon fa-2x"></i>,
   },
   {
     title: "General Medicine",
     desc: "Health checkups and diagnostic support for illness and chronic conditions.",
-    icon: "🩺",
+    icon: <i className="fa-solid fa-stethoscope fa-2x"></i>,
   }
 ];
+
 
   return (
     <div>
@@ -301,10 +305,10 @@ const Lab = () => {
       </div>
 
       {/* Lab Section */}
-      <h2 className="fetal-section-title">Comprehensive Laboratory Services at Prolife Hospital</h2>
     <section className="fetal-section">
         <div className="fetal-section-container">
           <div className="fetal-section-content">
+            <h2 className="fetal-section-title">Comprehensive Laboratory Services at Prolife Hospital</h2>
             <p className="fetal-section-text">
               Your health decisions start with accurate answers. Whether it's a routine checkup, pregnancy monitoring, or investigating symptoms that won't go away—reliable test results change everything.
             </p>
@@ -465,24 +469,24 @@ const Lab = () => {
           </div>
         </div>
       </section>
+<section className="lab-section">
+  <h2 className="lab-title">How Our Lab Works</h2>
 
-      <section className="lab-section">
-        <h2 className="lab-title">How Our Lab Works</h2>
+  <div className="lab-grid">
+    {steps.map((s, i) => (
+      <div key={i} className="lab-card">
+        <div className="icon">{s.icon}</div>
+        <h3>{s.title}</h3>
+        <p>{s.desc}</p>
+      </div>
+    ))}
+  </div>
 
-        <div className="lab-grid">
-          {steps.map((s, i) => (
-            <div key={i} className="lab-card">
-              <div className="icon">{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-            </div>
-          ))}
-        </div>
+  <div className="btn-wrapper">
+    <button className="cta-btn">Book Your Test Today →</button>
+  </div>
+</section>
 
-        <div className="btn-wrapper">
-          <button className="cta-btn">Book Your Test Today →</button>
-        </div>
-      </section>
 
       <section className="expert-wrapper">
         <div className="expert-container">
@@ -598,67 +602,79 @@ const Lab = () => {
           <button>View Complete Test Menu</button>
         </div>
       </section>
+<section className="patient-info-section">
+  <h2 className="patient-info-title">Patient Information</h2>
 
-      <section className="patient-info-section">
-        <h2 className="patient-info-title">Patient Information</h2>
+  <div className="info-blocks">
+    
+    {/* Preparing */}
+    <div className="info-card fade-info">
+      <div className="info-icon">
+        <i className="fa-solid fa-apple-whole fa-2x"></i>
+      </div>
+      <div>
+        <h3>Preparing for Your Lab Test</h3>
+        <ul>
+          <li><strong>Fasting Tests:</strong> No food for 10–12 hours before sample collection.</li>
+          <li><strong>Non-Fasting Tests:</strong> Can be done anytime.</li>
+          <li><strong>Medication:</strong> Continue unless doctor advises otherwise.</li>
+          <li><strong>Timing:</strong> Morning samples preferred for hormone tests.</li>
+        </ul>
+      </div>
+    </div>
 
-        <div className="info-blocks">
+    {/* What to bring */}
+    <div className="info-card fade-info">
+      <div className="info-icon">
+        <i className="fa-solid fa-file-lines fa-2x"></i>
+      </div>
+      <div>
+        <h3>What to Bring</h3>
+        <ul>
+          <li>Doctor's prescription or lab request form</li>
+          <li>Valid ID proof</li>
+          <li>Previous reports (if available)</li>
+        </ul>
+      </div>
+    </div>
 
-          <div className="info-card fade-info">
-            <div className="info-icon">🍎</div>
-            <div>
-              <h3>Preparing for Your Lab Test</h3>
-              <ul>
-                <li><strong>Fasting Tests:</strong> No food for 10–12 hours before sample collection.</li>
-                <li><strong>Non-Fasting Tests:</strong> Can be done anytime.</li>
-                <li><strong>Medication:</strong> Continue unless doctor advises otherwise.</li>
-                <li><strong>Timing:</strong> Morning samples preferred for hormone tests.</li>
-              </ul>
-            </div>
-          </div>
+    {/* Report understanding */}
+    <div className="info-card fade-info">
+      <div className="info-icon">
+        <i className="fa-solid fa-chart-column fa-2x"></i>
+      </div>
+      <div>
+        <h3>Understanding Your Report</h3>
+        <ul>
+          <li>Reference ranges help interpret medical values</li>
+          <li>Values outside range don’t always mean disease</li>
+          <li>Always consult your doctor for interpretation</li>
+        </ul>
+      </div>
+    </div>
 
-          <div className="info-card fade-info">
-            <div className="info-icon">📝</div>
-            <div>
-              <h3>What to Bring</h3>
-              <ul>
-                <li>Doctor's prescription or lab request form</li>
-                <li>Valid ID proof</li>
-                <li>Previous reports (if available)</li>
-              </ul>
-            </div>
-          </div>
+    {/* Report validity */}
+    <div className="info-card fade-info">
+      <div className="info-icon">
+        <i className="fa-solid fa-calendar-days fa-2x"></i>
+      </div>
+      <div>
+        <h3>Report Validity</h3>
+        <ul>
+          <li>Blood Group: Permanent</li>
+          <li>Lipid Profile: Valid 3–6 months</li>
+          <li>Infection Screening: Valid 1–3 months</li>
+        </ul>
+      </div>
+    </div>
 
-          <div className="info-card fade-info">
-            <div className="info-icon">📊</div>
-            <div>
-              <h3>Understanding Your Report</h3>
-              <ul>
-                <li>Reference ranges help interpret medical values</li>
-                <li>Values outside range don’t always mean disease</li>
-                <li>Always consult your doctor for interpretation</li>
-              </ul>
-            </div>
-          </div>
+  </div>
 
-          <div className="info-card fade-info">
-            <div className="info-icon">📅</div>
-            <div>
-              <h3>Report Validity</h3>
-              <ul>
-                <li>Blood Group: Permanent</li>
-                <li>Lipid Profile: Valid 3–6 months</li>
-                <li>Infection Screening: Valid 1–3 months</li>
-              </ul>
-            </div>
-          </div>
+  <div className="patient-cta">
+    <button>Need Help Understanding Your Report? Consult Our Doctors</button>
+  </div>
+</section>
 
-        </div>
-
-        <div className="patient-cta">
-          <button>Need Help Understanding Your Report? Consult Our Doctors</button>
-        </div>
-      </section>
 
       <section className="patient-testimonials-section">
         <h2 className="testimonials-title">What Our Patients Say</h2>

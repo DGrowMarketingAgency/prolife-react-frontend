@@ -2223,8 +2223,8 @@ footer::before {
 .fetal-section-title {
   color: var(--primary-color);
   font-size: 2.3rem;
-  font-weight: 700;
-  text-align: center;
+  font-weight: 600;
+  text-align: justify;
   margin-top: 30px;
 }
 
@@ -5163,6 +5163,10 @@ footer::before {
   justify-content: center;
   gap: 28px;
 }
+.lab-grid .icon {
+  color: black;
+  font-size: medium;
+}
 
 /* CARD STYLE */
 .lab-card {
@@ -5653,13 +5657,14 @@ footer::before {
 }
 
 .info-icon {
-  font-size: 30px;
+  font-size: 20px;
   background: var(--secondary-color);
-  color: #fff;
+  color: #000;
   padding: 12px;
   border-radius: 12px;
   min-width: 50px;
   text-align: center;
+  padding-right: 10px;
 }
 
 .info-card h3 {
@@ -6013,8 +6018,9 @@ footer::before {
 }
 
 .service-icon {
-  font-size: 40px;
+  font-size: 20px;
   margin-bottom: 15px;
+  color: var(--primary-color);
 }
 
 .related-card h3 {

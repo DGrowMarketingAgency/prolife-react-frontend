@@ -34,7 +34,7 @@ export default function Navbar() {
 
             <li className="dropdown">
               <a href="#">Services ▾</a>
-              <ul className="dropdown-menu">
+              {/* <ul className="dropdown-menu">
                 <li><Link to="/pregnancy-maternity">Pregnancy / Maternity</Link></li>
                 <li className="sub-dropdown">
                   <a href="#">Obstetrics ▸</a>
@@ -54,7 +54,6 @@ export default function Navbar() {
                     <li><Link to="/post-natal-care">Post-Natal Care</Link></li>
                   </ul>
                 </li>
-
                 <li className="sub-dropdown">
                   <a href="#">Gynecology ▸</a>
                   <ul className="sub-menu">
@@ -68,14 +67,14 @@ export default function Navbar() {
                     <li><Link to="/menopause">Menopause</Link></li>
                   </ul>
                 </li>
-
                 <li><Link to="/fetal-medicine">Fetal Medicine</Link></li>
                 <li><Link to="/ultrasound">Ultrasound</Link></li>
                 <li><Link to="/surgery-and-procedures">Surgery & Procedures</Link></li>
                 <li><Link to="/cervical-encirclage"> Cervical Encirclage </Link></li>
                 <li><Link to="/lab">Lab </Link></li>
-              </ul>
+              </ul> */}
             </li>
+
 
             <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/videos">Videos</Link></li>
