@@ -2222,7 +2222,7 @@ footer::before {
 
 .fetal-section-title {
   color: var(--primary-color);
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 600;
   text-align: justify;
   margin-top: 30px;
@@ -4843,8 +4843,7 @@ footer::before {
 /* Title */
 .why-choose-title {
   font-size: 36px;
-  font-weight: 700;
-  font-family: "Playfair Display", serif;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 65px;
 }
@@ -4937,7 +4936,7 @@ footer::before {
   padding: 15px 34px;
   font-size: 17px;
   border: none;
-  border-radius: 14px;
+  border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
   transition: 0.3s;
@@ -5013,8 +5012,7 @@ footer::before {
 /* Title */
 .diagnostic-title {
   font-size: 38px;
-  font-weight: 700;
-  font-family: "Playfair Display", serif;
+  font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 50px;
   animation: fadeDown 0.7s ease forwards;
@@ -5093,13 +5091,13 @@ footer::before {
   font-size: 17px;
   font-weight: 600;
   border: none;
-  border-radius: 12px;
+  border-radius: 25px;
   cursor: pointer;
   transition: 0.25s ease-in-out;
 }
 
 .diagnostic-cta button:hover {
-  background: var(--whatsapp-green-hover);
+  background: var(--secondary-color);
   color: #000;
   transform: translateY(-3px);
 }
@@ -5148,11 +5146,10 @@ footer::before {
 }
 
 .lab-title {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
   margin-bottom: 50px;
   color:var(--primary-color);
-  font-family: "Playfair Display", serif;
   margin: auto;
 }
 
@@ -5215,7 +5212,7 @@ footer::before {
   font-size: 19px;
   padding: 14px 34px;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
   transition: .3s;
@@ -5292,15 +5289,15 @@ footer::before {
 }
 
 .expert-content h2 {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
 
 .expert-content h3 {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 5px;
   
@@ -5324,6 +5321,7 @@ footer::before {
   list-style: none;
   padding: 0;
   margin-bottom: 28px;
+  text-align:justify;
 }
 
 .highlights li {
@@ -5344,7 +5342,7 @@ footer::before {
   color: #fff;
   padding: 14px 26px;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
@@ -5493,7 +5491,7 @@ footer::before {
   color: #fff;
   font-size: 17px;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
   margin-top: 8px;
@@ -5540,9 +5538,8 @@ footer::before {
 }
 
 .frequent-tests-title {
-  font-size: 36px;
-  font-weight: 700;
-  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 50px;
 }
@@ -5593,7 +5590,7 @@ footer::before {
   padding: 15px 34px;
   border: none;
   font-size: 17px;
-  border-radius: 14px;
+  border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
   transition: 0.3s ease;
@@ -5623,8 +5620,7 @@ footer::before {
 
 .patient-info-title {
   font-size: 38px;
-  font-weight: 700;
-  font-family: "Playfair Display", serif;
+  font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 60px;
 }
@@ -5664,7 +5660,7 @@ footer::before {
   border-radius: 12px;
   min-width: 50px;
   text-align: center;
-  padding-right: 10px;
+  margin-right: 40px;
 }
 
 .info-card h3 {
@@ -5702,7 +5698,7 @@ footer::before {
   background: var(--primary-color);
   color: #fff;
   padding: 16px 34px;
-  border-radius: 14px;
+  border-radius: 25px;
   font-size: 17px;
   font-weight: 600;
   border: none;
@@ -5753,8 +5749,7 @@ footer::before {
 
 .testimonials-title {
   font-size: 38px;
-  font-weight: 700;
-  font-family: "Playfair Display", serif;
+  font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 60px;
 }
@@ -5805,7 +5800,7 @@ footer::before {
 .testimonial-author {
   font-size: 15px;
   font-weight: 600;
-  color: var(--whatsapp-green);
+  color: var(--primary-color);
 }
 
 /* CTA */
@@ -5817,7 +5812,7 @@ footer::before {
   color: white;
   padding: 15px 35px;
   font-size: 17px;
-  border-radius: 14px;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -5861,7 +5856,7 @@ footer::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 10%;
+  padding: 50px 6%;
   background-color: #f9f9f9;
   gap: 40px;
   flex-wrap: wrap;
@@ -5870,6 +5865,7 @@ footer::before {
 .lab-content {
   flex: 1;
   min-width: 300px;
+  
 }
 
 .lab-content h2 {
@@ -5880,9 +5876,10 @@ footer::before {
 
 .lab-content p {
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.5;
   margin-bottom: 15px;
   color: #333;
+  text-align: justify;
 }
 
 .cta-button {
@@ -5950,7 +5947,7 @@ footer::before {
   background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
@@ -6082,7 +6079,7 @@ footer::before {
   background: var(--primary-color);
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   cursor: pointer;
   transition: 0.35s ease;
   box-shadow: 0 6px 12px rgba(0, 100, 0, 0.25);
@@ -7573,5 +7570,213 @@ footer::before {
 @media (max-width: 480px) {
   .doctor-img img {
     height: 220px;
+  }
+}
+
+
+/*  */
+
+.cerclage-team-section {
+  background: #f8faff;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  color:var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.team-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #e6eef7;
+  box-shadow: 0 4px 15px rgba(0, 60, 120, 0.08);
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 60, 120, 0.15);
+}
+
+.doctor-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.designation {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--whatsapp-green);
+  margin-bottom: 10px;
+}
+
+.doctor-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.center-btn {
+  margin-top: 40px;
+}
+
+.cta-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: var(--secondary-color);
+  color: #000;
+}
+
+/*  */
+/* Section Styling */
+.why-prolife-section {
+  background: linear-gradient(135deg, #d8ffdf, #fff9d8);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.wp-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Title */
+.wp-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid */
+.wp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+/* Cards */
+.wp-item {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d551f;
+  text-align: left;
+  border-left: 6px solid #ffc800;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wp-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* CTA Button */
+.wp-cta-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 32px;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 35px;
+  transition: all 0.3s ease;
+}
+
+.wp-cta-btn:hover {
+  background: var(--secondary-color);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideLeft 1s ease forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideRight 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .wp-title {
+    font-size: 22px;
+  }
+
+  .wp-item {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .wp-cta-btn {
+    font-size: 16px;
+    width: 100%;
   }
 }

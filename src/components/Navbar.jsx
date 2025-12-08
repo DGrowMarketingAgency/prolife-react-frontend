@@ -34,7 +34,7 @@ export default function Navbar() {
 
             <li className="dropdown">
               <a href="#">Services ▾</a>
-              {/* <ul className="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li><Link to="/pregnancy-maternity">Pregnancy / Maternity</Link></li>
                 <li className="sub-dropdown">
                   <a href="#">Obstetrics ▸</a>
@@ -72,7 +72,7 @@ export default function Navbar() {
                 <li><Link to="/surgery-and-procedures">Surgery & Procedures</Link></li>
                 <li><Link to="/cervical-encirclage"> Cervical Encirclage </Link></li>
                 <li><Link to="/lab">Lab </Link></li>
-              </ul> */}
+              </ul>
             </li>
 
 

@@ -602,6 +602,7 @@ const Lab = () => {
           <button>View Complete Test Menu</button>
         </div>
       </section>
+      
 <section className="patient-info-section">
   <h2 className="patient-info-title">Patient Information</h2>
 
