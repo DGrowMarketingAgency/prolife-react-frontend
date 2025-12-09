@@ -54,7 +54,7 @@ export default function Navbar() {
                     <li><Link to="/post-natal-care">Post-Natal Care</Link></li> */}
                   </ul>
                 </li>
-                {/* <li className="sub-dropdown">
+                <li className="sub-dropdown">
                   <a href="#">Preterm Labour ▸</a>
                   <ul className="sub-menu">
                     <li><Link to="/highrisk"> High-risk Pregnancy Management</Link></li>
@@ -64,8 +64,8 @@ export default function Navbar() {
                     <li><Link to="/preterm"> Preterm Labour Management</Link></li>
                     <li><Link to="/obstetric"> Obstetric Emergencies</Link></li>
                   </ul>
-                </li> */}
-                {/* <li className="sub-dropdown">
+                </li>
+                <li className="sub-dropdown">
                   <a href="#">Deliveries ▸</a>
                   <ul className="sub-menu">
                     <li><Link to="/vaginal"> Normal Vaginal Delivery (NVD)</Link></li>
@@ -78,7 +78,7 @@ export default function Navbar() {
                     <li><Link to="/sterilisation">Elective LSCS + Sterilisation</Link></li>
                   </ul>
                 </li>
-                <li><Link to="/fetal-medicine">Fetal Medicine</Link></li>
+                {/* <li><Link to="/fetal-medicine">Fetal Medicine</Link></li>
                 <li><Link to="/ultrasound">Ultrasound</Link></li>
                 <li><Link to="/surgery-and-procedures">Surgery & Procedures</Link></li> */}
                 <li><Link to="/cervical-encirclage"> Cervical Encirclage </Link></li>

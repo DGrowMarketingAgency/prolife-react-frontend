@@ -171,7 +171,7 @@ const Lab = () => {
    
   ];
 
-  const steps = [
+   const steps = [
   {
     icon: <i className="fa-solid fa-file-medical fa-2x"></i>,
     title: "Step 1: Test Booking",
@@ -198,6 +198,7 @@ const Lab = () => {
     desc: "Printed or digital reports via email/portal — shared with doctor if authorized.",
   },
 ];
+
 
 
   const imgSrc =

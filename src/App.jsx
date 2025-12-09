@@ -21,6 +21,8 @@ import PrePregnancy from "./pages/PrePregnancy";
 import Pregnancy from "./pages/Pregnancy";
 import CervicalEncirclage from "./pages/CervicalEncirclage";
 import Highrisk from "./pages/Highrisk";
+import Gdm from "./pages/Gdm";
+import Hypertension from "./pages/Hypertension";
 
 
 
@@ -44,6 +46,8 @@ export default function App() {
          <Route path="/cervical-encirclage" element={<CervicalEncirclage />} />
          <Route path="/pregnancy" element={<Pregnancy />} />
          <Route path="/highrisk" element={<Highrisk />} />
+         <Route path="/gdm" element={<Gdm />} />
+         <Route path="/hypertension" element={<Hypertension />} />
       </Routes>
       <Footer />
     </Router>

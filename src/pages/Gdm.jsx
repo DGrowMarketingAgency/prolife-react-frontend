@@ -18,37 +18,37 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FaCheckCircle } from "react-icons/fa";
 
-const highrisk = () => {
+const Gdm = () => {
 
   const SERVICES = [
     {
-      title: "Maternity Care",
+      title: "High-Risk Pregnancy Care",
       desc:
-        "Comprehensive care for pregnancies with complications, medical conditions, or previous pregnancy losses.",
+        " Comprehensive management for pregnancies with complications beyond GDM, including hypertension, multiple pregnancies, and preterm labor risks.",
       icon: faUserMd,
     },
     {
-      title: "Fertility Treatment",
+      title: "Prenatal Screening & Diagnostics:",
       desc:
-        "Plan your pregnancy with risk assessment and health optimization before conceiving.",
+        "Advanced testing including anomaly scans, NIPT, and fetal echocardiography to monitor your baby's development.",
       icon: faBaby,
     },
     {
-      title: "Gynecology Care",
+      title: "Nutritional Counseling for Pregnancy:",
       desc:
-        "Complete antenatal care with regular monitoring, scans, and delivery support.",
+        "Personalized dietary guidance for all pregnant women, not just those with GDM, ensuring optimal nutrition for mother and baby.",
       icon: faHeartbeat,
     },
     {
-      title: "Pediatric Care",
+      title: "Postpartum Care & Recovery:",
       desc:
-        "If you're struggling to conceive, our fertility specialists help you start your family.",
+        "Support after delivery, including lactation counseling, postpartum depression screening, and family planning guidance.",
       icon: faMicroscope,
     },
     {
-      title: "Laparoscopic Surgery",
+      title: "Preconception Counseling:",
       desc:
-        "Treatment for polycystic ovary syndrome affecting pregnancy and hormonal health.",
+        " If you're planning pregnancy and have diabetes or other health conditions, we help you optimize your health before conceiving.",
       icon: faStethoscope,
     },
   ];
@@ -73,6 +73,20 @@ const highrisk = () => {
     const cards = node.querySelectorAll(".rs-card");
     cards.forEach((c) => observer.observe(c));
 
+    return () => observer.disconnect();
+  }, []);
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) el.classList.add("gdm-visible");
+      },
+      { threshold: 0.2 }
+    );
+    if (el) observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
@@ -217,21 +231,21 @@ const highrisk = () => {
 
   const reviewsData = [
     {
-      text: "I received impeccable care from Dr. Thamarai ram and Prolife Hospital for the delivery of my twins. Dr listens to us and respects our choices and is very empathetic and respectful. Great Doctor with a great personality. We felt that we are in the safe hands.",
-      name: " -Mohammed",
-      avatar: "M",
+      text: "I was devastated when diagnosed with gestational diabetes at 26 weeks. The team at Prolife, especially Dr. Sujitha, made everything manageable. The dietitian helped me enjoy my favorite foods in balanced portions, and the frequent check-ups gave me peace of mind. My baby girl was born healthy at 38 weeks, and my sugar levels returned to normal after delivery",
+      name: "  Priya S., Manapakkam",
+      avatar: "P",
       rating: 5
     },
     {
-      text: "It's was a beautiful and pleasant experience and journey with Prolife Hospital and Dr.Thamarai Ram during planning for pregnancy, pregnancy, delivery and post delivery. Warmth, hospitality and helping tendency during delivery time makesour life easy and to be appreciated. Hope and trust this will be continued in years to come.",
-      name: "-Sreya",
-      avatar: "S",
+      text: "As a working professional, I was worried about managing diabetes during pregnancy. Prolife's flexible appointment scheduling and clear instructions made it possible. Dr. Varshini was always available for my questions, even after clinic hours. I'm grateful for their support throughout my journey",
+      name: "Lakshmi R., Porur",
+      avatar: "L",
       rating: 5
     },
     {
-      text: "We had our second delivery in prolife. We had safe delivery experience by Dr. tamarai, Dr. Sujitha, Dr Iswarya . We had excellent support and care by ward staff and nurses.They take care of my wife and daughter very well. Rooms also neat and clean",
-      name: "-Selva Ganesh",
-      avatar: "S",
+      text: "After having GDM in my first pregnancy, I was anxious about my second. Dr. Thamarai's proactive approach, starting early screening and monitoring, helped me stay ahead of any issues. Her reassurance and expertise made all the difference.",
+      name: "Divya M., Mogappair",
+      avatar: "D",
       rating: 5
     }
   ];
@@ -239,45 +253,49 @@ const highrisk = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
   const faqData = [
     {
-      question: "What makes a pregnancy high risk?",
+      question: " What causes gestational diabetes?",
       answer:
-        " Any condition that increases the chance of complications for the mother or baby."
+        "  Pregnancy hormones can reduce your body’s insulin efficiency. If your pancreas can’t keep up, blood sugar rises. It’s not caused by eating sugar and not your fault."
     },
     {
-      question: "How often will I need follow-ups?",
+      question: "Will GDM harm my baby?",
       answer:
-        "Weekly, biweekly, or more frequent—depending on your condition."
+        " With proper treatment, most babies are completely healthy. Problems occur only when sugars stay high for long periods."
     },
     {
-      question: "Can I have a normal delivery?",
+      question: "Do I need insulin?",
       answer:
-        "Yes, many high-risk mothers still have vaginal births. Decisions vary based on safety."
+        " Many women manage GDM with diet and exercise. Insulin is recommended only when sugar levels stay above target despite lifestyle changes."
     },
     {
-      question: "Will my baby require special care?",
+      question: " Can I have a normal delivery?",
       answer:
-        "Only if medically necessary. Our NICU team is available onsite."
+        "Yes. Most women with well-controlled GDM can have a vaginal birth. Your doctor will monitor baby’s growth and suggest the safest delivery plan."
     },
     {
-      question: "What if complications occur suddenly?",
+      question: " Will diabetes continue after delivery?",
       answer:
-        "Our obstetric emergency team operates 24/7."
+        " Usually GDM goes away after birth. But it increases your risk of future Type 2 diabetes, so postpartum testing and lifestyle care are important."
     },
     {
-      question: "Is treatment covered by insurance?",
+      question: " What should my sugar levels be?",
       answer:
-        " Coverage depends on your policy; our team helps verify details."
+        "  Typical targets - Fasting: below 95 mg/dL.  1 hour after food: below 140 mg/dL.  2 hours after food: below 120 mg/dL"
     },
     {
-      question: "How do you monitor my baby?",
+      question: "How often should I check sugar?",
       answer:
-        "Ultrasounds, Doppler, fetal heart monitoring, and growth scans."
+        " Usually 4 times a day—fasting and after each meal."
+    },
+    {
+      question: "What foods should I avoid?",
+      answer:
+        " Limit white rice, maida items, sugary drinks, and sweets. Focus on balanced meals and portion control. Our dietitian helps create a plan you can follow easily."
     },
   ];
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
-
 
   const steps = [
     {
@@ -307,7 +325,6 @@ const highrisk = () => {
     },
   ];
 
-
   const supports = [
     'Dr. Hari Prakash, Dr. Shalini, Dr. Nithya Priyan – Experienced anesthesiologists',
     'Dr. Uma Maheshwari – Senior pediatrician providing newborn care',
@@ -324,7 +341,7 @@ const highrisk = () => {
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">High-Risk Pregnancy Management</h1>
+          <h1 className="story-hero-title">Gestational Diabetes Mellitus Treatment in Chennai</h1>
         </div>
       </div>
 
@@ -334,19 +351,18 @@ const highrisk = () => {
 
           <div className="plan-left">
             <h2 className="plan-title">
-              Advanced Care for Safe, <br /> <span> Confident & Well-Monitored Pregnancies</span>
+              Expert GDM Care for a Healthy <br /> <span> Pregnancy at Prolife Hospital </span>
             </h2>
 
             <p className="plan-description">
-              A high-risk pregnancy needs more than routine care—it needs close monitoring, timely decisions, and specialists who understand every detail of maternal and fetal health.
-              At Prolife Hospitals, Manapakkam, we support mothers facing complex pregnancies with expert medical oversight and advanced diagnostic technology.
+             Gestational diabetes can feel overwhelming, especially when you're already navigating the changes of pregnancy. At Prolife Hospital, our gestational diabetes care in Chennai ensures that you receive the right guidance, close monitoring, and expert medical support throughout your pregnancy.
             </p>
             <p className="plan-description">
-              Our goal is simple: <b> protect your health and guide your pregnancy safely to delivery.</b>
+              Whether you are newly diagnosed or referred to us for pregnancy diabetes treatment in Chennai, our multidisciplinary team—gynecologists, endocrinologists, dietitians, and fetal medicine specialists—works together to safeguard both mother and baby.
             </p>
 
             <a href="/contact" className="plan-btn">
-              Book Your High-Risk Pregnancy Consultation →
+              Book Your Appointment →
             </a>
           </div>
 
@@ -370,18 +386,17 @@ const highrisk = () => {
           </div>
           <div className="plan-left">
             <h2 className="plan-title">
-              What Is High-Risk Pregnancy Management?
+              What is Gestational Diabetes Mellitus (GDM)?
             </h2>
 
             <p className="plan-description">
-              High-risk pregnancy management refers to specialized medical care for mothers who face increased chances of complications during pregnancy.
+            Gestational Diabetes Mellitus is a condition where blood sugar levels rise during pregnancy due to hormonal changes. It usually develops between 24–28 weeks and affects 7–10% of pregnant women in India.
 
             </p>
-            <p className="plan-description"> This may be due to medical conditions, previous pregnancy issues, or concerns that appear during routine tests.
-              Your care plan includes regular monitoring, targeted treatments, advanced fetal assessments, and coordinated care across specialties when needed.
+            <p className="plan-description">Gestational Diabetes Mellitus is a condition where blood sugar levels rise during pregnancy due to hormonal changes. It usually develops between 24–28 weeks and affects 7–10% of pregnant women in India.
             </p>
             <a href="/contact" className="plan-btn">
-              Learn More About Our Maternity Services →
+              Learn About GDM Care →
             </a>
           </div>
         </div>
@@ -390,50 +405,46 @@ const highrisk = () => {
       <section className="choose-prolife">
         <div className="choose-content">
           <h2 className="choose-title">
-            Why Choose <span> Prolife </span> for High-Risk Pregnancy Care?
+            Why Choose Prolife Hospital for  <span> Gestational Diabetes Mellitus </span> Treatment in Chennai?
           </h2>
           <ul className="choose-list">
             <li>
-              <strong>Experienced High-Risk Obstetricians</strong>
+              <strong>Doctors Who Truly Understand Motherhood + Diabetes</strong>
               <p>
-                Our gynecologists and maternal-fetal experts routinely manage complex pregnancies—from hypertension to diabetes, thyroid issues, placenta complications, and more.
+                Our experienced gynecologists have years of expertise in managing high-risk pregnancies, especially those complicated by gestational diabetes. We take time to understand your lifestyle, diet, daily routines, and emotional well-being before planning treatment.
               </p>
             </li>
             <li>
-              <strong>Focused Risk Assessment</strong>
+              <strong>Comprehensive Monitoring & Testing</strong>
               <p>
-                Every mother receives a personalized evaluation based on medical history, pre-existing conditions, previous pregnancies, and current pregnancy concerns.
-              </p>
-            </li>
-
-            <li>
-              <strong>Advanced Fetal Monitoring</strong>
-              <p>
-                Our high-risk pregnancy treatment and monitoring includes:
-                ● Detailed ultrasounds & 4D imaging
-                ● Doppler studies
-                ● Fetal heart rate monitoring
-                ● Growth scans
-                ● Screening for genetic or structural concerns
-              </p>
-            </li>
-            <li>
-              <strong>Multi-Specialty Support</strong>
-              <p>
-                When your pregnancy needs extra attention, our specialists in cardiology, endocrinology, nephrology, and neonatology work together for complete care.
+               From screening tests to advanced fetal monitoring, every part of your health and your baby’s development is tracked closely.
               </p>
             </li>
 
             <li>
-              <strong>24/7 Emergency Obstetric Support</strong>
+              <strong>Personalised Nutrition & Lifestyle Plans</strong>
               <p>
-                Complications can arise without warning. Our emergency team, NICU, anesthesiologists, and OTs are always prepared.
+                Our dietitians prepare simple, practical meal plans tailored to South Indian eating habits—idli, dosa, rice, millet, snacks, fruits, and more—so you can enjoy your meals without compromising sugar control.
+              </p>
+            </li>
+            <li>
+              <strong>High-Risk Pregnancy Expertise</strong>
+              <p>
+                We specialise in all conditions associated with GDM:
+High blood pressure, PCOS, Thyroid disorders, History of large babies, Obesity, Previous GDM
+              </p>
+            </li>
+
+            <li>
+              <strong>State-of-the-Art Facilities</strong>
+              <p>
+                4D ultrasound, in-house lab, fetal heart monitoring, 24/7 emergency care — everything needed for safe, accurate, and timely care.
               </p>
             </li>
           </ul>
 
           <a href="/reviews" className="choose-btn">
-            Read Patient Stories →
+           Read What Mothers Say →
           </a>
         </div>
 
@@ -446,187 +457,143 @@ const highrisk = () => {
         </div>
       </section>
 
-      <section className="services-section">
-        <h2 className="services-title">What We Evaluate During Your High-Risk Pregnancy Care</h2>
+       <section className="services-section">
+  <h2 className="services-title">Our Gestational Diabetes Care Services</h2>
 
-        <div className="services-grid">
-          <div className="service-card">
-            <h3>Your Complete Medical Background</h3>
-            <p> We review:
-              <li>Diabetes, hypertension, heart or kidney disorders</li>
-              <li>Autoimmune or thyroid conditions</li>
-              <li>Medications and their pregnancy safety</li>
-              <li>Weight, nutritional status, and metabolic health</li>
-            </p>
-          </div>
+  <div className="services-grid">
+    {/* Regular Antenatal Checkups */}
+    <div className="service-card">
+      <h3>GDM Screening & Diagnosis (24–28 Weeks)</h3>
+      <ul>
+        <li>Oral Glucose Tolerance Test (OGTT)</li>
+        <li>Early screening for high-risk women</li>
+        <li>Clear explanation of results and next steps</li>
+        <li>Guidance on sugar monitoring at home</li>
+      </ul>
+    </div>
 
-          <div className="service-card">
-            <h3>Pregnancy-Specific Risks</h3>
-            <p> We assess and manage:
-              <li>Preeclampsia</li>
-              <li>Gestational diabetes</li>
-              <li>Placenta previa or low-lying placenta</li>
-              <li>Preterm labor signs</li>
-              <li>Reduced fetal growth</li>
-              <li>Multiple pregnancies (twins, triplets)</li>
-            </p>
-          </div>
+    {/* Ultrasound Scans */}
+    <div className="service-card">
+      <h3>Blood Sugar Management</h3>
+      <p>Most women can control sugar levels with:</p>
+      <ul>
+        <li>Individualized diet plans</li>
+        <li>Low-glycemic food guidance</li>
+        <li>Safe pregnancy exercises</li>
+        <li>Carb-balanced meal planning</li>
+      </ul>
+      <p>If required, our doctors prescribe insulin safely and monitor doses regularly.</p>
+    </div>
 
-          <div className="service-card">
-            <h3>Fetal Health Monitoring</h3>
-            <p> Regular scans and tests allow us to track:
-              <li>Baby’s growth rate</li>
-              <li>Blood flow patterns</li>
-              <li>Placental function</li>
-              <li>Heart rate and movement</li>
-              <li>Risks of congenital or chromosomal issues</li>
-            </p>
-          </div>
-        </div>
+    {/* Complications */}
+    <div className="service-card">
+      <h3>Antenatal Checkups (More Frequent for GDM Moms)</h3>
+      <ul>
+        <li>Blood pressure tracking</li>
+        <li>Urine tests</li>
+        <li>Weight monitoring</li>
+        <li>Fetal heart rate checks</li>
+        <li>Sugar-log review</li>
+        <li>Emotional and lifestyle support</li>
+      </ul>
+      <p> <b>Visit schedule: </b>
+ Every 2 weeks → then weekly after 36 weeks</p>
+    </div>
 
-        <div className="service-cta">
-          <a href="/contact" className="cta-btn">
-            Not sure if your pregnancy needs special attention? Connect with us  →
-          </a>
-        </div>
-      </section>
+    {/* Childbirth Preparation */}
+    <div className="service-card">
+      <h3>Baby’s Growth & Wellness Monitoring</h3>
+      <ul>
+        <li>Growth scans</li>
+        <li>Amniotic fluid assessment</li>
+        <li>Doppler studies</li>
+        <li>Non-stress tests</li>
+        <li>Placental health checks</li>
+      </ul>
+      
+    </div>
+
+    {/* Delivery Support */}
+    <div className="service-card">
+      <h3>Delivery Planning</h3>
+      <p><b>Well-controlled GDM often allows:</b> </p>
+      <ul>
+        <li>Full-term pregnancy</li>
+        <li>Normal delivery</li>
+      </ul>
+      <p>If the baby is larger or complications arise, we discuss cesarean options with complete transparency.</p>
+    </div>
+
+    {/* Postpartum Care */}
+    <div className="service-card">
+      <h3>Postpartum Sugar Assessment</h3>
+      <ul>
+        <li>Monitoring blood sugar after delivery</li>
+        <li>Breastfeeding guidance</li>
+        <li>Postpartum OGTT (6–12 weeks)</li>
+        <li>Long-term diabetes prevention plan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div className="service-cta">
+    <a href="/contact" className="cta-btn">
+      Not sure where to start? Schedule a Consultation →
+    </a>
+  </div>
+</section>
 
 
-      <section className="lab-section">
-        <h2 className="lab-title">Your Personalized High-Risk Pregnancy Care Plan</h2>
+ <section className="gdm-section" ref={sectionRef}>
+      <div className="gdm-inner">
+        <h2 className="gdm-title">
+          Who Needs Pregnancy Diabetes Treatment in Chennai?
+        </h2>
+        <p className="gdm-subtitle">
+          You may need expert GDM care if you:
+        </p>
 
-        <div className="lab-grid">
-          {steps.map((s, i) => (
-            <div key={i} className="lab-card">
-              <div className="icon">{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-            </div>
+        <ul className="gdm-list">
+          {[
+            "Have been diagnosed with gestational diabetes",
+            "Had GDM previously",
+            "Have a family history of diabetes",
+            "Have PCOS",
+            "Are above 30 years",
+            "Delivered a baby over 4 kg earlier",
+            "Are overweight (BMI > 25)",
+            "Experience excessive thirst, tiredness, or frequent urination",
+          ].map((item, i) => (
+            <li key={i} className="gdm-item">
+              <span className="gdm-check">✓</span>
+              {item}
+            </li>
           ))}
+        </ul>
+
+        <div className="gdm-note">
+          Early screening = Safer pregnancy.<br />
+          Speak to our specialists today.
         </div>
 
-        <div className="btn-wrapper">
-          <button className="cta-btn">Book Your Appointment  →</button>
-        </div>
-      </section>
+        <a href="#booking" className="gdm-btn">
+          Book Appointment →
+        </a>
+      </div>
+    </section>
 
-      <section className="timeline-section">
-        <h2 className="timeline-title">How High-Risk Pregnancy Management Helps</h2>
-
-        <div className="timeline-container">
-
-          <div className="timeline-card">
-            <div className="timeline-header">
-              <span className="trimester-tag">Prevents Complications</span>
-            </div>
-            <p>Early detection reduces risks of:</p>
-            <ul>
-              <li>Preeclampsia</li>
-              <li>Preterm birth</li>
-              <li>Baby’s growth restrictions</li>
-              <li>Emergency C-sections</li>
-            </ul>
-          </div>
-
-          <div className="timeline-card">
-            <div className="timeline-header">
-              <span className="trimester-tag">Protects Mothers with Existing Conditions</span>
-            </div>
-            <p>Medical issues like diabetes or hypertension stay well-controlled with targeted monitoring.</p>
-          </div>
-
-          <div className="timeline-card">
-            <div className="timeline-header">
-              <span className="trimester-tag">Ensures Baby’s Healthy Development</span>
-            </div>
-            <p>Advanced fetal assessments help us act quickly when any concern appears.</p>
-          </div>
-
-          <div className="timeline-card">
-            <div className="timeline-header">
-              <span className="trimester-tag">Provides Safer Delivery Options</span>
-            </div>
-            <p>We plan your delivery with precision, keeping both mother and baby’s safety at the forefront.</p>
-          </div>
-
-          <div className="timeline-card">
-            <div className="timeline-header">
-              <span className="trimester-tag">Gives Confidence & Clarity</span>
-            </div>
-            <p>You always know what to expect, what is being monitored, and why.</p>
-          </div>
-        </div>
-        <div className="timeline-cta">
-          <a href="/contact" className="cta-btn">
-            Need reassurance? Talk to our high-risk pregnancy doctors near you →
-          </a>
-        </div>
-      </section>
-
-      <section className="eligibility-section">
-        <div className="eligibility-container">
-          <h2 className="eligibility-title">
-            Who Should Consider <span> High-Risk Pregnancy Care?</span>
-          </h2>
-          <div className="eligibility-rows">
-            {eligibilityList.map((item, index) => (
-              <div key={index} className="eligibility-card">
-                <div className="icon-wrapper">
-                  <FaCheckCircle className="check-icon" />
-                </div>
-                <p className="eligibility-text">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="eligibility-cta">
-            <a href="/contact" className="cta-button">
-              If any of these apply, consult our specialists early →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* <section className="hp-section hp-section--alt" aria-labelledby="specialists-heading">
-        <div className="hp-section__header">
-          <h2 id="specialists-heading">Meet Our High-Risk Pregnancy Specialists</h2>
-        </div>
-        <div className="hp-grid hp-grid--3">
-          {specialists.map((doc) => (
-            <article key={doc.name} className="hp-card">
-              <div className="hp-icon"><FaUserMd aria-hidden="true" /></div>
-              <h3>{doc.name}</h3>
-              <p className="hp-muted">{doc.title}</p>
-              <p>{doc.desc}</p>
-            </article>
-          ))}
-        </div>
-        <div className="hp-support">
-          <h3>Supported by:</h3>
-          <ul>
-            {supports.map((s) => (
-              <li key={s}>{s}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="hp-cta-inline">
-          <button className="hp-btn hp-btn--secondary" type="button">Meet Our Doctors</button>
-        </div>
-      </section> */}
-
-
-      <section className="cerclage-team-section" id="team">
+<section className="cerclage-team-section" id="team">
         <div className="container">
-          <h2 className="section-title">Meet Our High-Risk Pregnancy Specialists</h2>
+          <h2 className="section-title">Meet Our Gestational Diabetes Care Team</h2>
 
 
           <div className="team-grid">
             {/* Dr. Sujitha */}
             <div className="team-card">
               <h3 className="doctor-name">Dr. Sujitha R  </h3>
-              <p className="designation">Senior Gynecologist & Obstetrician</p>
+              <p className="designation">Consultant Gynecologist</p>
               <p className="doctor-desc">
-                Expert in managing high-risk pregnancies, recurrent pregnancy loss, and complex maternal conditions.
+                Specialist in high-risk pregnancies, including gestational diabetes. Known for her clarity, compassion, and consistent guidance throughout pregnancy.
               </p>
             </div>
 
@@ -634,9 +601,9 @@ const highrisk = () => {
             {/* Dr. Thamarai */}
             <div className="team-card">
               <h3 className="doctor-name">Dr. Thamarai</h3>
-              <p className="designation"> Maternal-Fetal Medicine Specialist</p>
+              <p className="designation"> Consultant Gynecologist</p>
               <p className="doctor-desc">
-                Known for her detailed monitoring, clear explanations, and calm, reassuring presence
+                Expert in complex pregnancy management. Patients trust her reassuring approach and careful monitoring techniques.
               </p>
             </div>
 
@@ -644,50 +611,39 @@ const highrisk = () => {
             {/* Dr. Varshini */}
             <div className="team-card">
               <h3 className="doctor-name">Dr. Varshini</h3>
-              <p className="designation">Gynecologist & High-Risk Pregnancy Specialist</p>
+              <p className="designation">Consultant Gynecologist</p>
               <p className="doctor-desc">
-                Provides structured care plans and precise management for mothers with medical complications.
+                Works closely with endocrinology and nutrition teams to deliver complete GDM care. Calm, patient, and highly supportive.
+              </p>
+              <p className="doctor-desc">Our gynecologists collaborate with:
+                    Endocrinologists,
+                    Dietitians,
+                    Pediatricians,
+                …to ensure safe, coordinated maternal and newborn care.
               </p>
             </div>
 
-
-            {/* Anesthesiology Team
-            <div className="team-card">
-              <h3 className="doctor-name">Anesthesiology Team</h3>
-              <p className="designation">
-                Dr. Hari Prakash | Dr. Shalini | Dr. Nithya Priyan
-              </p>
-              <p className="doctor-desc">
-                Ensure comfortable, pain-free procedures with expert anesthesia administration. Monitor patient safety throughout surgery and recovery.
-              </p>
-            </div> */}
           </div>
-          <div className="hp-support">
-              <h3>Supported by:</h3>
-              
-                {supports.map((s) => (
-                  <p key={s}>{s}</p>
-                ))}
-            </div>
+          
 
           <div className="center-btn">
-            <button className="cta-btn">Meet Our Doctors</button>
+            <button className="cta-btn"> Meet Our Specialists</button>
           </div>
         </div>
       </section>
 
-      <section className="why-prolife-section">
-  <h2 className="section-title">Why Prolife Hospital for Pregnancy Care?
+<section className="why-prolife-section">
+  <h2 className="section-title">Why Prolife Hospital Is Chennai’s Trusted GDM Care Centre
 </h2>
   
   <div className="prolife-grid-pregnancy">
     {[
-      "10+ Years of maternity excellence",
-      "  2,500+ Safe deliveries",
-      "Trusted high-risk pregnancy management in Chennai",
-      " NICU, OT & emergency care under one roof",
-      "Affordable packages & insurance assistance",
-      "Easy access in Manapakkam with family-friendly facilities",
+      "  Advanced Ultrasound & Lab Services",
+      " 24/7 Emergency Support for Pregnant Mom",
+      "Affordable, Transparent Pricing",
+      "Tailored Nutrition + Lifestyle Support",
+      " High Success Rate in Managing GDM",
+      " Hundreds of Healthy Deliveries",
       
     ].map((item, i) => (
       <div className="prolife-card" key={i}>
@@ -698,7 +654,7 @@ const highrisk = () => {
   </div>
 
   <div className="prolife-cta">
-    <a href="/about" className="cta-btn">Learn more about our maternity care →</a>
+    <a href="/about" className="cta-btn">Book Appointment Now →</a>
   </div>
 </section>
 
@@ -742,12 +698,13 @@ const highrisk = () => {
             <div className="journey-image">
               <div className="journey-content">
                 <h2>Book Your Cervical Cerclage Consultation</h2>
-                <p>If you've been advised to seek high-risk pregnancy care—or if your pregnancy feels uncertain—our specialists are here to guide you safely.</p>
+                <p>Don't let gestational diabetes overwhelm you. With proper care and support, you can have a healthy pregnancy and deliver a thriving baby. Our team at Prolife Hospitals is ready to guide you through every step.</p>
+                
                 <p> <b>Consultation Hours:</b> <br />
                   Monday - Saturday: 9 AM - 8 PM <br />
                   Sunday: 9 AM - 2 PM</p>
                 <p><b>Emergency Care:</b> <br /> Available 24/7</p>
-                <button className="appointment-btn">Book Appointment Online → </button>
+                <button className="appointment-btn">Book an Appointment → </button>
               </div>
             </div>
           </div>
@@ -771,12 +728,8 @@ const highrisk = () => {
       <section className="rs-section" aria-labelledby="rs-heading">
         <div className="rs-wrap">
           <h2 id="rs-heading" className="rs-title">
-            Related Services You Might Need
+            Related Services You Might Be Interested In
           </h2>
-
-          <p className="rs-sub">
-            Care pathways and treatments tailored for maternal & newborn health.
-          </p>
 
           <div className="rs-grid" ref={containerRef}>
             {SERVICES.map((s, i) => (
@@ -787,7 +740,7 @@ const highrisk = () => {
 
                 <div className="rs-body">
                   <h3 className="rs-head">{s.title}</h3>
-                  {/* <p className="rs-desc">{s.desc}</p> */}
+                   <p className="rs-desc">{s.desc}</p> 
                 </div>
 
                 <button
@@ -805,7 +758,7 @@ const highrisk = () => {
       <section className="lab-hero">
         <div className="lab-content">
           <h1>
-            Prolife Hospital —  Your trusted partner in maternal health and high-risk pregnancy management in Chennai.
+            Your journey to motherhood deserves expert care. Let Prolife Hospital be your partner in managing gestational diabetes and ensuring a healthy outcome for you and your baby.
           </h1>
         </div>
       </section>
@@ -813,4 +766,4 @@ const highrisk = () => {
   );
 };
 
-export default highrisk;
+export default Gdm;
