@@ -20,7 +20,7 @@ import Videos from "./pages/Videos";
 import PrePregnancy from "./pages/PrePregnancy";
 import Pregnancy from "./pages/Pregnancy";
 import CervicalEncirclage from "./pages/CervicalEncirclage";
-
+import Highrisk from "./pages/Highrisk";
 
 
 
@@ -43,6 +43,7 @@ export default function App() {
          <Route path="/pre-pregnancy" element={<PrePregnancy />} />
          <Route path="/cervical-encirclage" element={<CervicalEncirclage />} />
          <Route path="/pregnancy" element={<Pregnancy />} />
+         <Route path="/highrisk" element={<Highrisk />} />
       </Routes>
       <Footer />
     </Router>

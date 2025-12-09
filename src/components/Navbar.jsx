@@ -35,13 +35,13 @@ export default function Navbar() {
             <li className="dropdown">
               <a href="#">Services ▾</a>
               <ul className="dropdown-menu">
-                <li><Link to="/pregnancy-maternity">Pregnancy / Maternity</Link></li>
+                {/* <li><Link to="/pregnancy-maternity">Pregnancy / Maternity</Link></li> */}
                 <li className="sub-dropdown">
                   <a href="#">Obstetrics ▸</a>
                   <ul className="sub-menu">
                     <li><Link to="/pre-pregnancy">Pre-pregnancy </Link></li>
                     <li><Link to="/pregnancy"> Pregnancy Care</Link></li>
-                    <li className="inner-dropdown">
+                    {/* <li className="inner-dropdown">
                       <a href="#">Your Pregnancy ▸</a>
                       <ul className="inner-menu">
                         <li><Link to="/just-pregnant">Just Pregnant</Link></li>
@@ -49,27 +49,38 @@ export default function Navbar() {
                         <li><Link to="/3rd-trimester">3rd Trimester</Link></li>
                         <li><Link to="/after-37-weeks">After 37 Weeks</Link></li>
                       </ul>
-                    </li>
+                    </li> 
                     <li><Link to="/your-birth-its-time">Your Birth It's Time</Link></li>
-                    <li><Link to="/post-natal-care">Post-Natal Care</Link></li>
+                    <li><Link to="/post-natal-care">Post-Natal Care</Link></li> */}
                   </ul>
                 </li>
-                <li className="sub-dropdown">
-                  <a href="#">Gynecology ▸</a>
+                {/* <li className="sub-dropdown">
+                  <a href="#">Preterm Labour ▸</a>
                   <ul className="sub-menu">
-                    <li><Link to="/abnormal-uterine-bleeding">Abnormal Uterine Bleeding</Link></li>
-                    <li><Link to="/pap-smear-and-colposcopy">Pap Smear & Colposcopy</Link></li>
-                    <li><Link to="/contraception-and-family-planning">Contraception</Link></li>
-                    <li><Link to="/pelvic-organ-prolapse">Pelvic Organ Prolapse</Link></li>
-                    <li><Link to="/pelvic-pain-endometriosis">Pelvic Pain</Link></li>
-                    <li><Link to="/urinary-incontinence">Urinary Incontinence</Link></li>
-                    <li><Link to="/ovarian-cysts">Ovarian Cysts</Link></li>
-                    <li><Link to="/menopause">Menopause</Link></li>
+                    <li><Link to="/highrisk"> High-risk Pregnancy Management</Link></li>
+                    <li><Link to="/gdm">GDM (Gestational Diabetes Mellitus)</Link></li>
+                    <li><Link to="/thyroid">Thyroid Disorders</Link></li>
+                    <li><Link to="/hypertension">Hypertension</Link></li>
+                    <li><Link to="/preterm"> Preterm Labour Management</Link></li>
+                    <li><Link to="/obstetric"> Obstetric Emergencies</Link></li>
+                  </ul>
+                </li> */}
+                {/* <li className="sub-dropdown">
+                  <a href="#">Deliveries ▸</a>
+                  <ul className="sub-menu">
+                    <li><Link to="/vaginal"> Normal Vaginal Delivery (NVD)</Link></li>
+                    <li><Link to="/assisted">Assisted Delivery</Link></li>
+                    <li><Link to="/vacuum"> Vacuum</Link></li>
+                    <li><Link to="/forceps"> Forceps</Link></li>
+                    <li><Link to="/caesarean">Caesarean Sections (LSCS)</Link></li>
+                    <li><Link to="/emergency">Emergency LSCS</Link></li>
+                    <li><Link to="/elective"> Elective LSCS </Link></li>
+                    <li><Link to="/sterilisation">Elective LSCS + Sterilisation</Link></li>
                   </ul>
                 </li>
                 <li><Link to="/fetal-medicine">Fetal Medicine</Link></li>
                 <li><Link to="/ultrasound">Ultrasound</Link></li>
-                <li><Link to="/surgery-and-procedures">Surgery & Procedures</Link></li>
+                <li><Link to="/surgery-and-procedures">Surgery & Procedures</Link></li> */}
                 <li><Link to="/cervical-encirclage"> Cervical Encirclage </Link></li>
                 <li><Link to="/lab">Lab </Link></li>
               </ul>
