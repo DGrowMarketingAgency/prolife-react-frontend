@@ -404,7 +404,7 @@ const Hypertension = () => {
   <h2 className="services-title">Why Choose Prolife Hospital for Hypertension Management?</h2>
 
   <div className="services-grid">
-    {/* Regular Antenatal Checkups */}
+  
     <div className="service-card">
       <h3>Comprehensive Diagnostic Excellence</h3>
       <p>Our advanced diagnostics help us understand:</p>
@@ -426,67 +426,68 @@ const Hypertension = () => {
       <p>This ensures a complete and accurate health evaluation.</p>
     </div>
 
-    {/* Ultrasound Scans */}
+ 
     <div className="service-card">
-      <h3>Blood Sugar Management</h3>
-      <p>Most women can control sugar levels with:</p>
+      <h3>Personalized Treatment Plans</h3>
+      <p>Your body, lifestyle, stress levels, and medical conditions are unique. So is your treatment.
+We tailor your plan based on:
+</p>
       <ul>
-        <li>Individualized diet plans</li>
-        <li>Low-glycemic food guidance</li>
-        <li>Safe pregnancy exercises</li>
-        <li>Carb-balanced meal planning</li>
+        <li>Type of hypertension (primary or secondary)</li>
+        <li>Age & activity level</li>
+        <li>Pregnancy or postpartum needs</li>
+        <li>Diabetes, thyroid, or kidney issues</li>
+        <li>Medication tolerance</li>
       </ul>
-      <p>If required, our doctors prescribe insulin safely and monitor doses regularly.</p>
+      <p>Your plan may include:</p>
+      <ul>
+        <li>Medication optimization</li>
+        <li>Dietary changes</li>
+        <li>Weight management</li>
+        <li>Stress-reduction strategies</li>
+        <li>Home BP monitoring support</li>
+      </ul>
     </div>
 
-    {/* Complications */}
+
     <div className="service-card">
-      <h3>Antenatal Checkups (More Frequent for GDM Moms)</h3>
+      <h3>Multi-Specialty, Integrated Care</h3>
+      <p>Hypertension is often linked to other medical concerns. Our specialists work together to address every component of your health:</p>
       <ul>
-        <li>Blood pressure tracking</li>
-        <li>Urine tests</li>
-        <li>Weight monitoring</li>
-        <li>Fetal heart rate checks</li>
-        <li>Sugar-log review</li>
-        <li>Emotional and lifestyle support</li>
+        <li>General Medicine</li>
+        <li>Cardiology</li>
+        <li>Nephrology</li>
+        <li>Endocrinology</li>
+        <li>Gynecology (for pregnancy-related hypertension)</li>
       </ul>
-      <p> <b>Visit schedule: </b>
- Every 2 weeks → then weekly after 36 weeks</p>
+      <p> This coordinated approach makes Prolife the best hospital for hypertension in Chennai for complete, long-term care.</p>
     </div>
 
-    {/* Childbirth Preparation */}
+
     <div className="service-card">
-      <h3>Baby’s Growth & Wellness Monitoring</h3>
+      <h3>Advanced Monitoring & Follow-Ups</h3>
+      <p>We track your improvement closely with:</p>
       <ul>
-        <li>Growth scans</li>
-        <li>Amniotic fluid assessment</li>
-        <li>Doppler studies</li>
-        <li>Non-stress tests</li>
-        <li>Placental health checks</li>
+        <li> Routine clinic BP checks</li>
+        <li>Symptom evaluation</li>
+        <li>Medication adjustments</li>
+        <li>Lifestyle guidance</li>
+        <li>Risk assessments</li>
       </ul>
-      
+      <p>You’ll always know exactly where your health stands—and what steps to take next.</p>
     </div>
 
-    {/* Delivery Support */}
-    <div className="service-card">
-      <h3>Delivery Planning</h3>
-      <p><b>Well-controlled GDM often allows:</b> </p>
-      <ul>
-        <li>Full-term pregnancy</li>
-        <li>Normal delivery</li>
-      </ul>
-      <p>If the baby is larger or complications arise, we discuss cesarean options with complete transparency.</p>
-    </div>
 
-    {/* Postpartum Care */}
     <div className="service-card">
-      <h3>Postpartum Sugar Assessment</h3>
+      <h3>Patient Education & Support</h3>
+      <p>We explain:</p>
       <ul>
-        <li>Monitoring blood sugar after delivery</li>
-        <li>Breastfeeding guidance</li>
-        <li>Postpartum OGTT (6–12 weeks)</li>
-        <li>Long-term diabetes prevention plan</li>
+        <li> What your BP numbers mean</li>
+        <li>How hypertension affects your organs</li>
+        <li>How diet, exercise, sleep & stress influence BP</li>
+        <li>How to monitor BP at home correctly</li>
       </ul>
+      <p>You leave each visit confident, informed, and in control of your health.</p>
     </div>
   </div>
 
@@ -496,7 +497,6 @@ const Hypertension = () => {
     </a>
   </div>
 </section>
-
 
      <section className="gdm-section" ref={sectionRef}>
       <div className="gdm-inner">

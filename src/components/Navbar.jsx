@@ -61,7 +61,7 @@ export default function Navbar() {
                     <li><Link to="/gdm">GDM (Gestational Diabetes Mellitus)</Link></li>
                     <li><Link to="/thyroid">Thyroid Disorders</Link></li>
                     <li><Link to="/hypertension">Hypertension</Link></li>
-                    <li><Link to="/preterm"> Preterm Labour Management</Link></li>
+                    <li><Link to="/pretermlabor"> Preterm Labour Management</Link></li>
                     <li><Link to="/obstetric"> Obstetric Emergencies</Link></li>
                   </ul>
                 </li>

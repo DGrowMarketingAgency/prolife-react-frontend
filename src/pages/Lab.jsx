@@ -470,6 +470,10 @@ const Lab = () => {
           </div>
         </div>
       </section>
+
+
+
+      
 <section className="lab-section">
   <h2 className="lab-title">How Our Lab Works</h2>
 

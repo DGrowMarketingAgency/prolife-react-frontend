@@ -23,6 +23,9 @@ import CervicalEncirclage from "./pages/CervicalEncirclage";
 import Highrisk from "./pages/Highrisk";
 import Gdm from "./pages/Gdm";
 import Hypertension from "./pages/Hypertension";
+import PretermLabor from "./pages/PretermLabor";
+import Thyroid from "./pages/Thyroid";
+import Obstetric from "./pages/Obstetric";
 
 
 
@@ -48,6 +51,9 @@ export default function App() {
          <Route path="/highrisk" element={<Highrisk />} />
          <Route path="/gdm" element={<Gdm />} />
          <Route path="/hypertension" element={<Hypertension />} />
+        <Route path="/pretermlabor" element={<PretermLabor />} />
+        <Route path="/thyroid" element={<Thyroid />} />
+        <Route path="/obstetric" element={<Obstetric />} />
       </Routes>
       <Footer />
     </Router>
