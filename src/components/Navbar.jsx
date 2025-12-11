@@ -69,7 +69,7 @@ export default function Navbar() {
                   <a href="#">Deliveries ▸</a>
                   <ul className="sub-menu">
                     <li><Link to="/vaginal"> Normal Vaginal Delivery (NVD)</Link></li>
-                    <li><Link to="/assisted">Assisted Delivery</Link></li>
+                    <li><Link to="/assisteddelivery">Assisted Delivery</Link></li>
                     <li><Link to="/vacuum"> Vacuum</Link></li>
                     <li><Link to="/forceps"> Forceps</Link></li>
                     <li><Link to="/caesarean">Caesarean Sections (LSCS)</Link></li>

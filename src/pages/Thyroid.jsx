@@ -652,7 +652,7 @@ const cardVariants = {
       </div>
     </section>
 
-    <section className="why-prolife-section">
+    <section className="why-prolife-section-1">
       <div className="why-prolife-container">
 
         <motion.h2
@@ -836,7 +836,7 @@ const cardVariants = {
             Prolife Women's Centre: No:4, Krishnaveni Nagar, Mugalivakkam, Chennai - 600125
           </div>
           <div className="contact-card">
-            <strong>Email:</strong> <br />prolifehospitalg@gmail.com
+            <strong>Email:</strong> <br />prolifehospitalog@gmail.com
           </div>
         </div>
 

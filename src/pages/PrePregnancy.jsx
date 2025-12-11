@@ -284,7 +284,6 @@ const toggleFAQ = (index) => {
   }
 ];
 
-
   return (
     <div className="pre-pregnancy-page">
 

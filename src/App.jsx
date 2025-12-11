@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import Home from "./pages/Home";
 import Ourstory from "./pages/Ourstory";
 import Ourteam from "./pages/Ourteam";
@@ -26,7 +25,13 @@ import Hypertension from "./pages/Hypertension";
 import PretermLabor from "./pages/PretermLabor";
 import Thyroid from "./pages/Thyroid";
 import Obstetric from "./pages/Obstetric";
-
+import NormalVaginal from "./pages/NormalVaginal";
+import AssistedDelivery from "./pages/AssistedDelivery";
+import Vacuum from "./pages/Vacuum";
+import Forceps from "./pages/Forceps";
+import Caesarean from "./pages/Caesarean";
+import Emergency from "./pages/Emergency";
+import Sterilisation from "./pages/Sterilisation";
 
 
 export default function App() {
@@ -54,6 +59,13 @@ export default function App() {
         <Route path="/pretermlabor" element={<PretermLabor />} />
         <Route path="/thyroid" element={<Thyroid />} />
         <Route path="/obstetric" element={<Obstetric />} />
+        <Route path="/vaginal" element={<NormalVaginal />} />
+        <Route path="/assisteddelivery" element={<AssistedDelivery />} />
+        <Route path="/vacuum" element={<Vacuum />} />
+        <Route path="/forceps" element={<Forceps />} />
+        <Route path="/caesarean" element={<Caesarean />} />
+        <Route path="/emergency" element={<Emergency />} />
+        <Route path="/sterilisation" element={<Sterilisation />} />
       </Routes>
       <Footer />
     </Router>
