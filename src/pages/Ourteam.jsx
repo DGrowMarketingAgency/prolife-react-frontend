@@ -24,7 +24,7 @@ const Ourteam = () => {
 
   return ( <>
 
- <div className="story-hero-banner">
+ <div className="story-hero-banner" id="ourteam">
       <img
         src="./images/img/download (1).webp"
         alt="Our Story Banner"

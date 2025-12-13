@@ -1,762 +1,725 @@
-// Lab.jsx
-import React, { useState } from "react";
 
-const Lab = () => {
+import React, { useState, useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLeaf,
+  faPills,
+  faShieldHeart,
+  faPersonRunning,
+  faClock,
+  faClipboardCheck,
+  faAppleWhole,
+  faCalendarDays,
+  faUserMd,
+  faBaby,
+  faHeartbeat,
+  faMicroscope,
+  faStethoscope,
+} from "@fortawesome/free-solid-svg-icons";
+import { FaCheckCircle } from "react-icons/fa";
+
+const PrePregnancy = () => {
+
+  const SERVICES = [
+    {
+      title: "High-Risk Pregnancy Management",
+      desc:
+        "Comprehensive care for pregnancies with complications, medical conditions, or previous pregnancy losses.",
+      icon: faUserMd,
+    },
+    {
+      title: "Pre-Pregnancy Counselling",
+      desc:
+        "Plan your pregnancy with risk assessment and health optimization before conceiving.",
+      icon: faBaby,
+    },
+    {
+      title: "Pregnancy Care",
+      desc:
+        "Complete antenatal care with regular monitoring, scans, and delivery support.",
+      icon: faHeartbeat,
+    },
+    {
+      title: "Fertility Treatment",
+      desc:
+        "If you're struggling to conceive, our fertility specialists help you start your family.",
+      icon: faMicroscope,
+    },
+    {
+      title: "PCOS Management",
+      desc:
+        "Treatment for polycystic ovary syndrome affecting pregnancy and hormonal health.",
+      icon: faStethoscope,
+    },
+  ];
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { root: null, rootMargin: "0px", threshold: 0.12 }
+    );
+
+    const cards = node.querySelectorAll(".rs-card");
+    cards.forEach((c) => observer.observe(c));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const features = [
+    {
+      title: "Experienced Gynecologists",
+      desc: "Our specialists provide personalized care backed by years of successful pregnancy guidance.",
+    },
+    {
+      title: "Thorough Health Assessment",
+      desc: "We evaluate medical, lifestyle, and reproductive health factors for safer conception.",
+    },
+    {
+      title: "Evidence-Based Fertility Support",
+      desc: "Advanced diagnostic testing and proven strategies to boost natural conception.",
+    },
+    {
+      title: "Early Problem Detection",
+      desc: "Conditions like PCOS, thyroid & deficiencies are treated before they cause risks.",
+    },
+    {
+      title: "Individualized Action Plans",
+      desc: "Every woman is different. Your care plan will be 100% personalized to your health.",
+    },
+  ];
+
+  const items = [
+    {
+      icon: faLeaf,
+      title: "Nutritional Optimization",
+      description:
+        "Boost key nutrients like iron, calcium, protein & essential vitamins for healthy conception.",
+    },
+    {
+      icon: faPills,
+      title: "Folic Acid & Supplements",
+      description:
+        "Right folic acid dosage reduces birth defects by 70% + Vitamin D & iron correction.",
+    },
+    {
+      icon: faShieldHeart,
+      title: "Medication Safety Review",
+      description:
+        "We recheck medications to ensure they're pregnancy-safe & replace if required.",
+    },
+    {
+      icon: faPersonRunning,
+      title: "Lifestyle Modifications",
+      description:
+        "Stress reduction, exercise planning, sleep guidance & habit transformation.",
+    },
+    {
+      icon: faClock,
+      title: "Fertility Timing Guidance",
+      description:
+        "Get your exact fertile window clarified to improve natural conception chances.",
+    },
+    {
+      icon: faClipboardCheck,
+      title: "Follow-Up Schedule",
+      description:
+        "Regular tracking + progress review + new guidance as you move forward.",
+    },
+  ];
+
+  const experts = [
+    {
+      name: "Dr. Sujitha R",
+      title: "Senior Gynecologist",
+      desc: "15+ years managing normal and complicated pregnancies. Known for her patient-centered approach that ensures mothers feel heard and supported.",
+      img: "/images/doctors/sujitha.jpg", // just place image in public folder
+    },
+    {
+      name: "Dr. Thamarai",
+      title: "Maternal Health Specialist",
+      desc: "Expert in handling pregnancies with medical complications—diabetes, hypertension, autoimmune conditions. Clinical precision with calm demeanor.",
+      img: "/images/doctors/thamarai.jpg",
+    },
+    {
+      name: "Dr. Varshini",
+      title: "Obstetrician",
+      desc: "Modern obstetric practices with compassionate care. Skilled at managing first-time mothers and ensuring smooth deliveries.",
+      img: "/images/doctors/varshini.jpg",
+    },
+    {
+      name: "Dr. Uma Maheshwari",
+      title: "Pediatrician",
+      desc: "Newborn care specialist. Baby’s first medical assessment, vaccination plan & parental support.",
+      img: "/images/doctors/uma.jpg",
+    },
+  ];
+
+  const planItems = [
+    {
+      icon: faAppleWhole,
+      title: "First Trimester (Weeks 1-12)",
+      description:
+        "Specific dietary changes to boost protein, calcium, iron & essential vitamins needed for conception.",
+    },
+    {
+      icon: faPills,
+      title: "Folic Acid & Supplements",
+      description:
+        "Right folic acid dosage (reduces birth defects up to 70%) + Vitamin D & iron correction if needed.",
+    },
+    {
+      icon: faShieldHeart,
+      title: "Medication Safety Review",
+      description:
+        "We ensure your current medications are pregnancy-safe or recommend safer alternatives.",
+    },
+    {
+      icon: faPersonRunning,
+      title: "Lifestyle Modifications",
+      description:
+        "Stress reduction, proper exercise routines & fertility-boosting habit changes.",
+    },
+    {
+      icon: faCalendarDays,
+      title: "Fertility Timing Guidance",
+      description:
+        "Understand your fertile window clearly — many couples simply miss this right timing!",
+    },
+    {
+      icon: faClipboardCheck,
+      title: "Follow-Up Schedule",
+      description:
+        "Regular check-ins to guide progress & update your plan as your body changes.",
+    },
+  ];
+
+  const eligibilityList = [
+    " Prevents Second-Trimester Loss — Holds cervix closed when it would otherwise open prematurely",
+    "Allows Baby to Reach Full Term — Gives your pregnancy the time needed for healthy development",
+    " Reduces Preterm Birth Risk — Even if delivery happens slightly early, cerclage significantly extends pregnancy duration",
+    "Protects Future Pregnancies — Can be placed in subsequent pregnancies if needed",
+    "Provides Peace of Mind — Knowing your cervix is reinforced reduces constant worry",
+    " Improves Success Rates — Women with previous losses often carry to term successfully after cerclage",
+
+  ];
+
+  const reviewsData = [
+    {
+      text: "After losing my baby at 20 weeks, I was terrified to get pregnant again. Dr. Sujitha placed a cerclage at 14 weeks in my next pregnancy. I was monitored closely, followed every instruction, and delivered a healthy boy at 38 weeks. She gave it to my family.",
+      name: " Lakshmi P., Porur",
+      avatar: "L",
+      rating: 5
+    },
+    {
+      text: "My cervix started shortening at 18 weeks during my twin pregnancy. Emergency cerclage saved my babies. The team acted fast, explained everything, and monitored me constantly. My twins are now healthy toddlers because of Prolife.",
+      name: "Deepa M., Manapakkam",
+      avatar: "D",
+      rating: 5
+    },
+    {
+      text: "I'd had three cone biopsies for cervical issues and was told pregnancy would be difficult. Dr. Thamarai placed a cerclage before my cervix could weaken. Regular scans, bed rest when needed, and her expertise—I made it to 37 weeks and had a normal delivery.",
+      name: "Priya k., Ramapuram",
+      avatar: "P",
+      rating: 5
+    }
+  ];
+
   const [openFAQ, setOpenFAQ] = useState(null);
-
-  const cards = [
-    {
-      title: "Accuracy You Can Trust",
-      text: "Our laboratory uses internationally calibrated equipment and follows strict quality control protocols. Every sample gets handled with precision and verified by experienced pathologists."
-    },
-    {
-      title: "24/7 Availability—Test Anytime",
-      text: "Medical emergencies don't follow office hours. Our diagnostic centre operates round the clock. Urgent test at 2 AM? We're ready."
-    },
-    {
-      title: "Reports Delivered Fast",
-      text: "Routine tests within 6-12 hours. Specialized tests within 24-48 hours. Critical results communicated immediately to your doctor."
-    },
-    {
-      title: "Advanced Technology Meets Expert Analysis",
-      text: "Modern automated analyzers ensure consistency. Our qualified lab technicians and pathologists review every result."
-    },
-    {
-      title: "Affordable Pricing with Transparency",
-      text: "Healthcare packages for regular monitoring. Individual tests priced reasonably. No hidden charges."
-    },
-    {
-      title: "Convenient Locations Across Chennai",
-      text: "Main Laboratory at Manapakkam. Women's Centre at Mugalivakkam. Home sample collection service available."
-    }
-  ];
-
-  const services = [
-    {
-      title: "Clinical Pathology",
-      items: [
-        "Complete Blood Count (Hemoglobin, WBC, Platelet count)",
-        "Blood group and Rh typing",
-        "ESR and bleeding/clotting time",
-        "Peripheral smear examination",
-        "Anemia profile and investigations"
-      ]
-    },
-    {
-      title: "Clinical Biochemistry",
-      items: [
-        "Liver function tests (SGOT, SGPT, Bilirubin)",
-        "Kidney function tests (Creatinine, Urea, Uric acid)",
-        "Lipid profile (Cholesterol, Triglycerides, HDL, LDL)",
-        "Diabetic markers (Fasting glucose, HbA1c, Postprandial sugar)",
-        "Electrolyte panels (Sodium, Potassium, Chloride)",
-        "Thyroid function tests (T3, T4, TSH)",
-        "Cardiac markers (Troponin, CPK-MB)"
-      ]
-    },
-    {
-      title: "Hormone Analysis",
-      items: [
-        "Fertility hormones (FSH, LH, Prolactin, AMH)",
-        "Pregnancy hormones (Beta-HCG quantitative)",
-        "Testosterone and DHEA-S levels",
-        "Cortisol and growth hormone testing",
-        "Complete hormonal panels for PCOS and thyroid disorders"
-      ]
-    },
-    {
-      title: "Infectious Disease Screening",
-      items: [
-        "HIV, Hepatitis B and C testing",
-        "Dengue NS1 antigen and antibodies",
-        "Typhoid (Widal test and blood culture)",
-        "Malaria parasite detection",
-        "COVID-19 RT-PCR and antibody tests",
-        "STD screening panels",
-        "Tuberculosis diagnostic tests"
-      ]
-    },
-    {
-      title: "Pregnancy & Prenatal Testing",
-      items: [
-        "Complete antenatal screening packages",
-        "Double marker and triple marker tests",
-        "Gestational diabetes screening (GTT)",
-        "TORCH infection screening",
-        "Group B Streptococcus testing",
-        "Pregnancy confirmation (Urine and blood HCG)"
-      ]
-    },
-    {
-      title: "Urine & Stool Analysis",
-      items: [
-        "Complete urine examination (Routine and microscopy)",
-        "Urine culture and sensitivity",
-        "24-hour urine protein and creatinine",
-        "Stool routine and occult blood testing",
-        "Stool culture for infections"
-      ]
-    },
-    {
-      title: "Microbiology & Culture Tests",
-      items: [
-        "Blood culture and sensitivity",
-        "Urine culture and antibiotic sensitivity",
-        "Pus and wound culture",
-        "Throat and sputum culture",
-        "Body fluid analysis"
-      ]
-    },
-    {
-      title: "Histopathology & Cytology",
-      items: [
-        "Biopsy examination and tissue analysis",
-        "Pap smear for cervical cancer screening",
-        "Fine needle aspiration cytology (FNAC)",
-        "Endometrial biopsy analysis"
-      ]
-    },
-    {
-      title: "Specialized Cancer Markers",
-      items: [
-        "CA-125 for ovarian cancer screening",
-        "CEA for gastrointestinal cancers",
-        "PSA for prostate health",
-        "AFP and other tumor markers"
-      ]
-    }
-  ];
-
-  const packages = [
-    {
-      title: "",
-      description:
-        "Fertility Testing Packages\nComplete hormonal profile for women (FSH, LH, Prolactin, AMH, Thyroid)\nSemen analysis for male fertility evaluation\nAnti-Mullerian hormone testing for ovarian reserve\nComprehensive fertility workup for couples",
-    },
-    {
-      title: "Pregnancy Monitoring Panels",
-      description:
-        "First trimester screening with complete blood work\nGestational diabetes testing (Glucose tolerance test)\nAnemia and iron deficiency screening\nInfection screening (TORCH panel, Hepatitis, HIV)\nThird trimester readiness tests",
-    },
-     {
-      title: "Nutritional Deficiency Tests",
-      description:
-        "Vitamin D levels\nVitamin B12 and folate\nCalcium, magnesium, and iron studies",
-    },
-    {
-      title: "Diabetes Management Tests",
-      description:
-        "Fasting and postprandial glucose\nHbA1c for long-term sugar control\nInsulin levels and resistance testing\nDiabetic kidney function monitoring",
-    },
-    {
-      title: "Thyroid Disorder Evaluation",
-      description:
-        "Complete thyroid profile (T3, T4, TSH)\nThyroid antibody tests\nFree T3 and Free T4 for detailed assessment",
-    },
-    {
-      title: "Heart Health Screening",
-      description:
-        "Complete lipid profile\nCardiac risk markers (Troponin, CPK-MB)\nHomocysteine and hs-CRP testing",
-    },
-    {
-      title: "Liver & Kidney Health Panels",
-      description:
-        "Comprehensive liver function tests\nComplete kidney function assessment\nElectrolyte balance monitoring",
-    },
-    {
-      title: "Autoimmune & Allergy Testing",
-      description:
-        "ANA profile for autoimmune conditions\nRheumatoid factor and CRP\nIgE levels and allergy-specific tests",
-    },
-   
-  ];
-
-   const steps = [
-  {
-    icon: <i className="fa-solid fa-file-medical fa-2x"></i>,
-    title: "Step 1: Test Booking",
-    desc: "Walk into any Prolife Hospital, call, book online or request home sample collection.",
-  },
-  {
-    icon: <i className="fa-solid fa-syringe fa-2x"></i>,
-    title: "Step 2: Sample Collection",
-    desc: "Trained phlebotomists ensure comfortable sample collection with special pediatric care.",
-  },
-  {
-    icon: <i className="fa-solid fa-vial fa-2x"></i>,
-    title: "Step 3: Laboratory Processing",
-    desc: "Advanced analyzers + strict quality control for accurate results.",
-  },
-  {
-    icon: <i className="fa-solid fa-file-waveform fa-2x"></i>,
-    title: "Step 4: Report Generation",
-    desc: "Pathologists verify all results & reports are easy to interpret.",
-  },
-  {
-    icon: <i className="fa-solid fa-paper-plane fa-2x"></i>,
-    title: "Step 5: Report Delivery",
-    desc: "Printed or digital reports via email/portal — shared with doctor if authorized.",
-  },
-];
-
-
-
-  const imgSrc =
-    "/images/img/d7.png";
-
-    
   const faqData = [
     {
-      question: "Do I need a doctor's prescription for lab tests?",
+      question: "When should cervical cerclage be placed?",
       answer:
-        " Most routine tests don't require prescriptions. However, specialized tests and investigations typically need a doctor's order. Our physicians can also guide test selection if you're unsure."
+        "Typically between 12-14 weeks in planned cases. Emergency cerclage can be placed up to 24 weeks if the cervix starts opening unexpectedly. Earlier placement usually has better outcomes."
     },
     {
-      question: "How long do test results take?",
+      question: "Does the procedure hurt?",
       answer:
-        "Routine blood tests: 6-12 hours. Specialized hormone tests: 24 hours. Culture tests: 48-72 hours. Histopathology: 3-5 days. Critical results are communicated immediately."
+        "You'll receive spinal or general anesthesia—you won't feel pain during placement. Mild cramping afterward is normal and manageable with medication."
     },
     {
-      question: "Can I get tested without fasting?",
+      question: "How long does cerclage placement take?",
       answer:
-        " Many tests don't require fasting. CBC, thyroid tests, most hormonal assays can be done anytime. Fasting is essential only for glucose tests, lipid profiles, and certain liver function tests."
+        "Usually 20-30 minutes. You'll spend additional time in recovery for monitoring before going home the same day."
     },
     {
-      question: "Do you accept insurance for lab tests?",
+      question: "What restrictions will I have after cerclage?",
       answer:
-        "Yes, we partner with major insurance providers. Bring your insurance card and policy details. Our billing team verifies coverage before testing."
+        " Pelvic rest (no intercourse), avoiding heavy lifting, reducing strenuous activity. Some women need modified bed rest depending on their situation. We give you clear, specific guidelines."
     },
     {
-      question: "Is home sample collection safe and sterile?",
+      question: "Will I need bed rest for the entire pregnancy?",
       answer:
-        "Absolutely. Our technicians use the same sterile equipment and protocols as hospital collection. Samples are transported in temperature-controlled conditions to maintain integrity."
+        "Not necessarily. Some women continue normal activities with minor modifications. Others need more rest based on cervical changes. We monitor and adjust recommendations throughout pregnancy."
     },
     {
-      question: "What if my results are abnormal?",
+      question: "When is the cerclage removed?",
       answer:
-        "Abnormal results don't always indicate serious problems. Our doctors are available to interpret reports and guide next steps. You can book a consultation to discuss findings."
+        "Usually around 36-37 weeks, or earlier if labor starts. Removal is quick, done in the office without anesthesia in most cases."
     },
     {
-      question: "Can I get my previous reports from Prolife?",
+      question: "Can I have a normal delivery after cerclage?",
       answer:
-        "Yes. Visit our reception with valid ID, or email us requesting previous reports. Digital copies are stored securely in our system."
+        "Yes. Many women deliver vaginally after cerclage removal. Cesarean is only needed if other medical reasons require it."
     },
-     {
-      question: "Do you test children?",
+    {
+      question: "What are the risks of cervical cerclage?",
       answer:
-        "Yes. Our staff is trained in pediatric sample collection with minimal discomfort. Parents can stay with children throughout the process."
+        "Risks are low but include bleeding, infection, premature rupture of membranes, or preterm labor. We monitor closely to catch and address issues early."
     },
-     {
-      question: "How accurate are your pregnancy tests?",
+    {
+      question: "How much does cervical cerclage cost?",
       answer:
-        "Our blood HCG tests detect pregnancy as early as 6-8 days after conception with over 99% accuracy. Urine tests are also highly reliable but blood tests are definitive."
+        "Cost varies based on procedure type and insurance coverage. Contact our billing team for specific pricing. Many insurance plans cover cerclage for documented medical need."
     },
-     {
-      question: "Can I walk in without an appointment?",
+    {
+      question: "What if my cerclage fails?",
       answer:
-        "Yes. No appointment needed for routine tests. However, booking ahead for home collection or specific time slots is recommended."
-    }
+        "While rare, if the cervix continues opening despite cerclage, we manage your situation with bed rest, medications, or early delivery if necessary. Your safety and baby's wellbeing remain our priority."
+    },
+    {
+      question: "Can I have cerclage in future pregnancies?",
+      answer:
+        "Yes. If you needed cerclage once, you'll likely need it in subsequent pregnancies. We can place it early as a preventive measure."
+    },
   ];
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
- 
- const relatedServices = [
-  {
-    title: "Pregnancy Care",
-    desc: "Comprehensive antenatal monitoring with regular lab testing throughout your pregnancy.",
-    icon: <i className="fa-solid fa-baby fa-2x"></i>,
-  },
-  {
-    title: "Fertility Treatment",
-    desc: "Complete fertility evaluation including hormonal testing and semen analysis.",
-    icon: <i className="fa-solid fa-heart-pulse fa-2x"></i>,
-  },
-  {
-    title: "PCOS Management",
-    desc: "Hormonal panels and metabolic screening for PCOS treatment.",
-    icon: <i className="fa-solid fa-dna fa-2x"></i>,
-  },
-  {
-    title: "Thyroid Treatment",
-    desc: "Complete thyroid workup with follow-up testing to monitor treatment effectiveness.",
-    icon: <i className="fa-solid fa-ribbon fa-2x"></i>,
-  },
-  {
-    title: "General Medicine",
-    desc: "Health checkups and diagnostic support for illness and chronic conditions.",
-    icon: <i className="fa-solid fa-stethoscope fa-2x"></i>,
-  }
-];
+
 
 
   return (
-    <div>
-      {/* Hero Section */}
+    <div className="pre-pregnancy-page">
+
+      {/* Hero Banner */}
       <div className="story-hero-banner">
         <img
-          src="./images/img/g-bg.webp"
-          alt="Our Story Banner"
+          src="/images/img/g-bg.webp"
+          alt="Pre-pregnancy Banner"
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Emergency LSCS in Chennai - When Every Second Counts
-          </h1>
+
         </div>
       </div>
+      <h1 className="story-hero-title1">Emergency LSCS in Chennai - When Every Second Counts</h1>
 
-      {/* Lab Section */}
-    <section className="fetal-section">
-        <div className="fetal-section-container">
-          <div className="fetal-section-content">
-            <h2 className="fetal-section-title">Comprehensive Laboratory Services at Prolife Hospital</h2>
-            <p className="fetal-section-text">
-              Your health decisions start with accurate answers. Whether it's a routine checkup, pregnancy monitoring, or investigating symptoms that won't go away—reliable test results change everything.
+      {/* PLAN PREGNANCY SECTION */}
+      <section className="plan-pregnancy-section">
+        <div className="plan-container">
+
+          <div className="plan-left">
+            <h2 className="plan-title">
+              Expert Emergency C-Section Care at Prolife Hospital
+            </h2>
+
+            <p className="plan-description">
+              Childbirth doesn't always go as planned. When complications arise during labor, an emergency LSCS (Lower Segment Cesarean Section) can be the difference between life and death—for both mother and baby.
             </p>
-            <p className="fetal-section-text">
-              At Prolife Hospital's diagnostic lab in Chennai, we deliver precise reports fast. Our 24/7 lab services in Chennai mean you get tested when it's convenient for you, not when a lab happens to be open. From basic blood work to advanced diagnostic tests, we handle it all under one roof.
+            <p className="plan-description">
+              At Prolife Hospital, our emergency LSCS in Chennai operates 24/7 with skilled obstetricians, anesthesiologists, and surgical teams ready to act within minutes. We've performed hundreds of emergency cesarean deliveries, saving lives when unexpected complications threaten safe childbirth.
             </p>
-          </div>
-
-          <div className="fetal-section-image">
-            <img src="./images/img/lab.webp" alt="Lab" />
-          </div>
-        </div>
-      </section>
-
-      <section className="why-choose-section">
-        <h2 className="why-choose-title">Why Choose Prolife Hospital Laboratory?</h2>
-        <div className="why-choose-cards">
-          {cards.map((card, index) => (
-            <div key={index} className="choose-card fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </div>
-          ))}
-        </div>
-        <div className="lab-cta">
-          <button>Explore Our Lab Services</button>
-        </div>
-      </section>
-
-      <section className="diagnostic-lab-section">
-        <h2 className="diagnostic-title">Our Diagnostic Lab Services</h2>
-        <div className="diagnostic-cards">
-          {services.map((service, index) => (
-            <div key={index} className="diagnostic-card fade-up" style={{ animationDelay: `${index * 0.15}s` }}>
-              <h3>{service.title}</h3>
-              <ul>
-                {service.items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="diagnostic-cta">
-          <button>Not sure which test you need? Consult Our Doctors</button>
-        </div>
-      </section>
-
-      <section className="gynaecology-section">
-        <h2 className="section-title-lab">Specialized Tests Available</h2>
-
-        <div className="gynaecology-container">
-          <div className="gynaecology-column left">
-            <div className="feature-box">
-              <div className="icon-circle">
-                <i className="fa-solid fa-hospital"></i><i class=""></i>
-              </div>
-              <div>
-                <h3>Fertility Testing Packages</h3>
-                <p>
-                  Complete hormonal profile for women (FSH, LH, Prolactin, AMH, Thyroid) Semen analysis for male fertility evaluation Anti-Mullerian hormone testing for ovarian reserve Comprehensive fertility workup for couples
-                </p>
-              </div>
-            </div>
-
-            <div className="feature-box">
-              <div className="icon-circle">
-                <i className="fa-solid fa-user-nurse"></i>
-              </div>
-              <div>
-                <h3>Heart Health Screening</h3>
-                <p>Complete lipid profile Cardiac risk markers (Troponin, CPK-MB) Homocysteine and hs-CRP testing
-                </p>
-              </div>
-            </div>
-
-            <div className="feature-box">
-              <div className="icon-circle">
-                <i className="fa-solid fa-baby"></i>
-              </div>
-              <div>
-                <h3>Diabetes Management Tests</h3>
-                <p>
-                  Fasting and postprandial glucose HbA1c for long-term sugar control Insulin levels and resistance testing Diabetic kidney function monitoring
-                </p>
-              </div>
-            </div>
-
-            <div className="feature-box">
-              <div className="icon-circle">
-                <i className="fa-solid fa-flask"></i>
-
-              </div>
-              <div>
-                <h3>Autoimmune & Allergy Testing</h3>
-                <p>
-                  ANA profile for autoimmune conditions Rheumatoid factor and CRP IgE levels and allergy-specific tests
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="doctor-image">
-            <img src="/images/img/lab-2.jpg" alt="Doctor" />
-          </div>
-
-          <div className="gynaecology-column right">
-            <div className="feature-box">
-              <div className="icon-circle">
-                <i className="fa-solid fa-vials"></i>
-              </div>
-              <div>
-                <h3>Thyroid Disorder Evaluation
-                </h3>
-                <p>
-                  Complete thyroid profile (T3, T4, TSH) Thyroid antibody tests Free T3 and Free T4 for detailed assessment
-                </p>
-              </div>
-            </div>
-
-
-            <div className="feature-box">
-              <div className="icon-circle">
-                <i className="fa-solid fa-clock"></i>
-              </div>
-              <div>
-                <h3>Pregnancy Monitoring Panels</h3>
-                <p>
-                  First trimester screening with complete blood work Gestational diabetes testing (Glucose tolerance test) Anemia and iron deficiency screening Infection screening (TORCH panel, Hepatitis, HIV) Third trimester readiness tests
-                </p>
-              </div>
-            </div>
-
-
-
-            <div className="feature-box">
-              <div className="icon-circle">
-                <i className="fa-solid fa-hand-holding-heart"></i>
-              </div>
-              <div>
-                <h3>Liver & Kidney Health Panels</h3>
-                <p>
-                  Comprehensive liver function tests Complete kidney function assessment Electrolyte balance monitoring
-                </p>
-              </div>
-            </div>
-            <div className="feature-box">
-              <div className="icon-circle">
-                <i className="fa-solid fa-vial-virus"></i>
-              </div>
-              <div>
-                <h3>Nutritional Deficiency Tests</h3>
-                <p>
-                  Vitamin D levels Vitamin B12 and folate Calcium, magnesium, and iron studies
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      
-<section className="lab-section">
-  <h2 className="lab-title">How Our Lab Works</h2>
-
-  <div className="lab-grid">
-    {steps.map((s, i) => (
-      <div key={i} className="lab-card">
-        <div className="icon">{s.icon}</div>
-        <h3>{s.title}</h3>
-        <p>{s.desc}</p>
-      </div>
-    ))}
-  </div>
-
-  <div className="btn-wrapper">
-    <button className="cta-btn">Book Your Test Today →</button>
-  </div>
-</section>
-
-
-      <section className="expert-wrapper">
-        <div className="expert-container">
-          {/* Content Left */}
-          <div className="expert-content">
-            <h2>Meet Our Lab Experts</h2>
-
-            <h3>Dr. Sathya Moorthy</h3>
-            <p className="designation">General Physician & Lab Coordinator</p>
-
-            <p className="details">
-              Oversees clinical correlation of lab results with patient symptoms.
-              Ensures diagnostic accuracy and guides appropriate testing protocols.
+            <p className="plan-description">
+              Your safety is our priority. When things change suddenly, we're already prepared.
             </p>
 
-            <ul className="highlights">
-              <li>15+ years experience</li>
-              <li>Board-certified specialist</li>
-              <li>Expert in quality control</li>
-              <li>Advanced diagnostic knowledge</li>
-            </ul>
-
-            <button className="talk-btn">Talk to Our Team →</button>
+            <a href="/contact" className="plan-btn">
+              Emergency Helpline →
+            </a>
           </div>
 
-          {/* Image Right */}
-          <div className="expert-img-box">
+          <div className="plan-right">
             <img
-              src={imgSrc}
-              alt="Lab Expert Doctor"
-              loading="lazy"
+              src="/images/img/pre-pregnancy1.jpg"
+              alt="Pre Pregnancy Consultation"
             />
           </div>
+
         </div>
       </section>
 
-      <section className="home-collection-wrapper">
-        <div className="home-collection-container">
+      <section className="plan-pregnancy-section">
+        <div className="plan-container">
+          <div className="plan-right">
+            <img
+              src="/images/img/pre-pregnancy2.jpg"
+              alt="Pre Pregnancy Consultation"
+            />
+          </div>
+          <div className="plan-left">
+            <h2 className="plan-title">
+              What Is Emergency LSCS?
+            </h2>
 
-          <div className="home-collection-content">
-            <h2>Home Sample Collection</h2>
-            <p className="sub-text">Can't visit the hospital? We come to you.</p>
+            <p className="plan-description">
+              An Emergency LSCS (Emergency Caesarean Section) is a surgery done quickly and unexpectedly when the mother or baby is in danger during pregnancy or labour.Unlike planned C-sections, this procedure is performed immediately—usually within 30 minutes—to ensure safe and fast delivery
+            </p>
+            <p className="plan-description">During the surgery, doctors make a cut in the lower part of the uterus, which is safer, heals faster, and supports future pregnancies.
 
-            {/* What we collect */}
-            <div className="collection-box">
-              <h3>What We Collect at Home</h3>
+            </p>
+            <p className="plan-description"> <b>Emergency LSCS is needed when waiting even a few minutes could be risky. Some common reasons include:</b>
               <ul>
-                <li>Blood samples for routine & specialized tests</li>
-                <li>Urine & stool tests with sterile kits</li>
-                <li>Pregnancy monitoring tests</li>
-                <li>Diabetic & thyroid panels</li>
+                <li>Baby’s heart rate dropping (fetal distress)Umbilical cord </li>
+                <li>slipping out (cord prolapse)</li>
+                <li>Heavy bleeding due to placental problems</li>
+                <li>
+                  Labour not progressing despite efforts</li>
+                <li>Uterine rupture, which can endanger both mother and baby</li>
               </ul>
-            </div>
 
-            {/* Coverage */}
-            <div className="coverage-box">
-              <h3>Coverage Areas</h3>
+              This procedure allows doctors to deliver the baby quickly and safely when complications arise.
+            </p>
+            <a href="/contact" className="plan-btn">
+               Learn About Our Maternity Services  →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="choose-prolife">
+        <div className="choose-content">
+          <h2 className="choose-title">
+            Why Choose Prolife Hospital for Emergency LSCS?
+          </h2>
+
+          <ul className="choose-list">
+            <li>
+              <strong>24/7 Immediate Care</strong>
               <p>
-                Manapakkam, Mugalivakkam, Porur, Ramapuram, Vadapalani,
-                Ashok Nagar, KK Nagar, Virugambakkam & nearby Chennai areas.
+                 Our operation theaters are always ready. Doctors, anesthesiologists, nurses, and pediatricians are available on-site at all times. When an emergency LSCS is needed, we act immediately—no delays, no waiting.
+              </p>
+            </li>
+
+            <li>
+              <strong>Fast “Decision to Delivery” Time</strong>
+              <p>
+                Emergency C-sections must be done within 30 minutes for the safety of mother and baby. At Prolife Hospital, we consistently achieve this because our team and systems are prepared for urgent situations.
+              </p>
+            </li>
+
+            <li>
+              <strong>Highly Experienced Doctors</strong>
+              <p>
+                 Our gynecologists have performed hundreds of emergency C-sections, including cases with complications, previous surgeries, and twin pregnancies. Their experience ensures safe, quick decisions when every second counts.
+              </p>
+            </li>
+
+            <li>
+              <strong>Advanced Operation Theaters</strong> <br />
+              <p>  We have modern modular OTs equipped with:
+                <li>Advanced anesthesia machines</li>
+                <li>Continuous fetal monitoring</li>
+                <li>Immediate blood bank access</li>
+                <li>Newborn resuscitation equipment</li>
+                <li>Infection-controlled surroundings</li>
+              </p>
+            </li>
+
+            <li>
+              <strong>Complete Emergency Support</strong><br />
+              <p> We provide full support during emergencies, including:
+                <li>In-house blood bank</li>
+                <li>ICU for mothers</li>
+                <li>NICU for newborns</li>
+                <li>24/7 lab and scan facilities</li>
+              </p>
+            </li>
+            <li>
+              <strong>Clear Communication</strong>
+              <p>
+                 Even in emergencies, we make sure you understand what is happening, why the surgery is needed, and what to expect before and after the procedure.
+              </p>
+            </li>
+          </ul>
+
+          <a href="/reviews" className="choose-btn">
+            Emergency ? →
+          </a>
+        </div>
+
+        <div className="choose-img-wrapper">
+          <img
+            src="/images/img/u7.webp"
+            alt="Pregnancy Care at Prolife"
+            className="choose-img"
+          />
+        </div>
+      </section>
+
+      <section className="timeline-section">
+        <h2 className="timeline-title">What We Do When You Come to Prolife for Emergency LSCS</h2>
+
+        <div className="timeline-container">
+
+          <div className="timeline-card">
+            <div className="timeline-header">
+              <span className="trimester-tag">Immediate Assessment (First 5 Minutes)</span>
+            </div>
+            <ul>
+              <li>Your condition evaluation with vital signs and baby's heart rate monitoring through continuous fetal monitoring. Our obstetrician reviews your labor progress, examines complications, and determines if emergency LSCS is the safest option.</li>
+            </ul>
+          </div>
+          <div className="timeline-card">
+            <div className="timeline-header">
+              <span className="trimester-tag">Rapid Preparation (Next 10 Minutes)</span>
+            </div>
+            <ul>
+              <li>Consent process with clear explanation of why surgery is needed, anesthesia team assessment and preparation for spinal or epidural anesthesia, IV line placement for medications and fluids, pre-operative blood work if time permits, and catheter insertion and surgical site preparation.</li>
+            </ul>
+          </div>
+           <div className="timeline-card">
+            <div className="timeline-header">
+              <span className="trimester-tag">Surgical Procedure (15-30 Minutes)</span>
+            </div>
+            <ul>
+              <li>Consent process with clear explanation of why surgery is needed, anesthesia team assessment and preparation for spinal or epidural anesthesia, IV line placement for medications and fluids, pre-operative blood work if time permits, and catheter insertion and surgical site preparation.</li>
+            </ul>
+          </div>
+           <div className="timeline-card">
+            <div className="timeline-header">
+              <span className="trimester-tag">Rapid Preparation (Next 10 Minutes)</span>
+            </div>
+            <ul>
+              <li>Consent process with clear explanation of why surgery is needed, anesthesia team assessment and preparation for spinal or epidural anesthesia, IV line placement for medications and fluids, pre-operative blood work if time permits, and catheter insertion and surgical site preparation.</li>
+            </ul>
+          </div>
+           <div className="timeline-card">
+            <div className="timeline-header">
+              <span className="trimester-tag">Rapid Preparation (Next 10 Minutes)</span>
+            </div>
+            <ul>
+              <li>Consent process with clear explanation of why surgery is needed, anesthesia team assessment and preparation for spinal or epidural anesthesia, IV line placement for medications and fluids, pre-operative blood work if time permits, and catheter insertion and surgical site preparation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="timeline-cta">
+          <a href="/contact" className="cta-btn">
+            Not Sure If You Need It? Consult Our Doctors →
+          </a>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+      <section className="services-section">
+        <h2 className="services-title">What We Do When You Come to Prolife</h2>
+
+        <div className="services-grid">
+          {/* Regular Antenatal Checkups */}
+          <div className="service-card">
+            <h3>Initial Consultation & Risk Assessment</h3>
+            <p> We review your pregnancy history in detail—previous miscarriages, preterm births, cervical procedures, or genetic factors. Ultrasound measures your cervical length and checks for early changes.</p>
+          </div>
+
+          {/* Ultrasound Scans */}
+          <div className="service-card">
+            <h3>Pre-Procedure Preparation</h3>
+            <p>Complete health evaluation and infection screening. Discussion about procedure timing, anesthesia options, and what to expect. Answering every question until you feel confident.</p>
+          </div>
+
+          {/* Complications */}
+          <div className="service-card">
+            <h3>Cerclage Placement Procédure</h3>
+            <p>Performed under spinal or general anesthesia in our modern operation theater. Takes 20-30 minutes on average. Strong surgical stitches reinforce the cervix opening. You rest in recovery for observation before going home.</p>
+          </div>
+
+          {/* Childbirth Preparation */}
+          <div className="service-card">
+            <h3>Ongoing Pregnancy Monitoring</h3>
+            <p>Regular checkups tracking cervical length and cerclage position. Ultrasound scans ensuring baby's healthy growth. Addressing concerns immediately—never making you wait.</p>
+          </div>
+
+          {/* Delivery Support */}
+          <div className="service-card">
+            <h3>Activity & Lifestyle Guidance</h3>
+            <p>Clear instructions about physical restrictions, work modifications, and warning signs to watch for. Managing your anxiety about daily activities.</p>
+          </div>
+
+          {/* Postpartum Care */}
+          <div className="service-card">
+            <h3>Delivery Planning</h3>
+            <p>When it's time for delivery, we remove the cerclage (usually around 36-37 weeks). Labor can proceed naturally, or we schedule a cesarean if needed.</p>
+          </div>
+        </div>
+
+        <div className="service-cta">
+          <a href="/contact" className="cta-btn">
+            Schedule Your Risk Assessment  →
+          </a>
+        </div>
+      </section>
+
+
+      <section className="eligibility-section">
+        <div className="eligibility-container">
+          <h2 className="eligibility-title">
+            How Cervical Cerclage <span> Helps You</span>
+          </h2>
+
+          <div className="eligibility-rows">
+            {eligibilityList.map((item, index) => (
+              <div key={index} className="eligibility-card">
+                <div className="icon-wrapper">
+                  <FaCheckCircle className="check-icon" />
+                </div>
+                <p className="eligibility-text">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="eligibility-cta">
+            <a href="/contact" className="cta-button">
+              Talk to Our Cervical Cerclage Specialists →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      
+
+
+      <section className="cerclage-team-section" id="team">
+        <div className="container">
+          <h2 className="section-title">Meet Our Cervical Cerclage Team</h2>
+
+
+          <div className="team-grid">
+            {/* Dr. Sujitha */}
+            <div className="team-card">
+              <h3 className="doctor-name">Dr. Sujitha R</h3>
+              <p className="designation">Senior Gynecologist & Obstetrician</p>
+              <p className="doctor-desc">
+                15+ years managing high-risk pregnancies and cervical complications. Has placed cerclages in hundreds of women—many who went on to deliver healthy babies after previous losses. Known for surgical precision and genuine compassion during anxious pregnancies.
               </p>
             </div>
 
-            {/* How it Works */}
-            <div className="steps-box">
-              <h3>How It Works</h3>
-              <ol>
-                <li>Call us or book online mentioning home collection</li>
-                <li>Our trained technician arrives as scheduled</li>
-                <li>Hospital-grade sterile sample handling</li>
-                <li>Reports delivered digital or direct to doctor</li>
-              </ol>
+
+            {/* Dr. Thamarai */}
+            <div className="team-card">
+              <h3 className="doctor-name">Dr. Thamarai</h3>
+              <p className="designation">High-Risk Pregnancy Specialist</p>
+              <p className="doctor-desc">
+                Expert in complicated obstetric cases requiring surgical intervention. Specializes in managing pregnancies with cervical insufficiency, multiple gestations, and previous pregnancy losses. Patients trust her clinical judgment and calming presence.
+              </p>
             </div>
 
-            {/* Charges */}
-            <div className="charges-box">
-              <h3>Home Collection Charges</h3>
-              <p>Nominal fee based on location & test type.</p>
-              <p className="highlight">👉 Free home collection on full health packages!</p>
+
+            {/* Dr. Varshini */}
+            <div className="team-card">
+              <h3 className="doctor-name">Dr. Varshini</h3>
+              <p className="designation">Obstetrician</p>
+              <p className="doctor-desc">
+                Skilled in both preventive and emergency cerclage placement. Combines modern obstetric techniques with individualized patient care. Particularly attentive to first-time mothers navigating high-risk pregnancies.
+              </p>
             </div>
 
-            {/* CTA */}
-            <button className="schedule-btn">
-              Schedule Home Sample Collection →
-            </button>
+
+            {/* Anesthesiology Team */}
+            <div className="team-card">
+              <h3 className="doctor-name">Anesthesiology Team</h3>
+              <p className="designation">
+                Dr. Hari Prakash | Dr. Shalini | Dr. Nithya Priyan
+              </p>
+              <p className="doctor-desc">
+                Ensure comfortable, pain-free procedures with expert anesthesia administration. Monitor patient safety throughout surgery and recovery.
+              </p>
+            </div>
+          </div>
+
+
+          <div className="center-btn">
+            <button className="cta-btn">Book Consultation With Our Specialists</button>
           </div>
         </div>
       </section>
 
-      <section className="frequent-tests-section">
-        <h2 className="frequent-tests-title">Frequently Booked Tests</h2>
+      <section className="why-prolife-section">
+        <div className="wp-container">
+          <h2 className="wp-title"><strong>Why Choose Prolife Hospital for Cervical Cerclage?</strong></h2>
 
-        <div className="tests-grid">
-          {[
-            "Complete Blood Count (CBC)",
-            "Thyroid Profile",
-            "HbA1c",
-            "Lipid Profile",
-            "Liver Function Test",
-            "Kidney Function Test",
-            "Pregnancy Confirmation (Beta-HCG)",
-            "Vitamin D Levels",
-            "Iron Studies",
-            "Dengue Test",
-          ].map((test, idx) => (
-            <div key={idx} className="test-chip">
-              <span className="test-icon">🧪</span> {test}
+          <div className="wp-grid fade-up">
+            <div className="wp-item slide-in-left">✓ Proven Track Record — Hundreds of successful cerclages leading to healthy deliveries</div>
+            <div className="wp-item slide-in-right">✓ Complete High-Risk Pregnancy Care — Full monitoring throughout pregnancy</div>
+            <div className="wp-item slide-in-left">✓ Modern Surgical Facilities — Advanced operation theaters & safety standards</div>
+            <div className="wp-item slide-in-right">✓ Experienced Surgical Team — Expertise in all cervical cerclage techniques</div>
+            <div className="wp-item slide-in-left">✓ 24/7 Emergency Response — Immediate care for any complications</div>
+            <div className="wp-item slide-in-right">✓ Transparent Communication — Clear guidance with no confusion</div>
+            <div className="wp-item slide-in-left">✓ Affordable Treatment — Quality care without financial stress</div>
+            <div className="wp-item slide-in-right">✓ Two Locations — Manapakkam & Mugalivakkam for easy access</div>
+          </div>
+
+          <div className="wp-btn-wrapper fade-up">
+            <button className="wp-cta-btn">Learn More About Our Hospital</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="reviews-section">
+        <p className="sub-title">TESTIMONIALS</p>
+        <div className="google-rating">
+          ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+        </div>
+
+        <div className="reviews-container">
+          {reviewsData.map((review, index) => (
+            <div className="review-card" key={index}>
+              <p className="review-text">{review.text}</p>
+              <div className="reviewer">
+                <div className="avatar">{review.avatar}</div>
+                <div>
+                  <h4>{review.name}</h4>
+                  <div className="stars">{"⭐".repeat(review.rating)}</div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="test-cta">
-          <button>View Complete Test Menu</button>
-        </div>
+        <a
+          href="https://g.page/r/CS9733eotKhCEBM/review"
+          target="_blank"
+          rel="noreferrer"
+          className="see-more-btn"
+        >
+          ⭐ Read More Success Stories
+        </a>
       </section>
-      
-<section className="patient-info-section">
-  <h2 className="patient-info-title">Patient Information</h2>
 
-  <div className="info-blocks">
-    
-    {/* Preparing */}
-    <div className="info-card fade-info">
-      <div className="info-icon">
-        <i className="fa-solid fa-apple-whole fa-2x"></i>
-      </div>
-      <div>
-        <h3>Preparing for Your Lab Test</h3>
-        <ul>
-          <li><strong>Fasting Tests:</strong> No food for 10–12 hours before sample collection.</li>
-          <li><strong>Non-Fasting Tests:</strong> Can be done anytime.</li>
-          <li><strong>Medication:</strong> Continue unless doctor advises otherwise.</li>
-          <li><strong>Timing:</strong> Morning samples preferred for hormone tests.</li>
-        </ul>
-      </div>
-    </div>
-
-    {/* What to bring */}
-    <div className="info-card fade-info">
-      <div className="info-icon">
-        <i className="fa-solid fa-file-lines fa-2x"></i>
-      </div>
-      <div>
-        <h3>What to Bring</h3>
-        <ul>
-          <li>Doctor's prescription or lab request form</li>
-          <li>Valid ID proof</li>
-          <li>Previous reports (if available)</li>
-        </ul>
-      </div>
-    </div>
-
-    {/* Report understanding */}
-    <div className="info-card fade-info">
-      <div className="info-icon">
-        <i className="fa-solid fa-chart-column fa-2x"></i>
-      </div>
-      <div>
-        <h3>Understanding Your Report</h3>
-        <ul>
-          <li>Reference ranges help interpret medical values</li>
-          <li>Values outside range don’t always mean disease</li>
-          <li>Always consult your doctor for interpretation</li>
-        </ul>
-      </div>
-    </div>
-
-    {/* Report validity */}
-    <div className="info-card fade-info">
-      <div className="info-icon">
-        <i className="fa-solid fa-calendar-days fa-2x"></i>
-      </div>
-      <div>
-        <h3>Report Validity</h3>
-        <ul>
-          <li>Blood Group: Permanent</li>
-          <li>Lipid Profile: Valid 3–6 months</li>
-          <li>Infection Screening: Valid 1–3 months</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-
-  <div className="patient-cta">
-    <button>Need Help Understanding Your Report? Consult Our Doctors</button>
-  </div>
-</section>
-
-
-      <section className="patient-testimonials-section">
-        <h2 className="testimonials-title">What Our Patients Say</h2>
-
-        <div className="testimonials-wrapper">
-
-          {[
-            {
-              text: `I needed urgent blood work at 11 PM during my pregnancy emergency. Prolife's 24/7 lab services saved the day. Results came within hours, and the staff was so caring.`,
-              name: "Lakshmi K.",
-              place: "Manapakkam"
-            },
-            {
-              text: `After mismatched reports from other labs, Prolife gave accurate results my doctor trusted. Finally found the right treatment for my thyroid issue.`,
-              name: "Rajesh M.",
-              place: "Porur"
-            },
-            {
-              text: `Home sample collection was a lifesaver! Technician was on time, highly professional, and reports came by evening.`,
-              name: "Priya S.",
-              place: "Ramapuram"
-            }
-          ].map((review, idx) => (
-            <div key={idx} className="testimonial-card fade-testimonial">
-              <p className="testimonial-text">“{review.text}”</p>
-              <p className="testimonial-author">— {review.name}, {review.place}</p>
+      {/* Care Journey Section */}
+      <section className="journey-section">
+        <div className="journey-container">
+          <div className="journey-grid">
+            <div className="journey-image">
+              <div className="journey-content">
+                <h2>Book Your Cervical Cerclage Consultation</h2>
+                <p>Don't let cervical insufficiency take another pregnancy. Our specialists assess your situation and create a protection plan.</p>
+                <p> <b>Consultation Hours:</b> <br />
+                  Monday - Saturday: 9 AM - 8 PM <br />
+                  Sunday: 9 AM - 2 PM</p>
+                <p><b>Emergency Care:</b> <br /> Available 24/7</p>
+                <button className="appointment-btn">Book Appointment Online → </button>
+              </div>
             </div>
-          ))}
-
+          </div>
         </div>
-
-        <div className="testimonials-cta">
-          <button>Read More Patient Experiences</button>
-        </div>
-      </section>
-
-      <section className="lab-section">
-        <div className="lab-content">
-          <h2>Why Accurate Lab Results Matter</h2>
-          <p>
-            Wrong test results lead to wrong treatments. Delayed reports mean delayed diagnoses. Contaminated samples waste your time and money.
-          </p>
-          <p>
-            Our best diagnostic lab in Chennai eliminates these problems. Rigorous quality control catches errors before reports reach you. Modern equipment ensures precision. Experienced staff prevents sample mix-ups. Fast turnaround means faster treatment decisions.
-          </p>
-          <p>
-            Whether monitoring a chronic condition, investigating new symptoms, or getting routine checkups—accuracy isn't optional. It's everything.
-          </p>
-          <button className="cta-button">Experience the Prolife Laboratory Difference</button>
-        </div>
-        <div className="lab-image">
-          <img
-            src="./images/img/lab-4.jpg"
-            alt="Lab"
-          />
-        </div>
-      </section>
-
-      <section className="lab-section">
-        <div className="lab-image">
-          <img
-            src="/images/img/lab-6.jpg"
-            alt="Lab Quality"
-          />
-        </div>
-        <div className="lab-content">
-          <h2>Laboratory Accreditation & Quality Standards</h2>
-          <p>
-            Our laboratory maintains strict adherence to quality benchmarks. Regular equipment calibration ensures measurement accuracy. Internal quality controls run with every batch. External quality assessment programs validate our standards. Staff undergo continuous training on latest protocols.
-          </p>
-          <p>
-            We follow biosafety guidelines for infection control. Proper waste disposal protects our community. Your samples are handled with medical-grade sterility from collection to disposal.
-          </p>
-          <button className="cta-button">Learn About Our Quality Practices</button>
-        </div>
-
       </section>
 
       <section className="faq-section">
@@ -772,38 +735,55 @@ const Lab = () => {
           </div>
         ))}
       </section>
-      
-      <section className="related-services">
-      <h2 className="related-title">Related Services You Might Need</h2>
 
-      <div className="related-grid">
-        {relatedServices.map((service, index) => (
-          <div className="related-card" key={index}>
-            <div className="service-icon">{service.icon}</div>
-            <h3>{service.title}</h3>
-            <p>{service.desc}</p>
-            <div className="arrow">→</div>
+      <section className="rs-section" aria-labelledby="rs-heading">
+        <div className="rs-wrap">
+          <h2 id="rs-heading" className="rs-title">
+            Related Services You Might Need
+          </h2>
+
+          <p className="rs-sub">
+            Care pathways and treatments tailored for maternal & newborn health.
+          </p>
+
+          <div className="rs-grid" ref={containerRef}>
+            {SERVICES.map((s, i) => (
+              <article key={i} className={`rs-card rs-card-${i % 5}`}>
+                <div className="rs-icon">
+                  <FontAwesomeIcon icon={s.icon} />
+                </div>
+
+                <div className="rs-body">
+                  <h3 className="rs-head">{s.title}</h3>
+                  <p className="rs-desc">{s.desc}</p>
+                </div>
+
+                <button
+                  className="rs-cta"
+                  aria-label={`Learn more about ${s.title}`}
+                >
+                  Learn More →
+                </button>
+              </article>
+            ))}
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section className="lab-hero">
-      <div className="lab-content">
-        <h1>
-          Prolife Hospital — <span>Best Diagnostic Lab in Chennai</span> for
-          accurate, fast, and affordable testing.
-        </h1>
+      <section className="lab-hero">
+        <div className="lab-content">
+          <h1>
+            Prolife Hospital —  Cervical cerclage specialists protecting your pregnancy.
 
-        <button className="lab-btn">
-          Book Your Lab Test Today →
-        </button>
-      </div>
-    </section>
+          </h1>
 
-
+          <button className="lab-btn">
+            Protect Your Pregnancy Today →
+          </button>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Lab;
+export default PrePregnancy;

@@ -216,21 +216,21 @@ const containerRef = useRef(null);
 
   const reviewsData = [
     {
-      text: "After losing my baby at 20 weeks, I was terrified to get pregnant again. Dr. Sujitha placed a cerclage at 14 weeks in my next pregnancy. I was monitored closely, followed every instruction, and delivered a healthy boy at 38 weeks. She gave it to my family.",
-      name: " Lakshmi P., Porur",
-      avatar: "L",
-      rating: 5
-    },
-    {
-      text: "My cervix started shortening at 18 weeks during my twin pregnancy. Emergency cerclage saved my babies. The team acted fast, explained everything, and monitored me constantly. My twins are now healthy toddlers because of Prolife.",
-      name:"Deepa M., Manapakkam",
-      avatar: "D",
-      rating: 5
-    },
-    {
-      text:"I'd had three cone biopsies for cervical issues and was told pregnancy would be difficult. Dr. Thamarai placed a cerclage before my cervix could weaken. Regular scans, bed rest when needed, and her expertise—I made it to 37 weeks and had a normal delivery.",
-      name: "Priya k., Ramapuram",
+      text: "I was terrified when my doctor mentioned assisted delivery, but the team at Prolife explained everything so clearly. Dr. Sujitha's skilled use of vacuum extraction brought my daughter into the world safely after hours of exhausting labor. I'm grateful we avoided emergency surgery.",
+      name: "  Priya M., Manapakkam",
       avatar: "P",
+      rating: 5
+    },
+    {
+      text: "After my baby's heart rate dropped suddenly, the Prolife team acted with incredible speed. The assisted delivery was performed expertly, and my son was healthy and crying immediately. Their emergency response saved my baby.",
+      name:" Anjali K., Mogappair",
+      avatar: "A",
+      rating: 5
+    },
+    {
+      text:"The doctors at Prolife helped me understand when assisted delivery was necessary and why. Their honest communication and obvious expertise made a stressful situation manageable. Both my twins were delivered safely with their help",
+      name: "Divya S., Porur",
+      avatar: "D",
       rating: 5
     }
   ];
@@ -238,59 +238,34 @@ const containerRef = useRef(null);
   const [openFAQ, setOpenFAQ] = useState(null);
   const faqData = [
     {
-      question: "When should cervical cerclage be placed?",
+      question: "Is assisted delivery safe for my baby?",
       answer:
-        "Typically between 12-14 weeks in planned cases. Emergency cerclage can be placed up to 24 weeks if the cervix starts opening unexpectedly. Earlier placement usually has better outcomes."
+        " When performed by experienced obstetricians like our team at Prolife, assisted delivery is very safe. We use these techniques only when they offer the safest outcome compared to alternatives. Temporary marks from instruments fade quickly, and serious complications are rare with skilled practitioners."
     },
     {
-      question: "Does the procedure hurt?",
+      question: "How do I know if I'll need assisted delivery?",
       answer:
-        "You'll receive spinal or general anesthesia—you won't feel pain during placement. Mild cramping afterward is normal and manageable with medication."
+        " Most women don't know in advance. The decision is made during labor based on progress, fetal monitoring, and maternal condition. Our doctors continuously assess these factors and will discuss assisted delivery if it becomes the best option."
     },
     {
-      question: "How long does cerclage placement take?",
+      question: "What's the difference between vacuum and forceps delivery?",
       answer:
-        "Usually 20-30 minutes. You'll spend additional time in recovery for monitoring before going home the same day."
+        "Both are types of assisted vaginal delivery. Vacuum extraction uses gentle suction on the baby's head, while forceps are curved instruments that guide the baby through the birth canal. Your obstetrician chooses the technique based on your baby's position and specific circumstances."
     },
     {
-      question: "What restrictions will I have after cerclage?",
+      question: "Will I need pain medication for assisted delivery?",
       answer:
-        " Pelvic rest (no intercourse), avoiding heavy lifting, reducing strenuous activity. Some women need modified bed rest depending on their situation. We give you clear, specific guidelines."
+        " Most assisted deliveries are performed with epidural anesthesia already in place from labor. If not, local anesthesia or pudendal blocks can be administered quickly. Our anesthetists ensure you're comfortable throughout the procedure."
     },
     {
-      question: "Will I need bed rest for the entire pregnancy?",
+      question: "How long is recovery after assisted delivery?",
       answer:
-        "Not necessarily. Some women continue normal activities with minor modifications. Others need more rest based on cervical changes. We monitor and adjust recommendations throughout pregnancy."
+        "Recovery is generally shorter than cesarean section but may take slightly longer than uncomplicated vaginal delivery. Most mothers go home within 48 hours and resume normal activities within 2-3 weeks. We provide specific guidance based on your individual situation."
     },
     {
-      question: "When is the cerclage removed?",
+      question: "Does assisted delivery mean something went wrong?",
       answer:
-        "Usually around 36-37 weeks, or earlier if labor starts. Removal is quick, done in the office without anesthesia in most cases."
-    },
-    {
-      question: "Can I have a normal delivery after cerclage?",
-      answer:
-        "Yes. Many women deliver vaginally after cerclage removal. Cesarean is only needed if other medical reasons require it."
-    },
-    {
-      question: "What are the risks of cervical cerclage?",
-      answer:
-        "Risks are low but include bleeding, infection, premature rupture of membranes, or preterm labor. We monitor closely to catch and address issues early."
-    },
-    {
-      question: "How much does cervical cerclage cost?",
-      answer:
-        "Cost varies based on procedure type and insurance coverage. Contact our billing team for specific pricing. Many insurance plans cover cerclage for documented medical need."
-    },
-    {
-      question: "What if my cerclage fails?",
-      answer:
-        "While rare, if the cervix continues opening despite cerclage, we manage your situation with bed rest, medications, or early delivery if necessary. Your safety and baby's wellbeing remain our priority."
-    },
-     {
-      question: "Can I have cerclage in future pregnancies?",
-      answer:
-        "Yes. If you needed cerclage once, you'll likely need it in subsequent pregnancies. We can place it early as a preventive measure."
+        "Not at all. Many perfectly normal labors end with assisted delivery simply because of positioning or timing factors. It's a valuable tool that allows vaginal delivery when cesarean section might otherwise be necessary."
     },
   ];
   const toggleFAQ = (index) => {
@@ -307,18 +282,19 @@ const containerRef = useRef(null);
         <img
           src="/images/img/g-bg.webp"
           alt="Pre-pregnancy Banner"
-          className="story-hero-image"
-        />
-        <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Assisted Delivery in Chennai - Prolife Hospitals</h1>
+          className="story-hero-image"/>
         </div>
+        <div className="story-hero-overlay">
       </div>
+      <h1 className="story-hero-title1">Assisted Delivery in Chennai - Prolife Hospitals</h1>
 
       {/* PLAN PREGNANCY SECTION */}
       <section className="plan-pregnancy-section">
+        
         <div className="plan-container">
-
+            
           <div className="plan-left">
+            
             <h2 className="plan-title">
               Expert Assisted Delivery in Chennai  <br />
               <span>for Safe Childbirth</span>
@@ -346,290 +322,359 @@ const containerRef = useRef(null);
         </div>
       </section>
 
+<section className="ad-pro-section">
+      <div className="ad-pro-container">
 
-      <section className="plan-pregnancy-section">
-        <div className="plan-container">
-          <div className="plan-right">
-            <img
-              src="/images/img/pre-pregnancy2.jpg"
-              alt="Pre Pregnancy Consultation"
-            />
-          </div>
-          <div className="plan-left">
-            <h2 className="plan-title">
-              What is Cervical Cerclage?
-            </h2>
-
-            <p className="plan-description">
-              Cervical cerclage is a surgical procedure where we stitch your cervix closed during pregnancy to prevent premature opening. Think of it as reinforcement—giving your cervix the strength to hold your baby safely until delivery time.
-            </p>
-            <p className="plan-description">Your cervix naturally softens and opens during labor. But if it's weak (called cervical incompetence), it might open too early—causing miscarriage or preterm birth. A cerclage prevents this.
-              The procedure is simple, safe, and can make the difference between loss and bringing your baby home.
-            </p>
-            <a href="/contact" className="plan-btn">
-              Learn More About Our Maternity Services →
-            </a>
-          </div>
+        {/* Left Art */}
+        <div className="ad-pro-art">
+          <div className="ad-glass-orb"></div>
+          <div className="ad-glass-orb small"></div>
+          <div className="ad-hero-blur"></div>
+          <h1 className="ad-pro-title">Assisted Delivery Excellence</h1>
         </div>
-      </section>
 
-      <section className="choose-prolife">
-        <div className="choose-content">
-          <h2 className="choose-title">
-            Why Choose Prolife <span>Prolife</span> for Cervical Cerclage in Chennai?
-          </h2>
-        
-          <ul className="choose-list">
+        {/* Right Content */}
+        <div className="ad-pro-content">
+          <h2>Why Choose Prolife Hospital for Assisted Delivery</h2>
+          <p className="tagline">Advanced Care When It Matters Most</p>
+
+          <p className="desc">
+            Choosing where to deliver your baby is one of the most important decisions you'll make.
+            At Prolife Hospitals, our assisted delivery services combine decades of expertise with 
+            modern technology to navigate complex birth situations safely.
+          </p>
+
+          <ul className="ad-feature-list">
             <li>
-              <strong>Specialists Who've Done This Hundreds of Times</strong>
-              <p>
-                Our gynecologists have placed cerclages in women at every stage—emergency situations, planned procedures, first pregnancies, and women who've lost multiple babies. Experience matters when you're trusting someone with your pregnancy.
-              </p>
+              <span>•</span> Experienced Obstetricians – hundreds of successful assisted deliveries.
             </li>
 
             <li>
-              <strong>Personalized Assessment—Not One-Size-Fits-All</strong>
-              <p>
-                We evaluate your specific situation: previous pregnancy history, cervix measurements, ultrasound findings, and risk factors. Your treatment plan is designed for YOU—not copied from a textbook.
-              </p>
+              <span>•</span> 24/7 Emergency Readiness – doctors + OT always on standby.
             </li>
 
             <li>
-              <strong>Advanced Monitoring Throughout Pregnancy</strong>
-              <p>
-                Cerclage placement is just the beginning. We monitor you closely—regular cervical length checks, infection screening, contraction monitoring, and immediate response if concerns arise.
-              </p>
+              <span>•</span> Advanced Monitoring Systems – fetal heart & maternal assessment.
             </li>
 
             <li>
-              <strong>Multiple Cerclage Techniques Available</strong>
-              <p>
-                <li>Transvaginal cerclage (McDonald or Shirodkar method)</li>
-                <li>Transabdominal cerclage for complex cases</li>
-                <li>Emergency cerclage when cervix has already started opening</li>
-                We choose the right approach based on your anatomy and history.
-
-              </p>
+              <span>•</span> Minimal Intervention Philosophy – only when medically required.
             </li>
 
             <li>
-              <strong>24/7 Emergency Support</strong>
-              <p>
-                Pregnancy emergencies don't wait for office hours. Our team is available round-the-clock if you experience bleeding, contractions, or other warning signs.
-              </p>
+              <span>•</span> Complete Support Team – anesthetists, pediatricians & nurses.
             </li>
           </ul>
 
-          <a href="/reviews" className="choose-btn">
-            Read What Our Mothers Say →
-          </a>
-        </div>
-
-        <div className="choose-img-wrapper">
-          <img
-            src="/images/img/u7.webp"
-            alt="Pregnancy Care at Prolife"
-            className="choose-img"
-          />
-        </div>
-      </section>
-
-      <section className="services-section">
-        <h2 className="services-title">What We Do When You Come to Prolife</h2>
-
-        <div className="services-grid">
-          {/* Regular Antenatal Checkups */}
-          <div className="service-card">
-            <h3>Initial Consultation & Risk Assessment</h3>
-            <p> We review your pregnancy history in detail—previous miscarriages, preterm births, cervical procedures, or genetic factors. Ultrasound measures your cervical length and checks for early changes.</p>
-          </div>
-
-          {/* Ultrasound Scans */}
-          <div className="service-card">
-            <h3>Pre-Procedure Preparation</h3>
-            <p>Complete health evaluation and infection screening. Discussion about procedure timing, anesthesia options, and what to expect. Answering every question until you feel confident.</p>
-          </div>
-
-          {/* Complications */}
-          <div className="service-card">
-            <h3>Cerclage Placement Procédure</h3>
-            <p>Performed under spinal or general anesthesia in our modern operation theater. Takes 20-30 minutes on average. Strong surgical stitches reinforce the cervix opening. You rest in recovery for observation before going home.</p>
-          </div>
-
-          {/* Childbirth Preparation */}
-          <div className="service-card">
-            <h3>Ongoing Pregnancy Monitoring</h3>
-            <p>Regular checkups tracking cervical length and cerclage position. Ultrasound scans ensuring baby's healthy growth. Addressing concerns immediately—never making you wait.</p>
-          </div>
-
-          {/* Delivery Support */}
-          <div className="service-card">
-            <h3>Activity & Lifestyle Guidance</h3>
-            <p>Clear instructions about physical restrictions, work modifications, and warning signs to watch for. Managing your anxiety about daily activities.</p>
-          </div>
-
-          {/* Postpartum Care */}
-          <div className="service-card">
-            <h3>Delivery Planning</h3>
-            <p>When it's time for delivery, we remove the cerclage (usually around 36-37 weeks). Labor can proceed naturally, or we schedule a cesarean if needed.</p>
+          <div className="ad-btn-row">
+            <button className="ad-btn primary">Schedule a Consultation</button>
+            <button className="ad-btn">Contact Us</button>
           </div>
         </div>
 
-        <div className="service-cta">
-          <a href="/contact" className="cta-btn">
-            Schedule Your Risk Assessment  →
-          </a>
-        </div>
-      </section>
+      </div>
+    </section>
 
+    <section className="asclean-section">
+      <div className="asclean-container">
 
-      <section className="eligibility-section">
-        <div className="eligibility-container">
-          <h2 className="eligibility-title">
-            How Cervical Cerclage <span> Helps You</span>
-          </h2>
+        <header className="asclean-header">
+          <h2>What We Assist You With at Prolife</h2>
+          <p>
+            Complete Support Throughout Your Assisted Delivery Journey
+          </p>
+        </header>
 
-          <div className="eligibility-rows">
-            {eligibilityList.map((item, index) => (
-              <div key={index} className="eligibility-card">
-                <div className="icon-wrapper">
-                  <FaCheckCircle className="check-icon" />
-                </div>
-                <p className="eligibility-text">{item}</p>
-              </div>
-            ))}
+        <p className="asclean-intro">
+          From the moment assisted delivery becomes a consideration, our team
+          surrounds you with expertise and emotional support.
+        </p>
+
+        <div className="asclean-grid">
+
+          <div className="asclean-card">
+            <h3>Pre-Delivery Assessment</h3>
+            <p>
+              We thoroughly evaluate your labor progress, baby's position,
+              and maternal health to determine if assisted delivery is the
+              safest option. Our doctors explain every aspect of the procedure,
+              addressing your concerns and ensuring informed consent.
+            </p>
           </div>
 
-          <div className="eligibility-cta">
-            <a href="/contact" className="cta-button">
-              Talk to Our Cervical Cerclage Specialists →
-            </a>
+          <div className="asclean-card">
+            <h3>During the Procedure</h3>
+            <p>
+              Our obstetricians skillfully perform vacuum or forceps-assisted
+              delivery in our modern operation theaters or delivery suites,
+              with continuous monitoring of both mother and baby. Pain management
+              options are discussed and implemented according to your birth plan
+              and medical needs.
+            </p>
           </div>
-        </div>
-      </section>
 
-      <section className="timeline-section">
-        <h2 className="timeline-title">Who Needs Cervical Cerclage?</h2>
-
-        <div className="timeline-container">
-
-          <div className="timeline-card">
-            <div className="timeline-header">
-              <span className="trimester-tag">You're a Candidate If:</span>
-            </div>
-            <ul>
-              <li>You've lost pregnancies in the second trimester (14-24 weeks) with painless cervical opening</li>
-              <li>Ultrasound shows your cervix is shortening too early in current pregnancy</li>
-              <li>You have documented cervical insufficiency from previous pregnancies</li>
-              <li>Previous cervical surgery (LEEP, cone biopsy) weakened your cervix</li>
-              <li> You're carrying twins or triplets with cervical shortening</li>
-              <li>Physical exam reveals cervix already starting to open during pregnancy</li>
-              <li> You have uterine abnormalities contributing to cervical weakness</li>
-            </ul>
+          <div className="asclean-card">
+            <h3>Immediate Postpartum Care</h3>
+            <p>
+              After delivery, we closely monitor both you and your newborn,
+              checking for any effects of the assisted delivery. Our pediatricians
+              examine your baby thoroughly, while our team ensures your comfort
+              and recovery.
+            </p>
           </div>
-          <div className="timeline-card">
-            <div className="timeline-header">
-              <span className="trimester-tag">When Cerclage Isn't Recommended:</span>
-            </div>
-            <ul>
-              <li>Active vaginal bleeding or infection</li>
-              <li>Rupture of membranes (water already broken)</li>
-              <li>Labor has already started</li>
-              <li>Fetal abnormalities incompatible with life</li>
-              <li>Placental problems requiring early delivery</li>
-            </ul>
+
+          <div className="asclean-card">
+            <h3>Recovery Guidance</h3>
+            <p>
+              We provide detailed instructions for postpartum healing, especially
+              important after assisted delivery. Follow-up appointments track your
+              recovery, and our lactation consultants support successful
+              breastfeeding initiation.
+            </p>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+      <section className="assist-benefits">
+      <div className="ab-container">
+
+        <div className="ab-title-block">
+          <h2>How Our Assisted Delivery Service Helps You</h2>
+          <p>Turning Complex Births Into Safe Outcomes</p>
         </div>
 
-        <div className="timeline-cta">
-          <a href="/contact" className="cta-btn">
-            Not Sure If You Need It? Consult Our Doctors →
-          </a>
-        </div>
-      </section>
+        <p className="ab-desc">
+          Assisted delivery is a bridge between natural birth and cesarean section,
+          offering a middle path when labor doesn't progress as expected.
+        </p>
 
+        <div className="ab-timeline">
 
-      <section className="cerclage-team-section" id="team">
-        <div className="container">
-          <h2 className="section-title">Meet Our Cervical Cerclage Team</h2>
-
-
-          <div className="team-grid">
-            {/* Dr. Sujitha */}
-            <div className="team-card">
-              <h3 className="doctor-name">Dr. Sujitha R</h3>
-              <p className="designation">Senior Gynecologist & Obstetrician</p>
-              <p className="doctor-desc">
-                15+ years managing high-risk pregnancies and cervical complications. Has placed cerclages in hundreds of women—many who went on to deliver healthy babies after previous losses. Known for surgical precision and genuine compassion during anxious pregnancies.
-              </p>
-            </div>
-
-
-            {/* Dr. Thamarai */}
-            <div className="team-card">
-              <h3 className="doctor-name">Dr. Thamarai</h3>
-              <p className="designation">High-Risk Pregnancy Specialist</p>
-              <p className="doctor-desc">
-                Expert in complicated obstetric cases requiring surgical intervention. Specializes in managing pregnancies with cervical insufficiency, multiple gestations, and previous pregnancy losses. Patients trust her clinical judgment and calming presence.
-              </p>
-            </div>
-
-
-            {/* Dr. Varshini */}
-            <div className="team-card">
-              <h3 className="doctor-name">Dr. Varshini</h3>
-              <p className="designation">Obstetrician</p>
-              <p className="doctor-desc">
-               Skilled in both preventive and emergency cerclage placement. Combines modern obstetric techniques with individualized patient care. Particularly attentive to first-time mothers navigating high-risk pregnancies.
-              </p>
-            </div>
-
-
-            {/* Anesthesiology Team */}
-            <div className="team-card">
-              <h3 className="doctor-name">Anesthesiology Team</h3>
-              <p className="designation">
-                Dr. Hari Prakash | Dr. Shalini | Dr. Nithya Priyan
-              </p>
-              <p className="doctor-desc">
-               Ensure comfortable, pain-free procedures with expert anesthesia administration. Monitor patient safety throughout surgery and recovery.
+          <div className="ab-item">
+            <div className="ab-icon">💛</div>
+            <div className="ab-content">
+              <h3>Medical Benefits</h3>
+              <p>
+                Safe assisted delivery options at Prolife help avoid emergency
+                cesarean sections, especially when the baby is already in the
+                birth canal. This results in faster recovery, fewer surgical risks,
+                and a fulfilling vaginal birth experience whenever possible.
               </p>
             </div>
           </div>
 
-
-          <div className="center-btn">
-            <button className="cta-btn">Book Consultation With Our Specialists</button>
+          <div className="ab-item">
+            <div className="ab-icon">💚</div>
+            <div className="ab-content">
+              <h3>Preventing Birth Complications</h3>
+              <p>
+                Our team steps in when prolonged labor exhausts the mother or the
+                baby shows distress. Assisted delivery helps prevent oxygen deprivation
+                and reduces complications for both mother and child through timely intervention.
+              </p>
+            </div>
           </div>
+
+          <div className="ab-item">
+            <div className="ab-icon">🌿</div>
+            <div className="ab-content">
+              <h3>Emotional and Physical Recovery</h3>
+              <p>
+                We help mothers understand why assistance was needed, offering emotional
+                counseling and physiotherapy support to ensure a smooth recovery journey
+                after assisted delivery.
+              </p>
+            </div>
+          </div>
+
         </div>
-      </section>
+      </div>
+    </section>
 
-     <section className="why-prolife-section">
-  <div className="wp-container">
-    <h2 className="wp-title"><strong>Why Choose Prolife Hospital for Cervical Cerclage?</strong></h2>
+    <section className="ans-section">
+      <div className="ans-container">
 
-    <div className="wp-grid fade-up">
-      <div className="wp-item slide-in-left">✓ Proven Track Record — Hundreds of successful cerclages leading to healthy deliveries</div>
-      <div className="wp-item slide-in-right">✓ Complete High-Risk Pregnancy Care — Full monitoring throughout pregnancy</div>
-      <div className="wp-item slide-in-left">✓ Modern Surgical Facilities — Advanced operation theaters & safety standards</div>
-      <div className="wp-item slide-in-right">✓ Experienced Surgical Team — Expertise in all cervical cerclage techniques</div>
-      <div className="wp-item slide-in-left">✓ 24/7 Emergency Response — Immediate care for any complications</div>
-      <div className="wp-item slide-in-right">✓ Transparent Communication — Clear guidance with no confusion</div>
-      <div className="wp-item slide-in-left">✓ Affordable Treatment — Quality care without financial stress</div>
-      <div className="wp-item slide-in-right">✓ Two Locations — Manapakkam & Mugalivakkam for easy access</div>
-    </div>
+        <div className="ans-header">
+          <h2>Who Needs Assisted Delivery?</h2>
+          <p>Understanding When Intervention Becomes Necessary</p>
+        </div>
 
-    <div className="wp-btn-wrapper fade-up">
-      <button className="wp-cta-btn">Learn More About Our Hospital</button>
-    </div>
-  </div>
-</section>
+        <p className="ans-intro">
+          Not every delivery requires assistance, but certain situations make assisted 
+          vaginal delivery the safest choice for mother and baby.
+        </p>
+
+        <div className="ans-panels">
+
+          <div className="ans-panel">
+            <span className="ans-label">Medical Indications</span>
+            <p>
+              Assisted delivery becomes necessary when the second stage of labor is 
+              prolonged beyond safe limits, when fetal heart rate patterns indicate distress, 
+              or when maternal exhaustion prevents effective pushing. Mothers with certain 
+              medical conditions like heart disease or high blood pressure may need assisted 
+              delivery to shorten pushing time and reduce cardiovascular strain.
+            </p>
+          </div>
+
+          <div className="ans-panel">
+            <span className="ans-label">Fetal Positioning Challenges</span>
+            <p>
+              Sometimes babies are positioned in ways that make natural delivery difficult. 
+              Certain presentations and rotations respond well to assisted delivery techniques, 
+              avoiding the need for cesarean section in the advanced stage of labor.
+            </p>
+          </div>
+
+          <div className="ans-panel">
+            <span className="ans-label">Previous Birth Complications</span>
+            <p>
+              Women who experienced difficult deliveries previously may benefit from planned 
+              assisted delivery, especially if anatomical factors remain the same. Our team 
+              reviews your complete obstetric history to anticipate challenges early.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section className="eds-section">
+      <div className="eds-container">
+
+        <div className="eds-header">
+          <h2>Meet Our Expert Obstetricians</h2>
+          <p>Skilled Hands, Compassionate Hearts</p>
+        </div>
+
+        <p className="eds-intro">
+          The success of assisted delivery depends entirely on the obstetrician's
+          skill and judgment. Our team brings extensive experience in managing
+          complex deliveries with precision and care.
+        </p>
+
+        <div className="eds-grid">
+
+          <div className="eds-card">
+            <span className="eds-bar"></span>
+            <h3>Dr. Sujitha R – Gynecologist</h3>
+            <p>
+              With years of experience in high-risk obstetrics, Dr. Sujitha
+              specializes in assisted vaginal deliveries and has helped countless
+              families welcome their babies safely. Her calm demeanor and technical
+              expertise make her a trusted choice for complex deliveries.
+            </p>
+          </div>
+
+          <div className="eds-card">
+            <span className="eds-bar"></span>
+            <h3>Dr. Thamarai – Gynecologist</h3>
+            <p>
+              Dr. Thamarai's comprehensive approach includes expertise in all
+              assisted delivery techniques. Her focus on clear communication ensures
+              families understand every decision, reducing anxiety during labor.
+            </p>
+          </div>
+
+          <div className="eds-card">
+            <span className="eds-bar"></span>
+            <h3>Dr. Varshini – Gynecologist</h3>
+            <p>
+              Known for her gentle technique and patient-centered approach,
+              Dr. Varshini has extensive training in instrumental deliveries and
+              works closely with mothers to prepare for various delivery scenarios.
+            </p>
+          </div>
+
+        </div>
+
+        <div className="eds-support">
+          <h4>Supporting Specialists:</h4>
+          <p>
+            Our assisted delivery team includes anesthetists like <strong>Dr. Shalini</strong>
+            and <strong>Dr. Nithya Priyan</strong> who ensure optimal pain management.
+            <strong> Dr. Uma Maheshwari</strong>, our pediatrician, is always present to
+            provide immediate newborn care when needed.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section className="pss-section">
+      <div className="pss-container">
+
+        <div className="pss-ribbon">
+          <h2>Why Prolife Hospital Stands Apart</h2>
+          <p>Excellence in Maternity Care Across Chennai</p>
+        </div>
+
+        <div className="pss-intro">
+          <p>
+            As a leading maternity and gynecology hospital in Chennai, Prolife Hospitals 
+            has built its reputation on successful outcomes in complex deliveries.
+          </p>
+        </div>
+
+        <div className="pss-feature-grid">
+
+          <div className="pss-feature">
+            <div className="pss-icon">
+              <i className="fa-solid fa-hospital"></i>
+            </div>
+            <h3>Infrastructure That Inspires Confidence</h3>
+            <p>
+              Our well-equipped modular operation theaters meet international standards 
+              for assisted delivery procedures. Advanced monitoring equipment tracks every 
+              vital sign, while emergency protocols ensure immediate escalation to 
+              cesarean section if needed. The NICU proximity adds extra safety.
+            </p>
+          </div>
+
+          <div className="pss-feature">
+            <div className="pss-icon">
+              <i className="fa-solid fa-heartbeat"></i>
+            </div>
+            <h3>Patient-Centered Philosophy</h3>
+            <p>
+              We believe informed mothers make the best decisions for their babies. Our 
+              doctors explain all assisted vaginal delivery options clearly and respectfully.
+            </p>
+          </div>
+
+          <div className="pss-feature">
+            <div className="pss-icon">
+              <i className="fa-solid fa-hand-holding-medical"></i>
+            </div>
+            <h3>Affordable Excellence</h3>
+            <p>
+              Transparent pricing, insurance support, and accessible maternity care for 
+              every family in Chennai.
+            </p>
+          </div>
+
+          <div className="pss-feature">
+            <div className="pss-icon">
+              <i className="fa-solid fa-baby"></i>
+            </div>
+            <h3>Integrated Maternity Services</h3>
+            <p>
+              End-to-end maternity care from prenatal to postpartum stages, ensuring 
+              continuity and safe decision-making during delivery.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
       {/* Reviews Section */}
       <section className="reviews-section">
-        <p className="sub-title">TESTIMONIALS</p>
+        <p className="sub-title">What Our Families Say</p>
         <div className="google-rating">
-          ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+         <span>Real Stories, Real Outcomes & 5/5 Google Rating</span>
         </div>
 
         <div className="reviews-container">
@@ -657,25 +702,6 @@ const containerRef = useRef(null);
         </a>
       </section>
 
-      {/* Care Journey Section */}
-      <section className="journey-section">
-        <div className="journey-container">
-          <div className="journey-grid">
-            <div className="journey-image">
-              <div className="journey-content">
-                <h2>Book Your Cervical Cerclage Consultation</h2>
-                <p>Don't let cervical insufficiency take another pregnancy. Our specialists assess your situation and create a protection plan.</p>
-                <p> <b>Consultation Hours:</b> <br />
-                  Monday - Saturday: 9 AM - 8 PM <br />
-                  Sunday: 9 AM - 2 PM</p>
-                <p><b>Emergency Care:</b> <br /> Available 24/7</p>
-                <button className="appointment-btn">Book Appointment Online → </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="faq-section">
         <h2>FAQ</h2>
         {faqData.map((item, index) => (
@@ -690,50 +716,82 @@ const containerRef = useRef(null);
         ))}
       </section>
 
-<section className="rs-section" aria-labelledby="rs-heading">
-      <div className="rs-wrap">
-        <h2 id="rs-heading" className="rs-title">
-          Related Services You Might Need
-        </h2>
-
-        <p className="rs-sub">
-          Care pathways and treatments tailored for maternal & newborn health.
-        </p>
-
-        <div className="rs-grid" ref={containerRef}>
-          {SERVICES.map((s, i) => (
-            <article key={i} className={`rs-card rs-card-${i % 5}`}>
-              <div className="rs-icon">
-                <FontAwesomeIcon icon={s.icon} />
+            {/* Care Journey Section */}
+      <section className="journey-section">
+        <div className="journey-container">
+          <div className="journey-grid">
+            <div className="journey-image">
+              <div className="journey-content">
+                <h2>Schedule Your Maternity Consultation</h2>
+                <h3>Expert Guidance for Every Birth Scenario</h3>
+                <p>Whether you're planning your delivery or facing unexpected labor complications, Prolife Hospitals provides the expertise you need for the safest possible outcome.</p>
+                <p><b>Emergency Care:</b> <br /> Available 24/7</p>
+                <button className="appointment-btn">Book Appointment Online → </button>
               </div>
-
-              <div className="rs-body">
-                <h3 className="rs-head">{s.title}</h3>
-                <p className="rs-desc">{s.desc}</p>
-              </div>
-
-              <button
-                className="rs-cta"
-                aria-label={`Learn more about ${s.title}`}
-              >
-                Learn More →
-              </button>
-            </article>
-          ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+
+      <section className="rs-section">
+<div className="rs-container">
+<div className="rs-header">
+<h2>Related Services You Might Consider</h2>
+<p>Comprehensive Maternity Care at Prolife</p>
+</div>
+
+
+<div className="rs-grid">
+<div className="rs-card">
+<h3>High-Risk Pregnancy Management</h3>
+<p>Specialized care for complicated pregnancies requiring close monitoring</p>
+</div>
+
+
+<div className="rs-card">
+<h3>Cesarean Section</h3>
+<p>Safe surgical delivery when vaginal birth isn't advisable</p>
+</div>
+
+
+<div className="rs-card">
+<h3>Normal Delivery</h3>
+<p>Supporting natural childbirth with expert guidance</p>
+</div>
+
+
+<div className="rs-card">
+<h3>Labor Induction</h3>
+<p>Medically supervised labor initiation when pregnancy extends beyond due date</p>
+</div>
+
+
+<div className="rs-card">
+<h3>Postpartum Care</h3>
+<p>Comprehensive recovery support for new mothers</p>
+</div>
+
+
+<div className="rs-card">
+<h3>Newborn Care</h3>
+<p>Expert pediatric services for your baby's first days</p>
+</div>
+</div>
+
+
+<div className="rs-cta">
+<a href="#">Explore Our Complete Maternity Services →</a>
+</div>
+</div>
+</section>
+
 
       <section className="lab-hero">
         <div className="lab-content">
-          <h1>
-            Prolife Hospital —  Cervical cerclage specialists protecting your pregnancy.
-
-          </h1>
-
-          <button className="lab-btn">
-             Protect Your Pregnancy Today →
-          </button>
+          <h3>
+            At Prolife Hospitals, we understand that every birth is unique. Our assisted delivery services represent decades of combined obstetric experience, modern facilities, and unwavering commitment to maternal and infant safety. When natural labor needs skilled intervention, trust Chennai's leading maternity hospital to guide you through with expertise and compassion.
+          </h3>
         </div>
       </section>
     </div>
