@@ -295,9 +295,10 @@ const toggleFAQ = (index) => {
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Pre-Pregnancy Counselling in Chennai</h1>
+          
         </div>
       </div>
+      <h1 className="story-hero-title1">Pre-Pregnancy Counselling in Chennai</h1>
 
       {/* PLAN PREGNANCY SECTION */}
       <section className="plan-pregnancy-section">

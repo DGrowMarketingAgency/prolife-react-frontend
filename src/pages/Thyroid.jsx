@@ -359,9 +359,10 @@ const cardVariants = {
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Best Thyroid Disorders Treatment in Chennai</h1>
+          
         </div>
       </div>
+      <h1 className="story-hero-title1">Best Thyroid Disorders Treatment in Chennai</h1>
 
       {/* PLAN PREGNANCY SECTION */}
       <section className="plan-pregnancy-section">

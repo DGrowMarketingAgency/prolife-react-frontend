@@ -130,9 +130,10 @@ export default function GallerySection() {
           className="story-hero-image w-full h-full object-cover"
         />
         <div className="story-hero-overlay absolute inset-0 bg-black/50 flex items-center justify-center">
-          <h1 className="story-hero-title text-white text-4xl font-bold uppercase">Gallery</h1>
+          
         </div>
       </div>
+      <h1 className="story-hero-title1">Gallery</h1>
 
       <section className="gallery-section py-10">
         <div className="gallery-header flex justify-center gap-4 mb-6">

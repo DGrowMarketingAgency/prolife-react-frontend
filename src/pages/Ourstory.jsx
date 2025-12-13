@@ -136,10 +136,9 @@ useEffect(() => {
         <div className="story-hero-banner">
           <img src="./images/img/download (1).webp" alt="Our Story Banner" className="story-hero-image" />
           <div className="story-hero-overlay">
-            <h1 className="story-hero-title">About Prolife Hospital</h1>
           </div>
-          <p>Trusted Women's Healthcare in Chennai Since 2013</p>
         </div>
+         <h1 className="story-hero-title1">About Prolife Hospital</h1>
 
         <div className="story-hero-content">
           <div className="story-hero-text-about">

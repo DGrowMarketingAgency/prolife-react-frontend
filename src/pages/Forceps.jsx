@@ -19,7 +19,7 @@ import {
 import { FaUserDoctor, FaStethoscope, FaHospital, FaBaby, FaFileMedical, FaHeartCircleBolt } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
 
-const PrePregnancy = () => {
+const Forceps = () => {
 
 const SERVICES = [
   {
@@ -800,4 +800,4 @@ const containerRef = useRef(null);
   );
 };
 
-export default PrePregnancy;
+export default Forceps;

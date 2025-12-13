@@ -9,10 +9,6 @@ import Home from "./pages/Home";
 import Ourstory from "./pages/Ourstory";
 import Ourteam from "./pages/Ourteam";
 import Contact from "./pages/Contact";
-import PregnancyMaternity from "./pages/PregnancyMaternity";
-import FetalMedicine from "./pages/FetalMedicine";
-import Ultrasound from "./pages/Ultrasound";
-import SurgerySection from "./pages/SurgerySection";
 import Lab from "./pages/Lab";
 import Gallery from "./pages/Gallery";
 import Videos from "./pages/Videos";
@@ -44,10 +40,6 @@ export default function App() {
         <Route path="/story" element={<Ourstory />} />
         <Route path="/ourteam" element={<Ourteam />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/pregnancy-maternity" element={<PregnancyMaternity />} />
-        <Route path="/fetal-medicine" element={<FetalMedicine />} />
-        <Route path="/ultrasound" element={<Ultrasound />} />
-        <Route path="/surgery-and-procedures" element={<SurgerySection />} />
          <Route path="/lab" element={<Lab />} />
          <Route path="/gallery" element={<Gallery />} />
          <Route path="/videos" element={<Videos />} />

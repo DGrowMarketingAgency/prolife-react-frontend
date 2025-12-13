@@ -21,7 +21,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 
-const NormalVaginal = () => {
+const Caesarean = () => {
 
   const features = [
     {
@@ -710,4 +710,4 @@ const NormalVaginal = () => {
   );
 };
 
-export default NormalVaginal;
+export default Caesarean ;

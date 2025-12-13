@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FaCheckCircle } from "react-icons/fa";
 
-const PrePregnancy = () => {
+const Pregnancy = () => {
   
   const features = [
     {
@@ -271,9 +271,10 @@ const toggleFAQ = (index) => {
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Best Pregnancy Care in Chennai</h1>
+          
         </div>
       </div>
+      <h1 className="story-hero-title1">Best Pregnancy Care in Chennai</h1>
 
       {/* PLAN PREGNANCY SECTION */}
       <section className="plan-pregnancy-section">
@@ -711,4 +712,4 @@ The goal? A healthy pregnancy, a safe delivery, and a thriving baby. Regular che
   );
 };
 
-export default PrePregnancy;
+export default Pregnancy;

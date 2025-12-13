@@ -31,18 +31,15 @@ const Ourteam = () => {
         className="story-hero-image"
       />
       <div className="story-hero-overlay">
-        <h1 className="story-hero-title">Our Team</h1>
+        
       </div>
     </div>
-  
+  <h1 className="story-hero-title1">Our Team</h1>
 
     <section className="doc-section">
   <h2>Our Dedicated Doctors</h2>
   <h5>Meet our experienced professionals</h5>
-  {/* <p className="doc-sub-tit">
-    Prolife's strength lies in our physician roster. Each doctor combines clinical training with patient-focused practice:
-  </p> */}
-
+  
   <div className="doc-section-container">
     {doctorsData.map((doc, index) => (
       <div className="doc-section-card" key={index}>

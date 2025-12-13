@@ -249,9 +249,10 @@ const containerRef = useRef(null);
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Preterm Labor Management Service</h1>
+         
         </div>
       </div>
+       <h1 className="story-hero-title1">Preterm Labor Management Service</h1>
 
       {/* PLAN PREGNANCY SECTION */}
       <section className="plan-pregnancy-section">

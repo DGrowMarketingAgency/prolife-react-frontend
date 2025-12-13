@@ -18,7 +18,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FaCheckCircle } from "react-icons/fa";
 
-const PrePregnancy = () => {
+const Vacuum = () => {
 
 const SERVICES = [
   {
@@ -711,4 +711,4 @@ const containerRef = useRef(null);
   );
 };
 
-export default PrePregnancy;
+export default Vacuum;

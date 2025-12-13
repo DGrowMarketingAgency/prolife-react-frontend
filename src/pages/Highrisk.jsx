@@ -18,7 +18,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FaCheckCircle } from "react-icons/fa";
 
-const highrisk = () => {
+const Highrisk = () => {
 
   const SERVICES = [
     {
@@ -324,9 +324,10 @@ const highrisk = () => {
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">High-Risk Pregnancy Management</h1>
+          
         </div>
       </div>
+      <h1 className="story-hero-title1">High-Risk Pregnancy Management</h1>
 
       {/* PLAN PREGNANCY SECTION */}
       <section className="plan-pregnancy-section">
@@ -813,4 +814,4 @@ const highrisk = () => {
   );
 };
 
-export default highrisk;
+export default Highrisk;
