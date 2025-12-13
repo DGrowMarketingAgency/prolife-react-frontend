@@ -32,6 +32,7 @@ import Forceps from "./pages/Forceps";
 import Caesarean from "./pages/Caesarean";
 import Emergency from "./pages/Emergency";
 import Sterilisation from "./pages/Sterilisation";
+import Elective from "./pages/Elective";
 
 
 export default function App() {
@@ -65,6 +66,7 @@ export default function App() {
         <Route path="/forceps" element={<Forceps />} />
         <Route path="/caesarean" element={<Caesarean />} />
         <Route path="/emergency" element={<Emergency />} />
+        <Route path="/elective" element={<Elective />} />
         <Route path="/sterilisation" element={<Sterilisation />} />
       </Routes>
       <Footer />

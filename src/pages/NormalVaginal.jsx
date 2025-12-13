@@ -310,9 +310,10 @@ const toggleFAQ = (index) => {
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Normal Vaginal Delivery (NVD) at Prolife Hospital, Chennai</h1>
+         
         </div>
       </div>
+       <h1 className="story-hero-title1">Normal Vaginal Delivery (NVD) at Prolife Hospital, Chennai</h1>
 
       {/* PLAN PREGNANCY SECTION */}
       <section className="plan-pregnancy-section">

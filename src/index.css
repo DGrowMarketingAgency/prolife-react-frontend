@@ -7469,6 +7469,14 @@ footer::before {
   margin-top: 60px;
 }
 
+.str-cta {
+  text-align: center;
+}
+.str-cta1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
 .cta-btn {
   background: var(--primary-color);
   color: #fff;
@@ -12209,6 +12217,149 @@ display:flex;flex-direction:column;gap:18px;
 @media (max-width: 900px) {
   .pa-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/*  */
+
+/* Section Background */
+.lscs-section {
+  background: linear-gradient(135deg, #f6ffe8, #ffffff);
+  padding: 60px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Container */
+.lscs-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Title */
+.lscs-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  color: #1f7a4d;
+  margin-bottom: 40px;
+}
+
+.lscs-title span {
+  color: #f4b400;
+}
+
+/* Grid */
+.lscs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Card */
+.lscs-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lscs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Check Icon */
+.check-icon {
+  background: #1f7a4d;
+  color: #ffffff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Card Text */
+.lscs-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Requirements */
+.requirements-box {
+  background: #fffbea;
+  border-left: 6px solid #f4b400;
+  padding: 30px;
+  border-radius: 14px;
+  margin-bottom: 40px;
+}
+
+.requirements-box h3 {
+  font-size: 24px;
+  color: #1f7a4d;
+  margin-bottom: 15px;
+}
+
+.requirements-box ul {
+  padding-left: 20px;
+}
+
+.requirements-box li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* CTA */
+.cta-box {
+  background: linear-gradient(135deg, #1f7a4d, #2fa36a);
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.cta-box h4 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.cta-button {
+  background: #f4b400;
+  color: #1f7a4d;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ffffff;
+  color: #1f7a4d;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lscs-title {
+    font-size: 26px;
+  }
+
+  .cta-box h4 {
+    font-size: 22px;
   }
 }
 
