@@ -310,7 +310,7 @@ const Lab = () => {
     <section className="fetal-section">
         <div className="fetal-section-container">
           <div className="fetal-section-content">
-            <h2 className="fetal-section-title">Comprehensive Laboratory Services at <span>PROLIFE HOSPITAL</span> </h2>
+            <h2 className="fetal-section-title">Comprehensive Laboratory Services at <span> PROLIFE HOSPITAL</span> </h2>
             <p className="fetal-section-text">
               Your health decisions start with accurate answers. Whether it's a routine checkup, pregnancy monitoring, or investigating symptoms that won't go away—reliable test results change everything.
             </p>
@@ -719,7 +719,7 @@ const Lab = () => {
         </div>
 
         <div className="testimonials-cta">
-          <button>Read More Patient Experiences</button>
+          <button> <a href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews">Read More Patient Experiences</a> </button>
         </div>
       </section>
 

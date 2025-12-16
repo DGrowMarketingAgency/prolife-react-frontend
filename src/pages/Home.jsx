@@ -103,20 +103,19 @@ const closeModal = () => {
     specialization: "Gynecology",
     isFounder: true,
   },
-   { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
+    { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
     { img: "./images/img/d19.jpeg", name: "DR.PAVITHRA", specialization: "General Medican" },
     { img: "./images/img/d20.jpg", name: "DR.HARI PRIYA", specialization: "General Medican" },
     { img: "./images/img/d7.png", name: "DR.SATHYA MOORTHY", specialization: "General Phydician" },
     { img: "./images/img/d.png", name: "DR.MOHANRAJ", specialization: "General Surgeon" },
     { img: "./images/img/d6.png", name: "DR.PAULIA DEVI", specialization: "General Surgeon" }, 
     { img: "./images/img/d.png", name: "DR.AADHAISHA", specialization: "Dermatologist" }, 
-     { img: "./images/img/d.png", name: "DR.ASHOK", specialization: "Gynecology" },
-      { img: "./images/img/d.png", name: "DR.SUGAPRAKASH", specialization: "Gynecology" },
-           { img: "./images/img/d.png", name: "DR.VASANTH", specialization: "Urologist" },
-             { img: "./images/img/d.png", name: "DR.GERALD", specialization: "Oncologist" },
-               { img: "./images/img/d.png", name: "DR.SIVAKUMAR", specialization: "Oncologist" },
-                 { img: "./images/img/d.png", name: "DR.MEENAXI", specialization: "ENT" },
-
+    { img: "./images/img/d.png", name: "DR.ASHOK", specialization: "Gynecology" },
+    { img: "./images/img/d.png", name: "DR.SUGAPRAKASH", specialization: "Gynecology" },
+    { img: "./images/img/d.png", name: "DR.VASANTH", specialization: "Urologist" },
+    { img: "./images/img/d.png", name: "DR.GERALD", specialization: "Oncologist" },
+    { img: "./images/img/d.png", name: "DR.SIVAKUMAR", specialization: "Oncologist" },
+    { img: "./images/img/d.png", name: "DR.MEENAXI", specialization: "ENT" },
 ];
 
 
