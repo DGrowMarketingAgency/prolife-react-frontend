@@ -314,7 +314,7 @@ const containerRef = useRef(null);
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/ad1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>

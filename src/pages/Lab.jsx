@@ -300,10 +300,11 @@ const Lab = () => {
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Best Diagnostic Lab in Chennai
-          </h1>
+         
         </div>
       </div>
+       <h1 className="story-hero-title1">Best Diagnostic Lab in Chennai
+          </h1>
 
       {/* Lab Section */}
     <section className="fetal-section">

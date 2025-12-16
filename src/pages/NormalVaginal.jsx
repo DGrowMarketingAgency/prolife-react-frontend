@@ -321,8 +321,7 @@ const toggleFAQ = (index) => {
 
           <div className="plan-left">
             <h2 className="plan-title">
-              Experience Natural Childbirth with <br />
-              <span>Expert Care </span>
+              Experience Natural Childbirth with <span>Expert Care </span>
             </h2>
 
             <p className="plan-description">
@@ -338,7 +337,7 @@ const toggleFAQ = (index) => {
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/nv1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -467,7 +466,7 @@ const toggleFAQ = (index) => {
 
   <div className="choose-img-wrapper">
     <img
-      src="/images/img/u7.webp"
+      src="/images/img/nv2.jpg"
       alt="Pregnancy Care at Prolife"
       className="choose-img"
     />

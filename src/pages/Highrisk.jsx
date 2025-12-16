@@ -52,7 +52,33 @@ const Highrisk = () => {
       icon: faStethoscope,
     },
   ];
-
+const relatedServices = [
+  {
+    title: "Pre-Pregnancy Counselling",
+    desc: "Plan your pregnancy with expert medical guidance. Optimize your health before conceiving for safer outcomes.",
+   
+  },
+  {
+    title: "Fertility Treatment ",
+    desc: "Comprehensive fertility evaluation and treatment for couples facing conception challenges.",
+    
+  },
+  {
+    title: "High-Risk Pregnancy Management",
+    desc: " Specialized care for pregnancies with medical complications or previous pregnancy issues",
+   
+  },
+  {
+    title: "PCOS Management",
+    desc: "  Treatment for polycystic ovary syndrome affecting pregnancy and hormonal health.",
+  
+  },
+  {
+    title: "Pediatric Care",
+    desc: "Continue your baby's healthcare journey with our experienced pediatricians.",
+   
+  }
+];
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -353,7 +379,7 @@ const Highrisk = () => {
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/highrisk1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -365,7 +391,7 @@ const Highrisk = () => {
         <div className="plan-container">
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy2.jpg"
+              src="/images/img/highrisk2.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -440,7 +466,7 @@ const Highrisk = () => {
 
         <div className="choose-img-wrapper">
           <img
-            src="/images/img/u7.webp"
+            src="/images/img/highrisk3.jpg"
             alt="Pregnancy Care at Prolife"
             className="choose-img"
           />
@@ -499,7 +525,7 @@ const Highrisk = () => {
         <div className="lab-grid">
           {steps.map((s, i) => (
             <div key={i} className="lab-card">
-              <div className="icon">{s.icon}</div>
+              <div className="icon1">{s.icon}</div>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>
             </div>
@@ -507,7 +533,7 @@ const Highrisk = () => {
         </div>
 
         <div className="btn-wrapper">
-          <button className="cta-btn">Book Your Appointment  →</button>
+          <button className="cta-btn"> <a href="/contact">Book Your Appointment  →</a> </button>
         </div>
       </section>
 
@@ -708,7 +734,7 @@ const Highrisk = () => {
       <section className="reviews-section">
         <p className="sub-title">TESTIMONIALS</p>
         <div className="google-rating">
-          ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+           <span>4.5/5 Google Rating</span>
         </div>
 
         <div className="reviews-container">
@@ -727,12 +753,12 @@ const Highrisk = () => {
         </div>
 
         <a
-          href="https://g.page/r/CS9733eotKhCEBM/review"
+          href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews"
           target="_blank"
           rel="noreferrer"
           className="see-more-btn"
         >
-          ⭐ Read More Success Stories
+           Read More Success Stories
         </a>
       </section>
 
@@ -769,39 +795,19 @@ const Highrisk = () => {
         ))}
       </section>
 
-      <section className="rs-section" aria-labelledby="rs-heading">
-        <div className="rs-wrap">
-          <h2 id="rs-heading" className="rs-title">
-            Related Services You Might Need
-          </h2>
+       <section className="related-services">
+      <h2 className="related-title">Related Services You Might Need</h2>
 
-          <p className="rs-sub">
-            Care pathways and treatments tailored for maternal & newborn health.
-          </p>
-
-          <div className="rs-grid" ref={containerRef}>
-            {SERVICES.map((s, i) => (
-              <article key={i} className={`rs-card rs-card-${i % 5}`}>
-                <div className="rs-icon">
-                  <FontAwesomeIcon icon={s.icon} />
-                </div>
-
-                <div className="rs-body">
-                  <h3 className="rs-head">{s.title}</h3>
-                  {/* <p className="rs-desc">{s.desc}</p> */}
-                </div>
-
-                <button
-                  className="rs-cta"
-                  aria-label={`Learn more about ${s.title}`}
-                >
-                  Learn More →
-                </button>
-              </article>
-            ))}
+      <div className="related-grid">
+        {relatedServices.map((service, index) => (
+          <div className="related-card" key={index}>
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
+            <div className="arrow">→</div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </section>
 
       <section className="lab-hero">
         <div className="lab-content">

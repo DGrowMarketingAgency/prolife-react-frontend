@@ -282,7 +282,7 @@ const toggleFAQ = (index) => {
 
           <div className="plan-left">
             <h2 className="plan-title">
-             Expert Maternity Services at  <br />
+             Expert Maternity Services at 
               <span>Prolife Hospital</span>
             </h2>
 
@@ -300,7 +300,7 @@ At Prolife Hospital, our pregnancy care in Chennai supports you through every tr
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/pregnancy.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -312,7 +312,7 @@ At Prolife Hospital, our pregnancy care in Chennai supports you through every tr
         <div className="plan-container">
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy2.jpg"
+              src="/images/img/pregnancy1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -385,14 +385,15 @@ The goal? A healthy pregnancy, a safe delivery, and a thriving baby. Regular che
 
   <div className="choose-img-wrapper">
     <img
-      src="/images/img/u7.webp"
+      src="/images/img/pregnancy2.jpg"
       alt="Pregnancy Care at Prolife"
       className="choose-img"
     />
   </div>
 </section>
 
-     <section className="services-section">
+
+<section className="services-section">
   <h2 className="services-title">Our Pregnancy Care Services</h2>
 
   <div className="services-grid">
@@ -562,34 +563,69 @@ The goal? A healthy pregnancy, a safe delivery, and a thriving baby. Regular che
       </div>
     </section>
 
- <section className="team-section">
-      <h2 className="team-title">Meet Our Pregnancy Care Team</h2>
-
-      <div className="team-grid">
-        {experts.map((doctor, i) => (
-          <div className="doctor-card" key={i}>
-            <div className="doctor-img">
-              <img src={doctor.img} alt={doctor.name} />
+ <section className="eds-section">
+          <div className="eds-container">
+    
+            <div className="eds-header">
+              <h2>Meet Our Pre-Pregnancy Counselling Experts</h2>
+              <p>Skilled Hands, Compassionate Hearts</p>
             </div>
+    
+            <div className="eds-grid">
+    
+              <div className="eds-card">
+                <span className="eds-bar"></span>
+                <h3>Dr. Sujitha R – Senior Gynecologist</h3>
+                <p>
+ 15+ years managing normal and complicated pregnancies. Known for her patient-centered approach that ensures mothers feel heard and supported.
+                </p>
+              </div>
+    
+              <div className="eds-card">
+                <span className="eds-bar"></span>
+                <h3>Dr. Thamarai – Maternal-Fetal Medicine Specialis</h3>
+                <p>
+                  Expert in managing complex medical conditions before and during pregnancy—diabetes, hypertension, autoimmune disorders.
+                </p>
+              </div>
+    
+              <div className="eds-card">
+                <span className="eds-bar"></span>
+                <h3>Dr. Varshini – Fertility Specialist</h3>
+                <p>
+                   Advanced training in reproductive endocrinology. Helps couples facing conception challenges using evidence-based approaches.
+                </p>
+              </div>
+              <div className="eds-card">
+                <span className="eds-bar"></span>
+                <h3>Dr. Uma Maheshwari - Pediatrician</h3>
+                <p>
+                   Provides immediate newborn care and assessment. Conducts baby's first health checks, vaccination planning, and addresses parental concerns.
+                </p>
+              </div>
+              <div className="eds-card">
+                <span className="eds-bar"></span>
+                <h3>Anesthesiology Team</h3>
+                <p>
+                   Expert pain management during labor and delivery. Administers epidurals, spinal blocks for cesarean sections, and monitors patient comfort throughout.
+                </p>
+              </div>
+              
+ 
 
-            <div className="doctor-info">
-              <h3 className="doctor-name">{doctor.name}</h3>
-              <p className="doctor-role">{doctor.title}</p>
-              <p className="doctor-desc">{doctor.desc}</p>
+
+    
             </div>
+            
+    
           </div>
-        ))}
+          <div className="consultation-cta">
+        <a href="/contact" className="cta-btn">
+          Have specific questions for our doctors? Book a Consultation →
+        </a>
       </div>
-      <div className="doctor-content">
-        <h3 className="doctor-role">Anesthesiology Team</h3>
-            <p>
- Expert pain management during labor and delivery. Administers epidurals, spinal blocks for cesarean sections, and monitors patient comfort throughout.</p>
-          </div>
-
-      <div className="team-btn-wrap">
-        <a href="/contact" className="team-btn">Book a Consultation →</a>
-      </div>
-    </section>
+      
+        </section>
 
       <section className="why-prolife-section">
   <h2 className="section-title">Why Prolife Hospital for Pregnancy Care?
@@ -621,7 +657,7 @@ The goal? A healthy pregnancy, a safe delivery, and a thriving baby. Regular che
       <section className="reviews-section">
   <p className="sub-title">TESTIMONIALS</p>
   <div className="google-rating">
-    ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+     <span>4.5/5 Google Rating</span>
   </div>
 
   <div className="reviews-container">
@@ -640,12 +676,12 @@ The goal? A healthy pregnancy, a safe delivery, and a thriving baby. Regular che
   </div>
 
   <a
-    href="https://g.page/r/CS9733eotKhCEBM/review"
+    href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews"
     target="_blank"
     rel="noreferrer"
     className="see-more-btn"
   >
-    ⭐ Read More Success Stories
+    Read More Success Stories
   </a>
 </section>
 
@@ -688,7 +724,6 @@ The goal? A healthy pregnancy, a safe delivery, and a thriving baby. Regular che
       <div className="related-grid">
         {relatedServices.map((service, index) => (
           <div className="related-card" key={index}>
-            <div className="service-icon">{service.icon}</div>
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
             <div className="arrow">→</div>
@@ -699,13 +734,12 @@ The goal? A healthy pregnancy, a safe delivery, and a thriving baby. Regular che
 
 <section className="lab-hero">
       <div className="lab-content">
-        <h1>
+        <h2>
           Prolife Hospital —  Best pregnancy care in Chennai for your growing family.
-        </h1>
+        </h2>
 
-        <button className="lab-btn">
-          Start Your Pregnancy Journey Today →
-        </button>
+        <div>
+        <a href="/contact" className="lab-btn">Start Your Pregnancy Journey Today →</a></div>
       </div>
     </section>
     </div>

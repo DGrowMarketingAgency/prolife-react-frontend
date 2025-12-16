@@ -369,7 +369,7 @@ const Hypertension = () => {
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/hyper1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -381,7 +381,7 @@ const Hypertension = () => {
         <div className="plan-container">
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy2.jpg"
+              src="/images/img/hyper2.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>

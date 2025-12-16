@@ -310,9 +310,10 @@ const containerRef = useRef(null);
           className="story-hero-image"
         />
         <div className="story-hero-overlay">
-          <h1 className="story-hero-title">Cervical Cerclage Treatment in Chennai</h1>
+          
         </div>
       </div>
+      <h1 className="story-hero-title1">Cervical Cerclage Treatment in Chennai</h1>
 
       {/* PLAN PREGNANCY SECTION */}
       <section className="plan-pregnancy-section">

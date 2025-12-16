@@ -1,25 +1,23 @@
 import React, { useState } from "react";
-import { useRef } from "react";
+
+import { useEffect, useRef } from "react";
 
 const Home = () => {
-  const [expanded, setExpanded] = useState(false);
+  
   const [openFAQ, setOpenFAQ] = useState(null);
+ const [expanded, setExpanded] = useState(false);
+const [activeCard, setActiveCard] = useState(null);
 
- const [modalOpen, setModalOpen] = useState(false);
-const [modalData, setModalData] = useState({ img: "", title: "", text: "" });
-
-  const handleSeeMore = () => setExpanded(!expanded);
-
-  const openModal = (card) => {
-  setModalData({ img: card.img, title: card.label, text: card.text });
-  setModalOpen(true);
-  document.body.style.overflow = "hidden"; // scroll lock
+const openModal = (card) => {
+  setActiveCard(card);
+  document.body.style.overflow = "hidden";
 };
 
-  const closeModal = () => {
-    setModalOpen(false);
-    document.body.style.overflow = "auto";
-  };
+const closeModal = () => {
+  setActiveCard(null);
+  document.body.style.overflow = "auto";
+};
+
 
   const cardsData = [
     { img: "/images/img/s1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance... ifbuhbcjhdc cdicbic cns hyddscnds dcsb ch n cbiuuijkjkbfsdfsdfdfcbdusjibdcdjhdnibfzfoudbcnoidsc djcdscudcud ddjcbdsucsj cjcidjciodsdicdc jcdsiuhcojdcv cnbxijzcnduc nc xziojcdnsuubcdc nbxzcz dcnjssj ciod ndhjccbscd" },
@@ -99,8 +97,13 @@ const [modalData, setModalData] = useState({ img: "", title: "", text: "" });
   };
 
   const doctorsData = [
+     {
+    img: "./images/img/d11.png",
+    name: "Dr. THAMARAI",
+    specialization: "Gynecology",
+    isFounder: true,
+  },
   { img: "./images/img/d1.png", name: "DR.NELLAIYAPPAN", specialization: "Orthopedics" },
-  { img: "./images/img/d11.png", name: "Dr.THAMARAI",  specialization: "Gynecology" },
   { img: "./images/img/d2.png", name: "DR.KUMANAN", specialization: "Oncology" },
   { img: "./images/img/d3.png", name: "DR.HARI PRAKASH", specialization: "Anesthesiology" },
   { img: "./images/img/d4.png", name: "DR.BALA", specialization: "Oncology" },
@@ -110,6 +113,10 @@ const [modalData, setModalData] = useState({ img: "", title: "", text: "" });
   { img: "./images/img/d8.png", name: "DR.NITHYA PRIYAN", specialization: "Anesthesiology" },
   { img: "./images/img/d9.png", name: "DR.SOORIYA.S", specialization: "Dermatology" },
   { img: "./images/img/d10.png", name: "DR.SUJITHA.R", specialization: "Gynecology" },
+   { img: "./images/img/d21.jpeg", name: "DR.SAMUEL", specialization: "Orthopedics" },
+  { img: "./images/img/d17.jpeg", name: "DR.PREMA PRATHICKSHA.M", specialization: "Duty Medical Officer" },
+   { img: "./images/img/d19.jpeg", name: "DR.PAVITHRA", specialization: "Duty Medical Officer" },
+    { img: "./images/img/d23.jpeg", name: "DR.MURUGANANDAM", specialization: "Internal Medicine" },
   { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
   { img: "./images/img/d13.png", name: "Dr.Varshini", specialization: "Gynecology" },
   { img: "./images/img/d14.png", name: "DR.PAVITHRA", specialization: "Duty Medical Officer" },
@@ -141,32 +148,55 @@ const openPharmacy = () => {
     window.open("https://theprolifepharmacy.com/", "_blank");
   };
 
-const trackRef = useRef(null); // Track-a reference panna
+  const trackRef = useRef(null);
+  let autoSlideRef = useRef(null);
 
-const moveSlide = (direction) => {
+  const moveSlide = (direction) => {
   const track = trackRef.current;
   if (!track) return;
 
   const card = track.querySelector(".home-doc-card");
-  if (!card) return;
+  const cardWidth = card.offsetWidth + 18;
 
-  const cardWidth = card.clientWidth + 22; // margin included
   const style = window.getComputedStyle(track);
-  const matrix = new WebKitCSSMatrix(style.transform); // current transform
-  let currentX = matrix.m41; // current translateX value
+  const matrix = new WebKitCSSMatrix(style.transform);
+  let currentX = matrix.m41;
 
   if (direction === "left") {
-    currentX = Math.min(currentX + cardWidth, 0); // left scroll limit
+    currentX += cardWidth;
   } else {
-    currentX = currentX - cardWidth; // right scroll (limit optional)
+    currentX -= cardWidth;
   }
 
-  track.style.transition = "0.4s ease";
+  track.style.transition = "0.6s cubic-bezier(0.4, 0, 0.2, 1)";
   track.style.transform = `translateX(${currentX}px)`;
-};
+ };
+
+/* 🔁 Auto Slide */
+  const startAutoSlide = () => {
+  stopAutoSlide();
+  autoSlideRef.current = setInterval(() => {
+    moveSlide("right");
+  }, 3000);
+  };
+
+  const stopAutoSlide = () => {
+  if (autoSlideRef.current) {
+    clearInterval(autoSlideRef.current);
+  }
+  };
+
+  const pauseAutoSlide = () => stopAutoSlide();
+
+/* Start on load */
+ useEffect(() => {
+  startAutoSlide();
+  return () => stopAutoSlide();
+  }, []);
+
 
   return (
-    <>
+    <div >
       {/* Hero Section */}
       <section className="master-section">
         <div className="master-section-container">
@@ -190,7 +220,7 @@ const moveSlide = (direction) => {
 
       {/* Section 1 - Specialized Healthcare */}
 
-<section className="story-hero-section home-21">
+<section className="story-hero-section home-21" id="home">
   <div className="story-hero-content home-12">
     <div className="story-hero-text home-2">
       <h2>Specialized Healthcare for Women and Growing Families</h2>
@@ -315,7 +345,7 @@ const moveSlide = (direction) => {
                 </p>
               </div>
             </div>
-<div className="feature-box">
+             <div className="feature-box">
               <div className="icon-circle">
                 <i className="fa-solid fa-baby"></i>
               </div>
@@ -356,7 +386,7 @@ const moveSlide = (direction) => {
                 <h4>Labour Preparation Guide</h4>
                 <p>Practical information about delivery day—what to expect, what to pack, and how to stay calm.</p>
                 <button>
-                  <a style={{ color: "#fff", textDecoration: "none" }} href="./PrePregnancy.jsx">
+                  <a style={{ color: "#fff", textDecoration: "none" }} href="./Pre-pregnancy">
                     View More
                   </a>
                 </button>
@@ -369,7 +399,7 @@ const moveSlide = (direction) => {
                 <h4>Laparoscopic Surgery Explained</h4>
                 <p>Understanding when minimally invasive options benefit your specific condition.</p>
                 <button>
-                  <a style={{ color: "#fff", textDecoration: "none" }} href="./surgery-and-proceures.html">
+                  <a style={{ color: "#fff", textDecoration: "none" }} href="./caesarean">
                     View More
                   </a>
                 </button>
@@ -382,7 +412,7 @@ const moveSlide = (direction) => {
                 <h4>Menopause Recognition</h4>
                 <p>Identifying symptoms and managing this transition with medical support.</p>
                 <button>
-                  <a style={{ color: "#fff", textDecoration: "none" }} href="./lab.html">
+                  <a style={{ color: "#fff", textDecoration: "none" }} href="./lab">
                     View More
                   </a>
                 </button>
@@ -395,7 +425,7 @@ const moveSlide = (direction) => {
                 <h4>Hormonal Balance Strategies</h4>
                 <p>Lifestyle modifications and treatment options for hormonal concerns.</p>
                 <button>
-                  <a style={{ color: "#fff", textDecoration: "none" }} href="./menopause-change-life.html">
+                  <a style={{ color: "#fff", textDecoration: "none" }} href="./assiteddelivery">
                     View More
                   </a>
                 </button>
@@ -405,79 +435,122 @@ const moveSlide = (direction) => {
         </div>
       </section>
 
- <section className="specialization-section">
-      <div className="specialization-container">
-        <h2 className="specialization-title">Clinical Departments</h2>
-        <p className="specialization-subtitle">Multi-Specialty Care Coordination</p>
 
-        <div className="specialization-grid">
-          {cardsData.map((card, index) => (
-            <div
-              key={index}
-              className="specialization-card"
-              style={{ display: expanded || index < 6 ? "block" : "none" }}
-              onClick={() => openModal(card)}
-            >
-              <div className="card-img">
-                <img src={card.img} alt={card.label} />
-              </div>
-              <div className="card-label">{card.label}</div>
-              <p className="card-text">{card.text}</p>
-              <a className="learn-more">Learn More →</a>
-            </div>
-          ))}
+   <section className="specialization-section">
+     <div className="specialization-container">
+      <h2 className="specialization-title">Clinical Departments</h2>
+         <p className="specialization-subtitle">
+      Multi-Specialty Care Coordination
+      </p>
+
+    <div className="specialization-grid">
+      {cardsData.map((card, index) => (
+        <div
+          key={index}
+          className="specialization-card"
+          style={{ display: expanded || index < 6 ? "block" : "none" }}
+        >
+          <div className="card-img">
+            <img src={card.img} alt={card.label} />
+          </div>
+
+          <div className="card-label">{card.label}</div>
+
+          {/* short text */}
+          <p className="card-text">{card.text}</p>
+
+          <a
+            href="#"
+            className="learn-more"
+            onClick={(e) => {
+              e.preventDefault();
+              openModal(card);
+            }}
+          >
+            Learn More →
+          </a>
         </div>
-
-        <button className="see-more-btn" onClick={handleSeeMore}>
-          {expanded ? "Show Less" : "See More..."}
-        </button>
-      </div>
-
-      {/* Modal */}
-
-        {modalOpen && (
-  <div className="specialization-modal" onClick={closeModal}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <span className="close-btn" onClick={closeModal}>&times;</span>
-      <img src={modalData.img} alt={modalData.title} />
-      <h3>{modalData.title}</h3>
-      <p>{modalData.text}</p>
+      ))}
     </div>
+
+    <button className="see-more-btn" onClick={() => setExpanded(!expanded)}>
+      {expanded ? "Show Less" : "See More..."}
+    </button>
   </div>
-)}
-    
-    </section>
+
+  {/* 🔥 ZOOM BOX (IMAGE + CONTENT SAME BOX) */}
+  {activeCard && (
+    <div className="specialization-modal" onClick={closeModal}>
+      <div
+        className="modal-content"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <span className="close-btn" onClick={closeModal}>
+          &times;
+        </span>
+
+        <img src={activeCard.img} alt={activeCard.label} />
+
+        <h3>{activeCard.label}</h3>
+
+        {/* full text */}
+        <p>{activeCard.text}</p>
+      </div>
+    </div>
+  )}
+</section>
 
  
        
 <section className="home-doc-slider">
   <h2 className="home-doc-title">Our Medical Team</h2>
   <h5 className="home-doc-subtitle">Board-Certified Specialists</h5>
-  <p className="home-doc-text">
-    Prolife's strength lies in our physician roster. Each doctor combines clinical training with patient-focused practice:
-  </p>
 
-  <div className="home-doc-wrapper">
-     <div className="home-doc-track">
-    {[...doctorsData, ...doctorsData].map((doc, index) => (
-      <div className="home-doc-card" key={index}>
-        <img src={doc.img} alt={doc.name} />
-        <h4>{doc.name}</h4>
-        <p>{doc.specialization}</p>
-      </div>
-    ))}
-  </div>
+  <div
+    className="home-doc-wrapper"
+    onMouseEnter={pauseAutoSlide}
+    onMouseLeave={startAutoSlide}
+  >
+    <button
+      className="doc-arrow left"
+      onClick={() => moveSlide("left")}
+    >
+      ❮
+    </button>
 
-  <button className="doc-arrow left">❮</button>
-  <button className="doc-arrow right">❯</button>
+    <div className="home-doc-track" ref={trackRef}>
+      {[...doctorsData, ...doctorsData].map((doc, index) => (
+        <div
+          key={index}
+          className={`home-doc-card ${
+            doc.isFounder ? "founder-card" : ""
+          }`}
+        >
+          {doc.isFounder && (
+            <span className="founder-mini">Founder</span>
+          )}
+
+          <img src={doc.img} alt={doc.name} />
+          <h4>{doc.name}</h4>
+          <p>{doc.specialization}</p>
+        </div>
+      ))}
+    </div>
+
+    <button
+      className="doc-arrow right"
+      onClick={() => moveSlide("right")}
+    >
+      ❯
+    </button>
   </div>
 </section>
 
       {/* Reviews Section */}
       <section className="reviews-section">
-  <p className="sub-title">TESTIMONIALS</p>
+  <p className="sub-title">Testimonials</p>
   <div className="google-rating">
-    ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+    <span>5/5 Google Rating</span>
   </div>
 
   <div className="reviews-container">
@@ -501,34 +574,33 @@ const moveSlide = (direction) => {
     rel="noreferrer"
     className="see-more-btn"
   >
-    ⭐ See More Reviews
+     See More Reviews
   </a>
 </section>
 
       {/* Insurance Section */}
       <section className="slide-section">
-        <h2>Insurance Accepted</h2>
-        <p>Working With Your Coverage Provider</p>
-        <p>Prolife partners with major insurance companies to facilitate billing and coverage. Contact our admissions desk to verify your specific plan.</p>
+  <h2>Insurance Accepted</h2>
+  <p>Working With Your Coverage Provider</p>
+  <p>
+    Prolife partners with major insurance companies to facilitate billing and
+    coverage. Contact our admissions desk to verify your specific plan.
+  </p>
 
-        <div className="slider-wrapper">
-          <div className="slider-track" id="sliderTrack">
-            <img src="/images/img/b (1).jpg" alt="" />
-            <img src="/images/img/b (2).jpg" alt="" />
-            <img src="/images/img/b (3).jpg" alt="" />
-            <img src="/images/img/b (4).jpg" alt="" />
-            <img src="/images/img/b (5).jpg" alt="" />
-            <img src="/images/img/b (6).jpg" alt="" />
-            <img src="/images/img/b (7).jpg" alt="" />
-            <img src="/images/img/b (8).jpg" alt="" />
-            <img src="/images/img/b (9).jpg" alt="" />
-            <img src="/images/img/b (10).jpg" alt="" />
-            <img src="/images/img/b (11).jpg" alt="" />
-            <img src="/images/img/b (12).jpg" alt="" />
-            <img src="/images/img/b (13).jpg" alt="" />
-          </div>
-        </div>
-      </section>
+  <div className="slider-wrapper">
+    <div className="slider-track">
+      {[1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7,8,9,10,11,12,13].map(
+        (num, index) => (
+          <img
+            key={index}
+            src={`/images/img/b (${num}).jpg`}
+            alt={`Insurance ${num}`}
+          />
+        )
+      )}
+    </div>
+  </div>
+</section>
 
       {/* FAQ Section */}
        <section className="faq-section">
@@ -564,7 +636,7 @@ const moveSlide = (direction) => {
       </section>
 
       
-    </>
+    </div>
   );
 }
 

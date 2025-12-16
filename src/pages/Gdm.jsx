@@ -368,7 +368,7 @@ const Gdm = () => {
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/gdm3.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -380,7 +380,7 @@ const Gdm = () => {
         <div className="plan-container">
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy2.jpg"
+              src="/images/img/gdm2.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -450,7 +450,7 @@ High blood pressure, PCOS, Thyroid disorders, History of large babies, Obesity, 
 
         <div className="choose-img-wrapper">
           <img
-            src="/images/img/u7.webp"
+            src="/images/img/gdm1.jpg"
             alt="Pregnancy Care at Prolife"
             className="choose-img"
           />
@@ -663,7 +663,7 @@ High blood pressure, PCOS, Thyroid disorders, History of large babies, Obesity, 
       <section className="reviews-section">
         <p className="sub-title">TESTIMONIALS</p>
         <div className="google-rating">
-          ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+           <span>4.5/5 Google Rating</span>
         </div>
 
         <div className="reviews-container">
@@ -682,12 +682,12 @@ High blood pressure, PCOS, Thyroid disorders, History of large babies, Obesity, 
         </div>
 
         <a
-          href="https://g.page/r/CS9733eotKhCEBM/review"
+          href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews"
           target="_blank"
           rel="noreferrer"
           className="see-more-btn"
         >
-          ⭐ Read More Success Stories
+           Read More Success Stories
         </a>
       </section>
 

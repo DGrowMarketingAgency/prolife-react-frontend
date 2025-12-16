@@ -161,7 +161,7 @@ useEffect(() => {
           {storyCards.map((card, i) => (
             <div key={i} className="story-card" onClick={() => openStoryModal(card)}>
               <img src={card.img} alt={card.title} className="story-image" />
-              <h3 className="story-title">{card.title}</h3>
+              <h3 className="story-title1">{card.title}</h3>
               <p className="story-text">{card.text}</p>
             </div>
           ))}
@@ -181,7 +181,7 @@ useEffect(() => {
       )}
 
       <section className="services-section">
-         <h2 className="services-title">Our Services</h2>
+         <h2 className="services-title12">Our Services</h2>
         <div className="services-container">
            
           <div className="services-left">
@@ -362,7 +362,7 @@ useEffect(() => {
           <div className="location-grid">
             <div className="location-card">
               <h3>Walk-In Hours</h3>
-              <p>Mon-Sat: 9 AM - 8 PM | Sun: 9 AM - 2 PM</p>
+              <p>Mon-Sat : 9 AM - 8 PM   </p> <p> Sun  : 9 AM - 2 PM</p>
             </div>
             <div className="location-card">
               <h3>Emergency Services</h3>
