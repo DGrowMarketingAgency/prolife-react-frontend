@@ -339,7 +339,7 @@ const containerRef = useRef(null);
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/cct1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -351,7 +351,7 @@ const containerRef = useRef(null);
         <div className="plan-container">
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy2.jpg"
+              src="/images/img/cct3.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -427,7 +427,7 @@ const containerRef = useRef(null);
 
         <div className="choose-img-wrapper">
           <img
-            src="/images/img/u7.webp"
+            src="/images/img/cct2.jpg"
             alt="Pregnancy Care at Prolife"
             className="choose-img"
           />

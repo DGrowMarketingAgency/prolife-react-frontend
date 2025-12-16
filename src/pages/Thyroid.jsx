@@ -376,8 +376,8 @@ const cardVariants = {
 
           <div className="plan-left">
             <h2 className="plan-title">
-              Comprehensive Thyroid Care That Puts <br />
-              <span>Your Health First</span>
+              Comprehensive Thyroid Care That Puts 
+              <span> Your Health First</span>
             </h2>
 
             <p className="plan-description">
@@ -515,68 +515,74 @@ const cardVariants = {
         </div>
 
         <div className="why-cta">
-          <a href="#" className="why-btn">Schedule Your Visit</a>
+          <a href="/contact" className="why-btn">Schedule Your Visit</a>
         </div>
 
       </div>
     </section>
 
-     <section className="cerclage-team-section" id="team">
-             <div className="container">
-               <h2 className="section-title">Meet Our Thyroid Specialists in Chennai</h2>
-     
-     
-               <div className="team-grid">
+     <section className="eds-section">
+        <div className="eds-container">
 
-                 <div className="team-card">
-                   <h3 className="doctor-name">Dr. Sathya Moorthy </h3>
-                   <p className="designation">General Physician</p>
-                   <p className="doctor-desc">
-                     With extensive experience in managing chronic conditions, Dr. Sathya Moorthy brings a holistic approach to thyroid care, ensuring that all aspects of your health are considered in your treatment plan.
+          <div className="eds-header">
+            <h2>Meet Our Thyroid Specialists in Chennai</h2>
+            <p>Skilled Hands, Compassionate Hearts</p>
+          </div>
 
-                   </p>
-                 </div>    
+          {/* Founder Highlight */}
+          <div className="eds-founder-highlight">
+            <div className="eds-founder-img">
+              <img src="./images/img/d11.png" alt="Dr. Thamarai" />
+            </div>
+
+            <div className="eds-founder-content">
+              <span className="eds-founder-tag">Founder</span>
+              <h3>Dr. Thamarai</h3>
+              <h4>Maternal – Fetal Medicine Specialist</h4>
+              <p>
+                Founder of our hospital and  Dr. Thamarai's patient-centered approach combines clinical excellence with genuine compassion, making her a trusted partner for women navigating thyroid concerns alongside gynecological health.
+              </p>
+            </div>
+          </div>
+
+          <div className="eds-grid">
+
+            <div className="eds-card">
+              <span className="eds-bar"></span>
+              <h3>Dr. Sathya Moorthy - General Physician</h3>
+              <p>
+                With extensive experience in managing chronic conditions, Dr. Sathya Moorthy brings a holistic approach to thyroid care, ensuring that all aspects of your health are considered in your treatment plan.
+              </p>
+            </div>
+
+            <div className="eds-card">
+              <span className="eds-bar"></span>
+              <h3>Dr. Sujitha R – Senior Gynecologist</h3>
+              <p>
+                Specializing in women's reproductive health, Dr. Sujitha R expertly manages thyroid conditions during pregnancy, postpartum, and throughout different life stages, ensuring both mother and baby remain healthy.
+              </p>
+            </div>
 
 
 
-                 {/* Dr. Sujitha */}
-                 <div className="team-card">
-                   <h3 className="doctor-name">Dr. Sujitha R</h3>
-                   <p className="designation">Gynecologist</p>
-                   <p className="doctor-desc">
-                      Specializing in women's reproductive health, Dr. Sujitha R expertly manages thyroid conditions during pregnancy, postpartum, and throughout different life stages, ensuring both mother and baby remain healthy.
+            <div className="eds-card">
+              <span className="eds-bar"></span>
+              <h3>Dr. Varshini – Fertility Specialist</h3>
+              <p>
+                 Known for her thorough approach and clear communication, Dr. Varshini helps patients understand their thyroid conditions and actively participate in their treatment decisions.
+              </p>
+            </div>
+          </div>
+          <div className="consultation-cta">
+            <a href="/contact" className="cta-btn">
+              Have specific questions for our doctors? Book a Consultation →
+            </a>
+          </div>
 
-                   </p>
-                 </div>
-     
-     
-                 {/* Dr. Thamarai */}
-                 <div className="team-card">
-                   <h3 className="doctor-name">Dr. Thamarai</h3>
-                   <p className="designation">Gynecologist</p>
-                   <p className="doctor-desc">
-                      Dr. Thamarai's patient-centered approach combines clinical excellence with genuine compassion, making her a trusted partner for women navigating thyroid concerns alongside gynecological health.
+      
+      </div>
+      </section>
 
-                   </p>
-                 </div>
-     
-     
-                 {/* Dr. Varshini */}
-                 <div className="team-card">
-                   <h3 className="doctor-name">Dr. Varshini</h3>
-                   <p className="designation">Gynecologist</p>
-                   <p className="doctor-desc">
-                     Known for her thorough approach and clear communication, Dr. Varshini helps patients understand their thyroid conditions and actively participate in their treatment decisions.
-
-                   </p>
-                 </div>
-     
-     
-                 
-               </div>
-     
-             </div>
-           </section>
 
      <section className="tt-section" aria-labelledby="tt-heading">
       <div className="tt-inner">

@@ -337,7 +337,7 @@ const Emergency = () => {
 
           <div className="plan-left">
             <h2 className="plan-title">
-              Expert Emergency C-Section Care at Prolife Hospital
+              Expert Emergency C-Section Care at <span> PROLIFE HOSPITAL</span> 
             </h2>
 
             <p className="plan-description">
@@ -357,7 +357,7 @@ const Emergency = () => {
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/emergency1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -369,7 +369,7 @@ const Emergency = () => {
         <div className="plan-container">
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy2.jpg"
+              src="/images/img/emergency2.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -418,7 +418,7 @@ const Emergency = () => {
             </li>
 
             <li>
-              <strong>Fast “Decision to Delivery” Time</strong>
+              <strong>Fast Decision to Delivery Time</strong>
               <p>
                 Emergency C-sections must be done within 30 minutes for the safety of mother and baby. At Prolife Hospital, we consistently achieve this because our team and systems are prepared for urgent situations.
               </p>
@@ -432,23 +432,23 @@ const Emergency = () => {
             </li>
 
             <li>
-              <strong>Advanced Operation Theaters</strong> <br />
+              <strong>Advanced Operation Theaters</strong> 
               <p>  We have modern modular OTs equipped with:
-                <li>Advanced anesthesia machines</li>
-                <li>Continuous fetal monitoring</li>
-                <li>Immediate blood bank access</li>
-                <li>Newborn resuscitation equipment</li>
-                <li>Infection-controlled surroundings</li>
+           <br />   ● Advanced anesthesia machines
+           <br />    ● Continuous fetal monitoring
+            <br />    ● Immediate blood bank access
+            <br />   ● Newborn resuscitation equipment
+             <br />    ●  Infection-controlled surroundings
               </p>
             </li>
 
             <li>
-              <strong>Complete Emergency Support</strong><br />
+              <strong>Complete Emergency Support</strong>
               <p> We provide full support during emergencies, including:
-                <li>In-house blood bank</li>
-                <li>ICU for mothers</li>
-                <li>NICU for newborns</li>
-                <li>24/7 lab and scan facilities</li>
+            <br />   ●  In-house blood bank
+            <br />   ●  ICU for mothers
+            <br />   ●  NICU for newborns
+            <br />   ●  24/7 lab and scan facilities
               </p>
             </li>
             <li>
@@ -459,18 +459,18 @@ const Emergency = () => {
             </li>
           </ul>
 
-          <a href="/reviews" className="choose-btn">
+          <a href="/contact" className="choose-btn">
             Emergency ? →
           </a>
         </div>
 
-        <div className="choose-img-wrapper">
+        {/* <div className="choose-img-wrapper">
           <img
-            src="/images/img/u7.webp"
+            src="/images/img/emergency3.jpg"
             alt="Pregnancy Care at Prolife"
             className="choose-img"
           />
-        </div>
+        </div> */}
       </section>
 
       <section className="timeline-section">
@@ -480,7 +480,7 @@ const Emergency = () => {
 
           <div className="timeline-card">
             <div className="timeline-header">
-              <span className="trimester-tag">Immediate Assessment (First 5 Minutes)</span>
+              <span className="trimester-tag">Immediate Assessment ( 5 Minutes)</span>
             </div>
             <ul>
               <li>Your condition evaluation with vital signs and baby's heart rate monitoring through continuous fetal monitoring. Our obstetrician reviews your labor progress, examines complications, and determines if emergency LSCS is the safest option.</li>
@@ -634,6 +634,23 @@ const Emergency = () => {
           <h2 className="section-title">Meet Our Cervical Cerclage Team</h2>
 
 
+          {/* Founder Highlight */}
+          <div className="eds-founder-highlight">
+            <div className="eds-founder-img">
+              <img src="./images/img/d11.png" alt="Dr. Thamarai" />
+            </div>
+
+            <div className="eds-founder-content">
+              <span className="eds-founder-tag">Founder</span>
+              <h3>Dr. Thamarai</h3>
+              <h4>High-Risk Pregnancy Specialist</h4>
+              <p>
+                Founder of our hospital and  Expert in high-risk pregnancies, including diabetes, hypertension, and multiple pregnancies. Skilled in managing complex emergency C-sections, even in mothers with previous uterine surgeries.
+              </p>
+            </div>
+          </div>
+
+
           <div className="team-grid">
             {/* Dr. Sujitha */}
             <div className="team-card">
@@ -641,16 +658,6 @@ const Emergency = () => {
               <p className="designation">Senior Gynecologist & Obstetrician</p>
               <p className="doctor-desc">
                  With 15+ years of experience, she has handled hundreds of emergency C-sections. Known for quick decision-making and keeping families informed, she is available 24/7 for obstetric emergencies.
-              </p>
-            </div>
-
-
-            {/* Dr. Thamarai */}
-            <div className="team-card">
-              <h3 className="doctor-name">Dr. Thamarai</h3>
-              <p className="designation">Maternal Health Specialist</p>
-              <p className="doctor-desc">
-                 Expert in high-risk pregnancies, including diabetes, hypertension, and multiple pregnancies. Skilled in managing complex emergency C-sections, even in mothers with previous uterine surgeries.
               </p>
             </div>
 
@@ -709,7 +716,7 @@ const Emergency = () => {
           </div>
 
           <div className="center-btn">
-            <button className="cta-btn">Meet Our Complete Maternity Team</button>
+            <button className="cta-btn"> <a href="/ourteam">Meet Our Complete Maternity Team</a> </button>
           </div>
         </div>
       </section>
@@ -744,7 +751,7 @@ const Emergency = () => {
       <section className="reviews-section">
         <p className="sub-title">TESTIMONIALS</p>
         <div className="google-rating">
-          ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+         <span>4.5/5 Google Rating</span>
         </div>
 
         <div className="reviews-container">
@@ -763,12 +770,12 @@ const Emergency = () => {
         </div>
 
         <a
-          href="https://g.page/r/CS9733eotKhCEBM/review"
+          href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews"
           target="_blank"
           rel="noreferrer"
           className="see-more-btn"
         >
-          ⭐ Read More Success Stories
+          Read More Success Stories
         </a>
       </section>
 
@@ -827,8 +834,7 @@ const Emergency = () => {
           <h1>
            Prolife Hospital — High-risk pregnancy emergency LSCS in Chennai when every second counts.
           </h1>
-          <button className="lab-btn">
-             Emergency? We're Ready 24/7→
+          <button className="lab-btn"> <a href="/contact"> Emergency? We're Ready 24/7→ </a>
           </button>
         </div>
       </section>

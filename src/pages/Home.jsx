@@ -103,23 +103,20 @@ const closeModal = () => {
     specialization: "Gynecology",
     isFounder: true,
   },
-  { img: "./images/img/d1.png", name: "DR.NELLAIYAPPAN", specialization: "Orthopedics" },
-  { img: "./images/img/d2.png", name: "DR.KUMANAN", specialization: "Oncology" },
-  { img: "./images/img/d3.png", name: "DR.HARI PRAKASH", specialization: "Anesthesiology" },
-  { img: "./images/img/d4.png", name: "DR.BALA", specialization: "Oncology" },
-  { img: "./images/img/d5.png", name: "DR.SHALINI", specialization: "Anesthesiology" },
-  { img: "./images/img/d6.png", name: "DR.PAULIA DEVI", specialization: "General Surgery" },
-  { img: "./images/img/d7.png", name: "DR.SATHYA MOORTHY", specialization: "Internal Medicine" },
-  { img: "./images/img/d8.png", name: "DR.NITHYA PRIYAN", specialization: "Anesthesiology" },
-  { img: "./images/img/d9.png", name: "DR.SOORIYA.S", specialization: "Dermatology" },
-  { img: "./images/img/d10.png", name: "DR.SUJITHA.R", specialization: "Gynecology" },
-   { img: "./images/img/d21.jpeg", name: "DR.SAMUEL", specialization: "Orthopedics" },
-  { img: "./images/img/d17.jpeg", name: "DR.PREMA PRATHICKSHA.M", specialization: "Duty Medical Officer" },
-   { img: "./images/img/d19.jpeg", name: "DR.PAVITHRA", specialization: "Duty Medical Officer" },
-    { img: "./images/img/d23.jpeg", name: "DR.MURUGANANDAM", specialization: "Internal Medicine" },
-  { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
-  { img: "./images/img/d13.png", name: "Dr.Varshini", specialization: "Gynecology" },
-  { img: "./images/img/d14.png", name: "DR.PAVITHRA", specialization: "Duty Medical Officer" },
+   { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
+    { img: "./images/img/d19.jpeg", name: "DR.PAVITHRA", specialization: "General Medican" },
+    { img: "./images/img/d20.jpg", name: "DR.HARI PRIYA", specialization: "General Medican" },
+    { img: "./images/img/d7.png", name: "DR.SATHYA MOORTHY", specialization: "General Phydician" },
+    { img: "./images/img/d.png", name: "DR.MOHANRAJ", specialization: "General Surgeon" },
+    { img: "./images/img/d6.png", name: "DR.PAULIA DEVI", specialization: "General Surgeon" }, 
+    { img: "./images/img/d.png", name: "DR.AADHAISHA", specialization: "Dermatologist" }, 
+     { img: "./images/img/d.png", name: "DR.ASHOK", specialization: "Gynecology" },
+      { img: "./images/img/d.png", name: "DR.SUGAPRAKASH", specialization: "Gynecology" },
+           { img: "./images/img/d.png", name: "DR.VASANTH", specialization: "Urologist" },
+             { img: "./images/img/d.png", name: "DR.GERALD", specialization: "Oncologist" },
+               { img: "./images/img/d.png", name: "DR.SIVAKUMAR", specialization: "Oncologist" },
+                 { img: "./images/img/d.png", name: "DR.MEENAXI", specialization: "ENT" },
+
 ];
 
 
@@ -550,7 +547,7 @@ const openPharmacy = () => {
       <section className="reviews-section">
   <p className="sub-title">Testimonials</p>
   <div className="google-rating">
-    <span>5/5 Google Rating</span>
+    <span>4.5/5 Google Rating</span>
   </div>
 
   <div className="reviews-container">

@@ -424,7 +424,9 @@ const toggleFAQ = (index) => {
         ))}
       </div>
 
-      <button className="plan-btn">Book Your Consultation</button>
+      <a href="/contact" className="helps-btn">
+          Book Your Consultation →
+        </a>
     </section>
 
      <section className="helps-section">
@@ -493,51 +495,70 @@ const toggleFAQ = (index) => {
       </div>
     </section>
 
+
       <section className="eds-section">
-          <div className="eds-container">
-    
-            <div className="eds-header">
-              <h2>Meet Our Pre-Pregnancy Counselling Experts</h2>
-              <p>Skilled Hands, Compassionate Hearts</p>
+        <div className="eds-container">
+
+          <div className="eds-header">
+            <h2>Meet Our Pre-Pregnancy Counselling Experts</h2>
+            <p>Skilled Hands, Compassionate Hearts</p>
+          </div>
+
+          {/* Founder Highlight */}
+          <div className="eds-founder-highlight">
+            <div className="eds-founder-img">
+              <img src="./images/img/d11.png" alt="Dr. Thamarai" />
             </div>
-    
-            <div className="eds-grid">
-    
-              <div className="eds-card">
-                <span className="eds-bar"></span>
-                <h3>Dr. Sujitha R – Senior Gynecologist</h3>
-                <p>
-                   15+ years in obstetrics and reproductive health. Specializes in high-risk pregnancy planning and fertility optimization.
-                </p>
-              </div>
-    
-              <div className="eds-card">
-                <span className="eds-bar"></span>
-                <h3>Dr. Thamarai – Maternal-Fetal Medicine Specialis</h3>
-                <p>
-                  Expert in managing complex medical conditions before and during pregnancy—diabetes, hypertension, autoimmune disorders.
-                </p>
-              </div>
-    
-              <div className="eds-card">
-                <span className="eds-bar"></span>
-                <h3>Dr. Varshini – Fertility Specialist</h3>
-                <p>
-                   Advanced training in reproductive endocrinology. Helps couples facing conception challenges using evidence-based approaches.
-                </p>
-              </div>
-    
+
+            <div className="eds-founder-content">
+              <span className="eds-founder-tag">Founder</span>
+              <h3>Dr. Thamarai</h3>
+              <h4>Maternal – Fetal Medicine Specialist</h4>
+              <p>
+                Founder of our hospital and Expert in managing complex medical conditions before and during pregnancy—diabetes, hypertension, autoimmune disorders.
+              </p>
             </div>
-            
-    
+          </div>
+
+          <div className="eds-grid">
+
+            <div className="eds-card">
+              <span className="eds-bar"></span>
+              <h3>Dr. Sujitha R – Senior Gynecologist</h3>
+              <p>
+                15+ years managing normal and complicated pregnancies. Known for her patient-centered approach that ensures mothers feel heard and supported.
+              </p>
+            </div>
+
+
+
+            <div className="eds-card">
+              <span className="eds-bar"></span>
+              <h3>Dr. Varshini – Fertility Specialist</h3>
+              <p>
+                Advanced training in reproductive endocrinology. Helps couples facing conception challenges using evidence-based approaches.
+              </p>
+            </div>
+            <div className="eds-card">
+              <span className="eds-bar"></span>
+              <h3>Dr. Uma Maheshwari - Pediatrician</h3>
+              <p>
+                Provides immediate newborn care and assessment. Conducts baby's first health checks, vaccination planning, and addresses parental concerns.
+              </p>
+            </div>
+          
+
           </div>
           <div className="consultation-cta">
-        <a href="/contact" className="cta-btn">
-          Have questions? Book a Consultation →
-        </a>
-      </div>
+            <a href="/contact" className="cta-btn">
+              Have questions? Book a Consultation →
+            </a>
+          </div>
+
       
-        </section>
+      </div>
+      </section>
+
 
 
     <section className="why-prolife-section">

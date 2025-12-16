@@ -353,7 +353,7 @@ const Sterilisation = () => {
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/str1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -365,7 +365,7 @@ const Sterilisation = () => {
         <div className="plan-container">
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy2.jpg"
+              src="/images/img/str2.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -434,18 +434,18 @@ const Sterilisation = () => {
             </li>
           </ul>
 
-          <a href="/reviews" className="choose-btn">
+          <a href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews" className="choose-btn">
             Read Patient Reviews →
           </a>
         </div>
 
-        <div className="choose-img-wrapper">
+        {/* <div className="choose-img-wrapper">
           <img
-            src="/images/img/u7.webp"
+            src="/images/img/str3.jpg"
             alt="Pregnancy Care at Prolife"
             className="choose-img"
           />
-        </div>
+        </div> */}
       </section>
 
       <section className="timeline-section"> 
@@ -612,7 +612,7 @@ const Sterilisation = () => {
 
         <div className="cta-box">
           <h4>Have Questions?</h4>
-          <button className="cta-button">Talk to Our Doctors</button>
+          <button className="cta-button"> <a href="/contact">Talk to Our Doctors</a></button>
         </div>
       </div>
     </section>
@@ -625,6 +625,22 @@ const Sterilisation = () => {
           <p>Skilled Hands, Compassionate Hearts</p>
         </div>
 
+        {/* Founder Highlight */}
+          <div className="eds-founder-highlight">
+            <div className="eds-founder-img">
+              <img src="./images/img/d11.png" alt="Dr. Thamarai" />
+            </div>
+
+            <div className="eds-founder-content">
+              <span className="eds-founder-tag">Founder</span>
+              <h3>Dr. Thamarai</h3>
+              <h4> Maternal Health & High-Risk Pregnancy Specialist</h4>
+              <p>
+                An expert in managing pregnancies complicated by medical conditions—diabetes, hypertension, previous surgeries. Dr. Thamarai's expertise means even complex cesarean deliveries happen safely. Her meticulous planning and surgical precision have earned trust from countless families facing challenging pregnancies.
+              </p>
+            </div>
+          </div>
+
       
         <div className="eds-grid">
 
@@ -633,14 +649,6 @@ const Sterilisation = () => {
             <h3>Dr. Sujitha R – Senior Gynecologist & Obstetrician</h3>
             <p>
               With 15+ years of experience, Dr. Sujitha has performed countless planned cesarean deliveries with sterilisation. Her patients appreciate her thorough counseling approach and surgical expertise that ensures safe outcomes.
-            </p>
-          </div>
-
-          <div className="eds-card">
-            <span className="eds-bar"></span>
-            <h3>Dr. Thamarai – Maternal Health Specialist</h3>
-            <p>
-              Dr. Thamarai specializes in managing complex obstetric cases and high-risk pregnancies. Her precision during combined procedures and compassionate patient care make her a trusted choice for mothers.
             </p>
           </div>
 
@@ -711,7 +719,7 @@ const Sterilisation = () => {
       <section className="reviews-section">
         <p className="sub-title">What Our Mothers Say</p>
         <div className="google-rating">
-          ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+           <span>4.5/5 Google Rating</span>
         </div>
 
         <div className="reviews-container">
@@ -730,12 +738,12 @@ const Sterilisation = () => {
         </div>
 
         <a
-          href="https://g.page/r/CS9733eotKhCEBM/review"
+          href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews"
           target="_blank"
           rel="noreferrer"
           className="see-more-btn"
         >
-          ⭐ Read More Success Stories
+           Read More Success Stories
         </a>
       </section>
 

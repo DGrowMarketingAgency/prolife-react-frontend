@@ -286,7 +286,7 @@ const Elective = () => {
 
           <div className="plan-left">
             <h2 className="plan-title">
-              Safe, Planned C-Section Delivery at Prolife Hospital
+              Safe, Planned C-Section Delivery at <span>  PROLIFE HOSPITAL</span>
             </h2>
 
             <p className="plan-description">
@@ -302,7 +302,7 @@ const Elective = () => {
 
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy1.jpg"
+              src="/images/img/elective1.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -314,7 +314,7 @@ const Elective = () => {
         <div className="plan-container">
           <div className="plan-right">
             <img
-              src="/images/img/pre-pregnancy2.jpg"
+              src="/images/img/elective2.jpg"
               alt="Pre Pregnancy Consultation"
             />
           </div>
@@ -613,6 +613,22 @@ const Elective = () => {
           <p>Skilled Hands, Compassionate Hearts</p>
         </div>
 
+        {/* Founder Highlight */}
+          <div className="eds-founder-highlight">
+            <div className="eds-founder-img">
+              <img src="./images/img/d11.png" alt="Dr. Thamarai" />
+            </div>
+
+            <div className="eds-founder-content">
+              <span className="eds-founder-tag">Founder</span>
+              <h3>Dr. Thamarai</h3>
+              <h4> Maternal Health & High-Risk Pregnancy Specialist</h4>
+              <p>
+                An expert in managing pregnancies complicated by medical conditions—diabetes, hypertension, previous surgeries. Dr. Thamarai's expertise means even complex cesarean deliveries happen safely. Her meticulous planning and surgical precision have earned trust from countless families facing challenging pregnancies.
+              </p>
+            </div>
+          </div>
+
       
         <div className="eds-grid">
 
@@ -624,13 +640,7 @@ const Elective = () => {
             </p>
           </div>
 
-          <div className="eds-card">
-            <span className="eds-bar"></span>
-            <h3>Dr. Thamarai – Maternal Health & High-Risk Pregnancy Specialist</h3>
-            <p>
-              An expert in managing pregnancies complicated by medical conditions—diabetes, hypertension, previous surgeries. Dr. Thamarai's expertise means even complex cesarean deliveries happen safely. Her meticulous planning and surgical precision have earned trust from countless families facing challenging pregnancies.
-            </p>
-          </div>
+  
 
           <div className="eds-card">
             <span className="eds-bar"></span>
@@ -648,19 +658,21 @@ const Elective = () => {
             </p>
           </div>
 
-          <div className="eds-card">
-            <span className="eds-bar"></span>
-            <h3>Anesthesiology Specialists</h3>
-            <p>
-             Dr. Hari Prakash, Dr. Shalini, Dr. Nithya Priyan - Our anesthesiology team specializes in obstetric anesthesia. They administer spinal and epidural blocks with precision, monitor you continuously during surgery, and manage post-operative pain effectively. Their expertise ensures you remain comfortable while staying alert enough to experience your baby's arrival.
-            </p>
-          </div>
 
           <div className="eds-card">
             <span className="eds-bar"></span>
             <h3>Dr. Uma Maheshwari - Pediatrician</h3>
             <p>
              Every baby delivered via elective LSCS receives immediate assessment from Dr. Uma Maheshwari. She checks vital signs, performs newborn examinations, initiates feeding, and addresses any concerns. Parents trust her gentle approach and thorough explanations about their newborn's health.
+            </p>
+          </div>
+
+          
+          <div className="eds-card">
+            <span className="eds-bar"></span>
+            <h3>Anesthesiology Specialists</h3>
+            <p>
+             Dr. Hari Prakash, Dr. Shalini, Dr. Nithya Priyan - Our anesthesiology team specializes in obstetric anesthesia. They administer spinal and epidural blocks with precision, monitor you continuously during surgery, and manage post-operative pain effectively. Their expertise ensures you remain comfortable while staying alert enough to experience your baby's arrival.
             </p>
           </div>
 
@@ -698,7 +710,7 @@ const Elective = () => {
       <section className="reviews-section">
         <p className="sub-title">TESTIMONIALS</p>
         <div className="google-rating">
-          ⭐⭐⭐⭐⭐ <span>5/5 Google Rating</span>
+           <span>4.5/5 Google Rating</span>
         </div>
 
         <div className="reviews-container">
@@ -717,12 +729,12 @@ const Elective = () => {
         </div>
 
         <a
-          href="https://g.page/r/CS9733eotKhCEBM/review"
+          href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews"
           target="_blank"
           rel="noreferrer"
           className="see-more-btn"
         >
-          ⭐ Read More Success Stories
+           Read More Success Stories
         </a>
       </section>
 
