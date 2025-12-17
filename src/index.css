@@ -793,7 +793,6 @@ nav ul li a:hover {
   position: relative;
 }
 
-
 .sub-menu {
   position: absolute;
   left: 130px;
@@ -911,6 +910,7 @@ nav ul li a:hover {
 .specialization-section {
   padding: 80px 20px;
   text-align: center;
+  overflow: visible;
 }
 
 .specialization-container {
@@ -919,8 +919,8 @@ nav ul li a:hover {
   max-width: 90%;
   margin: 0 auto;
   border-radius: 16px;
+  overflow: visible;
 }
-
 
 .specialization-title {
   font-size: 42px;
@@ -941,18 +941,15 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
-  justify-items: center;
 }
-
 /* ===== CARD ===== */
 .specialization-card {
   background: #ffffff;
   border-radius: 18px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  transition: transform 0.3s ease;
+   transition: opacity 0.3s ease, transform 0.3s ease;
   width: 100%;
-  max-width: 300px;
   cursor: pointer;
 }
 
@@ -1085,6 +1082,8 @@ nav ul li a:hover {
 }
 
 
+
+/*  */
 .gynaecology-section {
   text-align: center;
   padding: 60px 0px;
