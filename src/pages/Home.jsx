@@ -97,12 +97,12 @@ const closeModal = () => {
   };
 
   const doctorsData = [
-     {
-    img: "./images/img/d11.png",
-    name: "Dr. THAMARAI RAM",
-    specialization: "Gynecology",
-    isFounder: true,
-  },
+  //    {
+  //   img: "./images/img/d11.png",
+  //   name: "Dr. THAMARAI RAM",
+  //   specialization: "Gynecology",
+  //   isFounder: true,
+  // },
     { img: "./images/img/d12.png", name: "DR.UMA MAHESHWARI", specialization: "Pediatrics" },
     { img: "./images/img/d19.jpeg", name: "DR.PAVITHRA", specialization: "General Medican" },
     { img: "./images/img/d20.jpg", name: "DR.HARI PRIYA", specialization: "General Medican" },
@@ -501,6 +501,22 @@ const openPharmacy = () => {
 <section className="home-doc-slider">
   <h2 className="home-doc-title">Our Medical Team</h2>
   <h5 className="home-doc-subtitle">Board-Certified Specialists</h5>
+
+   {/* Founder Highlight */}
+          <div className="eds-founder-highlight">
+            <div className="eds-founder-img">
+              <img src="./images/img/d11.png" alt="Dr. Thamarai" />
+            </div>
+
+            <div className="eds-founder-content">
+              <span className="eds-founder-tag">Founder</span>
+              <h3>Dr. Thamarai</h3>
+              <h4>Gynecologist</h4>
+              <p>
+                Founder of our hospital and Dr. Thamarai specializes in natural childbirth and believes in empowering women through education and support. Her dedication to minimizing unnecessary interventions has helped countless mothers achieve their desired birth experiences.
+              </p>
+            </div>
+          </div>
 
   <div
     className="home-doc-wrapper"
