@@ -33,7 +33,7 @@ const Home = () => {
 
   const navigate = useNavigate();
   const cardsData = [
-    { path: "pre-pregnancy", img: "/images/img/pre-pregnancy1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance..." },
+    { path: "pre-pregnancy", img: "/images/img/pre-pregnancy1.jpg", label: "Pre-Pregnancy Counselling", text: "Thoughtful guidance for couples planning... "  },
     { path: "pregnancy", img: "/images/img/pregnancy.jpg", label: "Pregnancy Care", text: "Comprehensive antenatal check-ups..." },
     { path: "highrisk", img: "/images/img/highrisk1.jpg", label: "High-Risk Pregnancy Management", text: "Conditions like diabetes..." },
     { path: "gdm", img: "/images/img/gdm1.jpg", label: "GDM (Gestational Diabetes Mellitus)", text: "Early screening, diet planning..." },
@@ -464,6 +464,8 @@ const Home = () => {
 
                 <h2>{selectedCard.label}</h2>
                 <p>{selectedCard.text}</p>
+            
+              
               </div>
             </section>
           )}
@@ -510,7 +512,7 @@ const Home = () => {
     className="see-more-btn"
     onClick={() => setExpanded(!expanded)}
   >
-    {expanded ? "Show Less" : "See More..."}
+    {expanded ? "Show Less" : "See More..."} 
   </button>
 )}
 
