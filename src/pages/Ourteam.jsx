@@ -5,7 +5,7 @@ const Ourteam = () => {
   const trackRef = useRef(null);
    const founder = {
     img: "./images/img/d11.png",
-    name: "Dr. Thamarai",
+    name: "Dr. Thamarai Ram",
     specialization: "Founder & Gynecologist",
     description:
       "Dr. Thamarai is the visionary founder of our hospital with decades of experience in women's healthcare. Her mission is to provide compassionate, world‑class medical care for every patient.",

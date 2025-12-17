@@ -34,6 +34,7 @@ import Elective from "./pages/Elective";
 export default function App() {
   return (
     <Router>
+      {/* <ScrollToTop /> */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

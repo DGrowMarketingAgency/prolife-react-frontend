@@ -99,7 +99,7 @@ const closeModal = () => {
   const doctorsData = [
      {
     img: "./images/img/d11.png",
-    name: "Dr. THAMARAI",
+    name: "Dr. THAMARAI RAM",
     specialization: "Gynecology",
     isFounder: true,
   },
