@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Ourstory from "./pages/Ourstory";
 import Ourteam from "./pages/Ourteam";
@@ -34,7 +35,7 @@ import Elective from "./pages/Elective";
 export default function App() {
   return (
     <Router>
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

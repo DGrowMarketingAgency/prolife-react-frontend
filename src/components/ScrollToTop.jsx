@@ -1,14 +1,19 @@
-// import { useEffect } from "react";
-// import { useLocation } from "react-router-dom";
 
-// const ScrollToTop = () => {
-//   const { pathname } = useLocation();
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, [pathname]);
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
-//   return null;
-// };
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth" // venumna remove pannalam
+    });
+  }, [pathname]);
 
-// export default ScrollToTop;
+  return null;
+};
+
+export default ScrollToTop;

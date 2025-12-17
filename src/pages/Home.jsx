@@ -326,7 +326,7 @@ const openPharmacy = () => {
           </div>
 
           <div className="doctor-image">
-            <img src="/images/img/section3-home.png" alt="Doctor" />
+            <img src="/images/img/doctor1.png" alt="Doctor" />
           </div>
 
           <div className="gynaecology-column right">
