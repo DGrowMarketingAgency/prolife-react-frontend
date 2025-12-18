@@ -654,7 +654,7 @@ const Pregnancy = () => {
         </div>
 
         <div className="prolife-cta">
-          <a href="/about" className="cta-btn">Learn More About Our Hospital →</a>
+          <a href="/story" className="cta-btn">Learn More About Our Hospital →</a>
         </div>
       </section>
 
@@ -702,7 +702,7 @@ const Pregnancy = () => {
                   Monday - Saturday: 9 AM - 8 PM <br />
                   Sunday: 9 AM - 2 PM</p>
                 <p><b>Emergency Obstetric Care:</b> <br /> Available 24/7</p>
-                <button className="appointment-btn">Book Appointment Online → </button>
+                <a href="/contact" className="appointment-btn">Book Appointment Online → </a>
               </div>
             </div>
           </div>

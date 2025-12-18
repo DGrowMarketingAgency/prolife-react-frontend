@@ -773,7 +773,7 @@ const Sterilisation = () => {
                   Monday - Saturday : 9 AM - 8 PM <br />
                   Sunday : 9 AM - 2 PM</p>
                 <p><b>Emergency Care:</b> <br /> Available 24/7</p>
-                <button className="appointment-btn"> Book Appointment Online  → </button>
+                 <a href="/contact" className="appointment-btn"> Book Appointment Online  → </a>
               </div>
             </div>
           </div>
@@ -802,8 +802,8 @@ const Sterilisation = () => {
           <h1>
            Prolife Hospital — Best hospital for C-section with sterilisation in Chennai 
           </h1>
-          <button className="lab-btn">
-             Plan Your Delivery with Confidence →
+          <button className="lab-btn"> <a href="/contact">
+             Plan Your Delivery with Confidence →</a>
           </button>
         </div>
       </section>

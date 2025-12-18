@@ -631,7 +631,6 @@ const Elective = () => {
 
       
         <div className="eds-grid">
-
           <div className="eds-card">
             <span className="eds-bar"></span>
             <h3>Dr. Sujitha R – Senior Gynecologist & Obstetrician</h3>
@@ -763,10 +762,10 @@ const Elective = () => {
                   Monday - Saturday: 9 AM - 8 PM <br />
                   Sunday: 9 AM - 2 PM</p>
                 <p><b> Emergency Obstetric Care:</b> <br /> Available 24/7</p>
-                <button className="appointment-btn"> Book Appointment Online → </button>
+                <a href="/contact" className="appointment-btn">Book Appointment Online → </a>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
       </section>
 
@@ -792,8 +791,8 @@ const Elective = () => {
           <h1>
            Prolife Hospital — Best hospital for elective LSCS in Chennai. Your safety, your comfort, your choice.
          </h1>
-          <button className="lab-btn">
-              Plan Your Cesarean Delivery Today →
+          <button className="lab-btn"> 
+            <a href="/contact">Plan Your Cesarean Delivery Today →</a> 
           </button>
         </div>
       </section>

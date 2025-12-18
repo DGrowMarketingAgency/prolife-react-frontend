@@ -617,7 +617,7 @@ const toggleFAQ = (index) => {
                 <h2>Take the First Step Toward Your Natural Birth</h2>
                 <p>Your journey to motherhood deserves expert support and compassionate care. At Prolife Hospital, we're committed to making your normal vaginal delivery a safe, comfortable, and empowering experience.</p>
                 
-                <button className="appointment-btn">Book Your Consultation Today</button>
+                <a href="/contact" className="appointment-btn">Book Your Consultation Today</a>
               </div>
             </div>
           </div>

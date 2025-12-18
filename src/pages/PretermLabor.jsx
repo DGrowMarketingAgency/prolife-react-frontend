@@ -572,7 +572,7 @@ const containerRef = useRef(null);
             </div>
 
           <div className="center-btn">
-            <button className="cta-btn">Meet Our Doctors</button>
+            <a href="/ourteam" className="cta-btn">Meet Our Doctors</a>
           </div>
         </div>
       </section>
@@ -648,7 +648,7 @@ We offer top-tier high-risk pregnancy care at affordable costs with support for 
 Even if you're not currently in labor but have risk factors that concern you, proactive consultation can lead to monitoring and preventive strategies that reduce your chances of early delivery.
 </p>
                 <p>Every day your baby stays safely in the womb matters. Let us help you reach that finish line.</p>
-                <button className="appointment-btn">Book Appointment Online → </button>
+                <a href="/contact" className="appointment-btn">Book Appointment Online → </a>
               </div>
             </div>
           </div>

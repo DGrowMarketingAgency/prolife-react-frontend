@@ -420,7 +420,7 @@ const containerRef = useRef(null);
             </li>
           </ul>
 
-          <a href="/reviews" className="choose-btn">
+          <a href="https://www.justdial.com/Chennai/Prolife-Maternity-and-Fertility-Hospital-Near-DLF-LT-and-Chennai-Trade-Centre-Manapakkam/044PXX44-XX44-191211174423-E9K1_BZDET/reviews" className="choose-btn">
             Read What Our Mothers Say →
           </a>
         </div>
@@ -626,7 +626,7 @@ const containerRef = useRef(null);
     </div>
 
     <div className="wp-btn-wrapper fade-up">
-      <button className="wp-cta-btn">Learn More About Our Hospital</button>
+      <button className="wp-cta-btn"> <a href="/story"> Learn More About Our Hospital </a></button>
     </div>
   </div>
 </section>
@@ -675,7 +675,7 @@ const containerRef = useRef(null);
                   Monday - Saturday: 9 AM - 8 PM <br />
                   Sunday: 9 AM - 2 PM</p>
                 <p><b>Emergency Care:</b> <br /> Available 24/7</p>
-                <button className="appointment-btn">Book Appointment Online → </button>
+                <a href="/contact" className="appointment-btn">  Book Appointment Online → </a>
               </div>
             </div>
           </div>
@@ -721,7 +721,7 @@ const containerRef = useRef(null);
               <button
                 className="rs-cta"
                 aria-label={`Learn more about ${s.title}`}
-              >
+              > 
                 Learn More →
               </button>
             </article>
@@ -737,8 +737,8 @@ const containerRef = useRef(null);
 
           </h1>
 
-          <button className="lab-btn">
-             Protect Your Pregnancy Today →
+          <button className="lab-btn"> <a href="/pregnancy">
+             Protect Your Pregnancy Today → </a>
           </button>
         </div>
       </section>

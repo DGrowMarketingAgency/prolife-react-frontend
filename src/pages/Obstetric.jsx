@@ -899,7 +899,7 @@ Specialized in rapid-sequence anesthesia for emergency C-sections, ensuring smoo
                                 <p> <b>Emergency Contact Numbers:</b> <br />
                                     8220305887 | 7305737051 | 9790896211 </p>
                                 <p><b>Emergency Care:</b> <br /> Available 24/7</p>
-                                <button className="appointment-btn">Book an Emergency Consultation → </button>
+                                <a href="/contact" className="appointment-btn">Book an Emergency Consultation → </a>
                             </div>
                         </div>
                     </div>

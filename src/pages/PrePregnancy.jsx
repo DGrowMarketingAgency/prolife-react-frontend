@@ -582,7 +582,7 @@ const toggleFAQ = (index) => {
   </div>
 
   <div className="prolife-cta">
-    <a href="/about" className="cta-btn">Learn More About Us →</a>
+    <a href="/story" className="cta-btn">Learn More About Us →</a>
   </div>
 </section>
 
@@ -674,7 +674,7 @@ const toggleFAQ = (index) => {
         <h1>
           Prolife Hospital —  Expert pregnancy care in Chennai for your growing family.
         </h1>
-        <div><a href="/contact" className="lab-btn">Start Your Journey Today →</a></div>
+        <a href="/contact" className="lab-btn1">Start Your Journey Today →</a>
         
       </div>
     </section>

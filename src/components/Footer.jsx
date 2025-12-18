@@ -13,23 +13,21 @@ export default function Footer() {
           Prolife Women's Centre No:4, Krishnaveni Nagar,<br />
           Mugalivakkam, Chennai, Tamil Nadu 600125
         </p>
-        <p><strong>Call Us:</strong> 8220305887 / 7305737051 / 9790896211</p>
-        <p><strong>Mail:</strong> prolifehospitalog@gmail.com</p>
-
+        <p><a href="tel:91-9790896211"><strong>📞Call Us:</strong> 8220305887 / 7305737051 / 9790896211</a></p> 
+        <p><a href="mailto:prolifehospitalog@gmail.com"><strong>📧 Mail:</strong> prolifehospitalog@gmail.com</a></p>
         <div className="social-icons">
           <a href="https://www.facebook.com/prolifeogclinic"><i className="fa-brands fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/prolifehospitalchennai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i className="fa-brands fa-instagram"></i></a>
           <a href="https://youtube.com/@prolifeogclinic2028?si=bfduUeWAiSfba32f"><i className="fa-brands fa-youtube"></i></a>
-          <a href="https://wa.me/918220305887"><i className="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/918220305887" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-
       {/* Column 2 */}
       <div className="footer-column">
         <h4>Quick Links</h4>
         <a href="/story">Our History</a><br />
-        <a href="/pregnancy-maternity">Obstetrics</a><br />
-        <a href="/abnormal-uterine-bleeding">Gynecology</a><br />
+        <a href="/lab">Our Lab</a><br />
+        <a href="/pregnancy">Pregnancy</a><br />
         <a href="/team">Our Doctors</a><br />
         <a href="/contact">Contact Us</a>
 

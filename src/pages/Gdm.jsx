@@ -665,7 +665,7 @@ High blood pressure, PCOS, Thyroid disorders, History of large babies, Obesity, 
   </div>
 
   <div className="prolife-cta">
-    <a href="/about" className="cta-btn">Book Appointment Now →</a>
+    <a href="/story" className="cta-btn">Book Appointment Now →</a>
   </div>
 </section>
 

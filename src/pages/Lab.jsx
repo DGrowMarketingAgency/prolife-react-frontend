@@ -336,7 +336,7 @@ const Lab = () => {
           ))}
         </div>
         <div className="lab-cta">
-          <button>Explore Our Lab Services</button>
+          <button> <a href="#lab-section"> Explore Our Lab Services</a></button>
         </div>
       </section>
 
@@ -355,7 +355,7 @@ const Lab = () => {
           ))}
         </div>
         <div className="diagnostic-cta">
-          <button>Not sure which test you need? Consult Our Doctors</button>
+          <button><a href="/contact"> Not sure which test you need? Consult Our Doctors</a></button>
         </div>
       </section>
 
@@ -475,7 +475,7 @@ const Lab = () => {
 
 
       
-<section className="lab-section">
+<section className="lab-section" id="lab-section">
   <h2 className="lab-title">How Our Lab Works</h2>
 
   <div className="lab-grid">
@@ -489,7 +489,7 @@ const Lab = () => {
   </div>
 
   <div className="btn-wrapper">
-    <button className="cta-btn">Book Your Test Today →</button>
+    <button className="cta-btn"><a href="/contact">Book Your Test Today → </a></button>
   </div>
 </section>
 
@@ -580,8 +580,8 @@ const Lab = () => {
             </div>
 
             {/* CTA */}
-            <button className="schedule-btn">
-              Schedule Home Sample Collection →
+            <button className="schedule-btn"> <a href="/contact">
+              Schedule Home Sample Collection → </a>
             </button>
           </div>
         </div>
@@ -610,7 +610,7 @@ const Lab = () => {
         </div>
 
         <div className="test-cta">
-          <button>View Complete Test Menu</button>
+          <button> <a href="/contact"> View Complete Test Menu</a></button>
         </div>
       </section>
       
@@ -683,7 +683,7 @@ const Lab = () => {
   </div>
 
   <div className="patient-cta">
-    <button>Need Help Understanding Your Report? Consult Our Doctors</button>
+    <button> <a href="/ourteam"> Need Help Understanding Your Report? Consult Our Doctors </a></button>
   </div>
 </section>
 
@@ -735,7 +735,7 @@ const Lab = () => {
           <p>
             Whether monitoring a chronic condition, investigating new symptoms, or getting routine checkups—accuracy isn't optional. It's everything.
           </p>
-          <button className="cta-button">Experience the Prolife Laboratory Difference</button>
+          <button className="cta-button"> <a href="/contact">Contact Lab Experience the Prolife Laboratory </a></button>
         </div>
         <div className="lab-image">
           <img
@@ -760,7 +760,7 @@ const Lab = () => {
           <p>
             We follow biosafety guidelines for infection control. Proper waste disposal protects our community. Your samples are handled with medical-grade sterility from collection to disposal.
           </p>
-          <button className="cta-button">Learn About Our Quality Practices</button>
+          <button className="cta-button"> <a href="/story">Learn About Our Quality Practices</a> </button>
         </div>
 
       </section>
@@ -801,8 +801,7 @@ const Lab = () => {
           accurate, fast, and affordable testing.
         </h1>
 
-        <button className="lab-btn">
-          Book Your Lab Test Today →
+        <button className="lab-btn"> <a href="/contact"> Book Your Lab Test Today →</a>
         </button>
       </div>
     </section>

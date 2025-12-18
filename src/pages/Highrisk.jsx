@@ -783,7 +783,7 @@ const relatedServices = [
   </div>
 
   <div className="prolife-cta">
-    <a href="/about" className="cta-btn">Learn more about our maternity care →</a>
+    <a href="/story" className="cta-btn">Learn more about our maternity care →</a>
   </div>
 </section>
 
@@ -832,7 +832,7 @@ const relatedServices = [
                   Monday - Saturday: 9 AM - 8 PM <br />
                   Sunday: 9 AM - 2 PM</p>
                 <p><b>Emergency Care:</b> <br /> Available 24/7</p>
-                <button className="appointment-btn">Book Appointment Online → </button>
+                <a href="/contact" className="appointment-btn">Book Appointment Online → </a>
               </div>
             </div>
           </div>

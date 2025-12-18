@@ -843,7 +843,7 @@ const cardVariants = {
                 <button
                   className="rs-cta"
                   aria-label={`Learn more about ${s.title}`}
-                >
+                > 
                   Learn More →
                 </button>
               </article>
@@ -884,7 +884,7 @@ const cardVariants = {
           care you deserve.
         </p>
 
-        <a href="#appointment" className="cta-button">
+        <a href="/contact" className="cta-button">
           Book an Appointment
         </a>
       </div>

@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-
-
-
 const Home = () => {
 
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -518,8 +515,6 @@ const Home = () => {
 
         </div>
       </section>
-
-
 
 
       <section className="home-doc-slider">

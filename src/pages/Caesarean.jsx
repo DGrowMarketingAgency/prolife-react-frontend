@@ -614,7 +614,7 @@ const Caesarean = () => {
           </div>
 
           <div className="wp-btn-wrapper fade-up">
-            <button className="wp-cta-btn">Learn More About Our Hospital</button>
+            <button className="wp-cta-btn"><a href="/story">Learn More About Our Hospital</a> </button>
           </div>
         </div>
       </section>
@@ -664,7 +664,7 @@ const Caesarean = () => {
                    Sunday: 9 AM - 2 PM</p>
                    <p><b>Emergency Obstetric Care:</b> <br /> Available 24/7</p>
 
-                <button className="appointment-btn">Book Appointment Online </button>
+                <a href="/contact" className="appointment-btn"> Book Appointment Online </a>
               </div>
             </div>
           </div>
@@ -708,8 +708,8 @@ const Caesarean = () => {
           <h1>
            Prolife Hospital — Your trusted LSCS delivery hospital in Chennai for safe, compassionate cesarean care.
           </h1>
-          <button className="lab-btn">
-          Start Your Journey Today →
+          <button className="lab-btn"> <a href="/contact">
+          Start Your Journey Today → </a>
         </button>
         </div>
         

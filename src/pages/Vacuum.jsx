@@ -642,7 +642,7 @@ const containerRef = useRef(null);
                 <h2>Ready to Experience Expert Maternity Care?</h2>
                 <p>Choosing Prolife Hospitals means choosing expertise, compassion, and comprehensive support for your delivery journey. Whether you're planning ahead or facing an unexpected turn during labor, our team is prepared to provide the skilled care you deserve.</p>
                 <p><b>Emergency Care:</b> <br /> Available 24/7</p>
-                <button className="appointment-btn">Book Your Appointment Now → </button>
+                <a href="/contact" className="appointment-btn">Book Your Appointment Now → </a>
               </div>
             </div>
           </div>
