@@ -202,7 +202,7 @@ const Lab = () => {
 
 
   const imgSrc =
-    "/images/img/d7.png";
+    "/images/img/d23.jpeg";
 
     
   const faqData = [
@@ -512,7 +512,7 @@ const Lab = () => {
 
       <h2>Meet Our Lab Experts</h2>
 
-      <h3>Dr. Sathya Moorthy</h3>
+      <h3>Dr. Muruganandam</h3>
       <p className="designation">General Physician & Lab Coordinator</p>
 
       <p className="details">

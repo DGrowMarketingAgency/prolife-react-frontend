@@ -16,10 +16,10 @@ export default function Footer() {
         <p><a href="tel:91-9790896211"><strong>📞Call Us:</strong> 8220305887 / 7305737051 / 9790896211</a></p> 
         <p><a href="mailto:prolifehospitalog@gmail.com"><strong>📧 Mail:</strong> prolifehospitalog@gmail.com</a></p>
         <div className="social-icons">
-          <a href="https://www.facebook.com/prolifeogclinic"><i className="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61563824666790"><i className="fa-brands fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/prolifehospitalchennai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i className="fa-brands fa-instagram"></i></a>
           <a href="https://youtube.com/@prolifeogclinic2028?si=bfduUeWAiSfba32f"><i className="fa-brands fa-youtube"></i></a>
-          <a href="https://wa.me/918220305887" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/919790869211" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
       {/* Column 2 */}
