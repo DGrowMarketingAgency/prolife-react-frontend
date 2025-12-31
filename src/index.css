@@ -35,7 +35,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-top: 40px;
 }
@@ -155,7 +155,7 @@ body {
 
 /* ===== CONTENT SECTION ===== */
 .story-hero-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 40px auto;
   padding: 0 30px;
   display: flex;
@@ -334,7 +334,7 @@ body {
 }
 
 .founder-card {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -1204,7 +1204,7 @@ nav ul li a:hover {
 .section-two-container {
   display: grid;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   grid-template-columns: 0.5fr 1fr;
   gap: 50px;
@@ -1326,7 +1326,7 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   flex-wrap: wrap;
   gap: 40px;
@@ -2660,7 +2660,7 @@ footer::before {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto 60px auto;
 }
 
@@ -2834,7 +2834,7 @@ footer::before {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .surgery-card {
@@ -3126,7 +3126,7 @@ footer::before {
 }
 
 .JUST-PREGNANT-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
@@ -3229,7 +3229,7 @@ footer::before {
 }
 
 .Growing-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
@@ -3333,7 +3333,7 @@ footer::before {
 }
 
 .NEAR-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
@@ -3437,7 +3437,7 @@ footer::before {
 }
 
 .after-section-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
@@ -3929,7 +3929,7 @@ a{
 }
 
 .painss-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -4016,7 +4016,7 @@ a{
 }
 
 .unary-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -4092,7 +4092,7 @@ a{
 }
 
 .ovarian-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -4197,7 +4197,7 @@ a{
 }
 
 .meno-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   line-height: 1.8;
 }
@@ -4563,7 +4563,7 @@ a{
 }
 
 .trust-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -4678,7 +4678,7 @@ a{
 }
 
 .results-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -4765,7 +4765,7 @@ a{
 
 /* Grid Layout */
 .approach-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -4905,7 +4905,7 @@ a{
 }
 
 .location-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -5760,7 +5760,7 @@ a{
 
 /* ===== CARD CONTAINER ===== */
 .expert-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 
   display: flex;
@@ -5927,7 +5927,7 @@ a{
 }
 
 .home-collection-container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   background: #b6f08f;
   padding: 55px 60px;
@@ -6657,7 +6657,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   gap: 50px;
 }
@@ -6745,7 +6745,7 @@ a{
 
 /* CONTENT WRAPPER */
 .choose-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -7031,7 +7031,7 @@ a{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -7242,7 +7242,7 @@ a{
   display: grid;
   gap: 25px;
   grid-template-columns: 1fr;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -7762,7 +7762,7 @@ a{
 
 /*  */
 .services-section {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding: 20px 20px;
   background: #ffffff;
@@ -8135,7 +8135,7 @@ a{
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -8858,7 +8858,7 @@ a{
 }
 
 .htn-team-inner {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -8979,7 +8979,7 @@ a{
 --radius-lg: 18px;
 --shadow-strong: 0 10px 30px rgba(11,107,58,0.12);
 --shadow-soft: 0 6px 18px rgba(10,10,10,0.06);
---max-width: 1200px;
+--max-width: 1400px;
 }
 
 
@@ -9057,7 +9057,7 @@ display:flex;flex-direction:column;gap:18px;
 
 /* Container */
 .ob-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -9157,7 +9157,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .ea-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -9391,7 +9391,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .trust-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -9613,7 +9613,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .thyroid-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -9746,7 +9746,7 @@ display:flex;flex-direction:column;gap:18px;
 
 /* Container */
 .why-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -9882,7 +9882,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .doctor-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -10027,7 +10027,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .tt-inner{
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -10432,7 +10432,7 @@ display:flex;flex-direction:column;gap:18px;
 
 /* ===== CONTAINER ===== */
 .ad-pro-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 
   display: flex;
@@ -10817,7 +10817,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .ans-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -11105,7 +11105,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .pss-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -11211,7 +11211,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .rs-container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
 }
 
@@ -11560,7 +11560,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .wpv-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -12001,7 +12001,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .vbr-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -12171,7 +12171,7 @@ display:flex;flex-direction:column;gap:18px;
 
 .vfb-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   z-index: 1;
 }
@@ -12331,7 +12331,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .ve-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -12437,7 +12437,7 @@ display:flex;flex-direction:column;gap:18px;
 }
 
 .wcp-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -12816,7 +12816,7 @@ display:flex;flex-direction:column;gap:18px;
 
 /* Container */
 .lscs-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
