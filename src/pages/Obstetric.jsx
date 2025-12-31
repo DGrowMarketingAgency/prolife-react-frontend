@@ -694,7 +694,7 @@ const Obstetric = () => {
                     {/* Delivery Support */}
                     <div className="service-card">
                         <h3>Patients from Other Facilities </h3>
-                        <p>CWe accept referrals from smaller clinics or hospitals lacking specialized obstetric emergency capabilities.</p>
+                        <p>We accept referrals from smaller clinics or hospitals lacking specialized obstetric emergency capabilities.</p>
                     </div>
 
                     {/* Postpartum Care */}
@@ -725,7 +725,7 @@ const Obstetric = () => {
               <h3>Dr. Thamarai</h3>
               <h4>Maternal – Fetal Medicine Specialist</h4>
               <p>
-                Founder of our hospital and Expert in handling pregnancies with medical complications—diabetes, hypertension, autoimmune conditions. Clinical precision with calm demeanor.
+                Founder of our hospital and an expert in handling pregnancies with medical complications—diabetes, hypertension, autoimmune conditions. Clinical precision with calm demeanor.
               </p>
             </div>
           </div>
@@ -752,7 +752,7 @@ const Obstetric = () => {
 
               <div className="eds-card">
               <span className="eds-bar"></span>
-              <h3>Dr. Shalini - Anesthetistt</h3>
+              <h3>Dr. Shalini - Anesthetist</h3>
               <p>       
 Provides safe, precise obstetric anesthesia with continuous monitoring of maternal & fetal wellbeing.
               </p>

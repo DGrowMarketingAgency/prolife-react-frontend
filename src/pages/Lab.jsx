@@ -11,7 +11,7 @@ const Lab = () => {
     },
     {
       title: "24/7 Availability—Test Anytime",
-      text: "Medical emergencies don't follow office hours. Our diagnostic centre operates round the clock. Urgent test at 2 AM? We're ready."
+      text: "Medical emergencies don't follow office hours. Our diagnostic centre operates round the clock. Urgent tests at 2 AM? We're ready."
     },
     {
       title: "Reports Delivered Fast",
@@ -154,9 +154,9 @@ const Lab = () => {
         "Complete thyroid profile (T3, T4, TSH)\nThyroid antibody tests\nFree T3 and Free T4 for detailed assessment",
     },
     {
-      title: "Heart Health Screening",
+      title: "Heart Health Screening.",
       description:
-        "Complete lipid profile\nCardiac risk markers (Troponin, CPK-MB)\nHomocysteine and hs-CRP testing",
+        "Complete lipid profile Cardiac risk markers (Troponin, CPK-MB)\nHomocysteine and hs-CRP testing",
     },
     {
       title: "Liver & Kidney Health Panels",
@@ -371,7 +371,7 @@ const Lab = () => {
               <div>
                 <h3>Fertility Testing Packages</h3>
                 <p>
-                  Complete hormonal profile for women (FSH, LH, Prolactin, AMH, Thyroid) Semen analysis for male fertility evaluation Anti-Mullerian hormone testing for ovarian reserve Comprehensive fertility workup for couples
+                  Complete hormonal profile for women (FSH, LH, Prolactin, AMH, Thyroid). Semen analysis for male fertility evaluation. Anti-Mullerian hormone testing for ovarian reserve Comprehensive fertility workup for couples
                 </p>
               </div>
             </div>
@@ -382,7 +382,7 @@ const Lab = () => {
               </div>
               <div>
                 <h3>Heart Health Screening</h3>
-                <p>Complete lipid profile Cardiac risk markers (Troponin, CPK-MB) Homocysteine and hs-CRP testing
+                <p>Complete lipid profile. Cardiac risk markers (Troponin, CPK-MB) Homocysteine and hs-CRP testing
                 </p>
               </div>
             </div>

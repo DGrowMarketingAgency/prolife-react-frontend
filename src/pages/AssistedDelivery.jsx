@@ -332,7 +332,7 @@ const containerRef = useRef(null);
         src="/images/img/highrisk3.jpg"
         alt="Assisted Delivery Care"
       />
-      <h1 className="ad-pro-title">Assisted Delivery Excellence</h1>
+      <h1 className="ad-pro-title"> Assisted Delivery Excellence</h1>
     </div>
 
     {/* RIGHT CONTENT */}
@@ -591,8 +591,7 @@ const containerRef = useRef(null);
             <span className="eds-bar"></span>
             <h3>Supporting Specialists:</h3>
             <p>
-               Our assisted delivery team includes anesthetists like <strong>Dr. Shalini</strong>
-            and <strong>Dr. Nithya Priyan</strong> who ensure optimal pain management.
+               Our assisted delivery team includes anesthetists like <strong>Dr. Shalini</strong> and <strong>Dr. Nithya Priyan</strong> who ensure optimal pain management.
             <strong> Dr. Uma Maheshwari</strong>, our pediatrician, is always present to
             provide immediate newborn care when needed.
             </p>

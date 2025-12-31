@@ -443,7 +443,7 @@ const Pregnancy = () => {
             <ul>
               <li>Labor stages and what to expect</li>
               <li>Breathing techniques and pain management</li>
-              <li>Breastfeeding basics and latch techniquess</li>
+              <li>Breastfeeding basics and latch techniques</li>
               <li>Newborn care essentials</li>
               <li>Postpartum recovery guidance</li>
 
@@ -567,7 +567,7 @@ const Pregnancy = () => {
         <div className="eds-container">
 
           <div className="eds-header">
-            <h2>Meet Our Pre-Pregnancy Counselling Experts</h2>
+            <h2>Meet Our Pregnancy Counselling Experts</h2>
             <p>Skilled Hands, Compassionate Hearts</p>
           </div>
 

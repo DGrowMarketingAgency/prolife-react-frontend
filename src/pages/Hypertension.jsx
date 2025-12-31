@@ -576,15 +576,15 @@ We tailor your plan based on:
         <ul className="htn-doctors">
           <li>
             <strong>Dr. Sujitha R</strong>
-            <span>Gynecologist</span>
+            <span>- Gynecologist</span>
           </li>
           <li>
             <strong>Dr. Thamarai</strong>
-            <span>Gynecologist</span>
+            <span>- Gynecologist</span>
           </li>
           <li>
             <strong>Dr. Varshini</strong>
-            <span>Gynecologist</span>
+            <span>- Gynecologist</span>
           </li>
         </ul>
 
@@ -664,8 +664,8 @@ We tailor your plan based on:
           <div className="journey-grid">
             <div className="journey-image">
               <div className="journey-content">
-                <h2>Book Your Cervical Cerclage Consultation</h2>
-                <p>Don't let gestational diabetes overwhelm you. With proper care and support, you can have a healthy pregnancy and deliver a thriving baby. Our team at Prolife Hospitals is ready to guide you through every step.</p>
+                <h2>Book Your Hypertension Consultation </h2>
+                <p>Don't let high blood pressure overwhelm you. With proper care and support, you can have a healthy pregnancy and deliver a thriving baby. Our team at Prolife Hospitals is ready to guide you through every step.</p>
                 
                 <p> <b>Consultation Hours:</b> <br />
                   Monday - Saturday: 9 AM - 8 PM <br />

@@ -13,8 +13,8 @@ export default function Footer() {
           Prolife Women's Centre No:4, Krishnaveni Nagar,<br />
           Mugalivakkam, Chennai, Tamil Nadu 600125
         </p>
-        <p><a href="tel:91-9790896211"><strong>📞Call Us:</strong> 8220305887 / 7305737051 / 9790896211</a></p> 
-        <p><a href="mailto:prolifehospitalog@gmail.com"><strong>📧 Mail:</strong> prolifehospitalog@gmail.com</a></p>
+        <p><a href="tel:91-9790896211"><strong>Call Us:</strong> 8220305887 / 7305737051 / 9790896211</a></p> 
+        <p><a href="mailto:prolifehospitalog@gmail.com"><strong> Mail:</strong> prolifehospitalog@gmail.com</a></p>
         <div className="social-icons">
           <a href="https://www.facebook.com/profile.php?id=61563824666790"><i className="fa-brands fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/prolifehospitalchennai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i className="fa-brands fa-instagram"></i></a>
@@ -61,9 +61,9 @@ export default function Footer() {
       <section className="footer-section">
         <div className="footer-bottom">
           Copyright © 2025.
-          <a href="https://www.prolifehospitals.com/">Prolife Hospital</a>.
+          <a href="https://www.prolifehospitals.com/"> Prolife Hospital. </a>
           All Rights Reserved. || Designed by
-          <a href="https://dgrowmarketing.com/">D-Grow Marketing</a>
+          <a href="https://dgrowmarketing.com/"> D - Grow Marketing</a>
         </div>
       </section>
       
