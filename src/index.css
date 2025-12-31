@@ -5009,13 +5009,13 @@ a{
 .journey-image {
   width: 100%;
   height: 100%;
-  background: url('./images/img/bottom-img1.png') no-repeat center center/cover;
+  background: url('/images/img/bottom-img1.png') no-repeat center center/cover;
   position: relative;
 }
 .journey-image-home {
   width: 100%;
   height: 100%;
-  background: url('./images/img/bottom-home-img.png') no-repeat center center/cover;
+  background: url('/images/img/bottom-home-img.png') no-repeat center center/cover;
   position: relative;
 }
 
